@@ -1,0 +1,119 @@
+{
+  "date": "2026-06-08",
+  "trades": [
+    {
+      "placed_at": "2026-06-08T10:00:10.561410",
+      "closed_at": "2026-06-08T10:58:20.109914",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 73600,
+      "entry_price": 500.3,
+      "exit_price": 480.0,
+      "sl_price": 433.6,
+      "target_price": 600.4,
+      "lot_size": 1,
+      "pnl": -466.0,
+      "status": "SMART_EXIT",
+      "reason": "[C9] Supertrend SHORT + PUT (MEDIUM) [C9/10] → SMART_EXIT: 5m Supertrend LONG + RSI 46 — exit losing PE",
+      "hold_minutes": 58,
+      "high_price": 555.95,
+      "low_price": 474.0,
+      "r_multiple": -0.35,
+      "confluence": 9,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 35.6,
+      "regime": "trending",
+      "strategy": "supertrend_follow"
+    },
+    {
+      "placed_at": "2026-06-08T13:27:45.169334",
+      "closed_at": "2026-06-08T15:05:56.680451",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23200,
+      "entry_price": 100.0,
+      "exit_price": 145.0,
+      "sl_price": 100.0,
+      "target_price": 145.0,
+      "lot_size": 1,
+      "pnl": 2865.0,
+      "status": "TARGET_HIT",
+      "reason": "[C9] CE OI unwind: d1=-0.23% d2=-0.23% | CE LTP +2.7% (long holders distributing — bearish) [C9/10] → TARGET_HIT: Target ₹145.00 reached",
+      "hold_minutes": 98,
+      "high_price": 143.0,
+      "low_price": 95.25,
+      "r_multiple": 1.63,
+      "confluence": 9,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 37.3,
+      "regime": "trending",
+      "strategy": "oi_velocity"
+    },
+    {
+      "placed_at": "2026-06-08T15:13:23.034251",
+      "closed_at": "2026-06-08T15:20:07.755048",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 73600,
+      "entry_price": 547.45,
+      "exit_price": 535.9,
+      "sl_price": 475.35,
+      "target_price": 656.95,
+      "lot_size": 1,
+      "pnl": -291.0,
+      "status": "EOD_CLOSE",
+      "reason": "[C9] Supertrend SHORT + PUT (HIGH) [C9/10] → EOD_CLOSE: Auto-close at 15:20",
+      "hold_minutes": 6,
+      "high_price": 547.45,
+      "low_price": 529.75,
+      "r_multiple": -0.2,
+      "confluence": 9,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 35.8,
+      "regime": "trending",
+      "strategy": "supertrend_follow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "oi_velocity",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 2865.0
+    },
+    {
+      "strategy": "supertrend_follow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -466.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 2865.0,
+      "avg_pnl": 2865.0
+    },
+    {
+      "status": "EOD_CLOSE",
+      "n": 1,
+      "total_pnl": -291.0,
+      "avg_pnl": -291.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -466.0,
+      "avg_pnl": -466.0
+    }
+  ],
+  "mtd": {
+    "pnl": -4566.0,
+    "trades": 171
+  },
+  "ai_analysis": "# 2026-06-08 Post-Market Debrief\n\nToday you finished with a +₹2,108 profit on three trades, but a 33% win rate masks the real story: one exceptional trade carried the entire session while two losers in the same strategy eroded gains. The OI velocity trade on NIFTY PE 23200 was textbook—you caught a CE OI unwind with confluence and trend alignment, entered at 100, hit your 145 target in 98 minutes for +₹2,865, a clean 1.63R win that proves your signal detection works when conditions align. Supertrend follow, however, misfired twice on SENSEX, costing you ₹757 combined: the first trade (10:00) took a SMART_EXIT at -466 when the setup reversed into a 5m supertrend long, and the second (15:13) was force-closed at EOD for -291 after only 6 minutes, suggesting the strategy was either too late in the session or fighting the actual market structure. Going forward, flag any supertrend setups that trigger within the final 45 minutes of the day—those six-minute holds are liquidity traps, not trades, and your month is already -₹4,566 YTD, so tightening entry timing discipline is non-negotiable.",
+  "generated_at": "2026-06-08T18:58:12.568716"
+}
