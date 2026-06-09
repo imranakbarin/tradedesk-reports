@@ -133,14 +133,22 @@
       "trades": 1,
       "wins": 1,
       "losses": 0,
-      "pnl": 2865.0
+      "pnl": 2865.0,
+      "gross_win": 2865.0,
+      "gross_loss": 0.0,
+      "avg_r": 1.63,
+      "avg_hold": 98.0
     },
     {
       "strategy": "supertrend_follow",
       "trades": 1,
       "wins": 0,
       "losses": 1,
-      "pnl": -466.0
+      "pnl": -466.0,
+      "gross_win": 0.0,
+      "gross_loss": -466.0,
+      "avg_r": -0.35,
+      "avg_hold": 58.0
     }
   ],
   "reasons": [
@@ -174,37 +182,43 @@
       "day": "2026-06-01",
       "trades": 4,
       "wins": 2,
-      "pnl": 3127.0
+      "pnl": 3127.0,
+      "cumulative": 3127.0
     },
     {
       "day": "2026-06-02",
       "trades": 154,
       "wins": 103,
-      "pnl": -2842.0
+      "pnl": -2842.0,
+      "cumulative": 285.0
     },
     {
       "day": "2026-06-03",
       "trades": 2,
       "wins": 0,
-      "pnl": -331.0
+      "pnl": -331.0,
+      "cumulative": -46.0
     },
     {
       "day": "2026-06-04",
       "trades": 7,
       "wins": 1,
-      "pnl": -5126.0
+      "pnl": -5126.0,
+      "cumulative": -5172.0
     },
     {
       "day": "2026-06-05",
       "trades": 1,
       "wins": 0,
-      "pnl": -1502.0
+      "pnl": -1502.0,
+      "cumulative": -6674.0
     },
     {
       "day": "2026-06-08",
       "trades": 3,
       "wins": 1,
-      "pnl": 2108.0
+      "pnl": 2108.0,
+      "cumulative": -4566.0
     }
   ],
   "week_days": [
@@ -239,6 +253,66 @@
       "pnl": 2108.0
     }
   ],
-  "ai_analysis": "# 2026-06-08 Post-Market Debrief\n\nToday was a net positive day (+₹2,108) but masks deeper trouble: a 33% win rate with only one profitable trade carrying the entire session, while two consecutive Supertrend shorts bled ₹757 combined. The OI velocity play on NIFTY 23200 PE was the hero—it caught a clear CE unwind signal at confluence 9, entered at ₹100, and rode the momentum to target at ₹145 in 98 minutes for a clean 1.63R win. In contrast, both Supertrend trades fought the setup: the first exited at a loss after Supertrend flipped to LONG (a momentum reversal you didn't anticipate), and the second got caught in a 6-minute EOD forced liquidation at ₹291 loss, suggesting the strategy was entering shorts into late-session volatility when conviction was weakening. The pattern screaming for attention tomorrow is **Supertrend SHORT bias during trending regimes**—you're forcing bearish puts when your own trend_score says 7.0 (bullish lean), and your entry RSI values (35–46) suggest oversold bounces rather than continuation shorts, so consider flipping to calls or sitting out when Supertrend SHORT conflicts with a positive regime score.",
-  "generated_at": "2026-06-08T21:35:04.747599"
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 2865.0,
+      "gross_win": 2865.0,
+      "gross_loss": 0.0,
+      "avg_hold": 98.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -466.0,
+      "gross_win": 0.0,
+      "gross_loss": -466.0,
+      "avg_hold": 58.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -466.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 2865.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -291.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0
+    }
+  ],
+  "stats": {
+    "avg_win": 2865.0,
+    "avg_loss": -378.0,
+    "profit_factor": 3.78,
+    "expectancy": 703.0,
+    "avg_hold_win": 98.0,
+    "avg_hold_loss": 32.0,
+    "avg_r": 0.36,
+    "max_win_streak": 1,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# Post-Market Debrief — June 8, 2026\n\nToday was a net positive day (+₹2,108) despite a weak 33% win rate, but the month remains underwater at -₹4,566—a warning sign that daily wins aren't translating into consistent edge. The OI velocity strategy delivered the heavy lifting: a Nifty PE trade entered at 100 with a 1.63R gain that hit target in 98 minutes, netting ₹2,865 on clean confluence signals (C9 score, RSI 37, CE OI unwind confirmation). That single trade masked what was otherwise a frustrating session for supertrend_follow, which lost twice: once via a SMART_EXIT that cost ₹466 when 5m Supertrend flipped bullish mid-trade, and again in the final 6 minutes with an EOD auto-close loss of ₹291 on another Sensex PE. Both supertrend trades entered with identical high confluence (C9) and trend scores (7.0) but failed to respect the regime shift—you're chasing mean reversion on puts in a trending market rather than following structure. For tomorrow: tighten supertrend entry logic to require RSI > 50 on the 5m timeframe before shorting puts, or reduce position size on that strategy until you can clarify why the same signal quality generates opposite outcomes within hours.",
+  "generated_at": "2026-06-08T21:52:44.032013"
 }
