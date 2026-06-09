@@ -1,0 +1,302 @@
+{
+  "date": "2026-06-09",
+  "trades": [
+    {
+      "placed_at": "2026-06-09T10:05:09.889023",
+      "closed_at": "2026-06-09T10:24:20.536637",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 73700,
+      "entry_price": 464.0,
+      "exit_price": 427.9,
+      "sl_price": 324.8,
+      "target_price": 672.8,
+      "lot_size": 1,
+      "pnl": -782.0,
+      "status": "SMART_EXIT",
+      "reason": "[C1] PE OI unwind: d1=-1.96% d2=-1.96% | PE LTP +1.1% (put writers covering — bullish) [C1/10] → SMART_EXIT: 5m Supertrend SHORT + RSI 46 — exit losing CE",
+      "hold_minutes": 19,
+      "high_price": 469.9,
+      "low_price": 427.9,
+      "r_multiple": -0.28,
+      "confluence": 1,
+      "trend_score_entry": 13.0,
+      "rsi_entry": 37.1,
+      "regime": "trending",
+      "strategy": "oi_velocity"
+    },
+    {
+      "placed_at": "2026-06-09T11:46:35.989767",
+      "closed_at": "2026-06-09T12:06:16.467385",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23150,
+      "entry_price": 67.25,
+      "exit_price": 60.85,
+      "sl_price": 47.05,
+      "target_price": 97.55,
+      "lot_size": 1,
+      "pnl": -476.0,
+      "status": "SMART_EXIT",
+      "reason": "[C2] PE OI unwind: d1=-26.09% d2=-26.09% | PE LTP +35.8% (put writers covering — bullish) [C2/10] → SMART_EXIT: Daily Supertrend SHORT — exit CE",
+      "hold_minutes": 19,
+      "high_price": 78.0,
+      "low_price": 55.5,
+      "r_multiple": -0.36,
+      "confluence": 2,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 36.8,
+      "regime": "ranging",
+      "strategy": "oi_velocity"
+    },
+    {
+      "placed_at": "2026-06-09T12:22:34.231798",
+      "closed_at": "2026-06-09T12:51:19.477312",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 73700,
+      "entry_price": 473.05,
+      "exit_price": 436.8,
+      "sl_price": 331.15,
+      "target_price": 685.95,
+      "lot_size": 1,
+      "pnl": -785.0,
+      "status": "SMART_EXIT",
+      "reason": "[C1] PE OI unwind: d1=-7.74% d2=-7.74% | PE LTP +10.8% (put writers covering — bullish) [C1/10] → SMART_EXIT: Daily Supertrend SHORT — exit CE",
+      "hold_minutes": 28,
+      "high_price": 499.0,
+      "low_price": 436.8,
+      "r_multiple": -0.28,
+      "confluence": 1,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 36.5,
+      "regime": "trending",
+      "strategy": "oi_velocity"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-09T10:05:10.101077",
+      "closed_at": "2026-06-09T10:24:33.061074",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 73700,
+      "entry_price": 409.45,
+      "exit_price": 443.25,
+      "sl_price": 286.65,
+      "target_price": 593.75,
+      "lot_size": 1,
+      "pnl": 676.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|43d9679b",
+      "hold_minutes": 19,
+      "strategy": "oi_velocity"
+    },
+    {
+      "placed_at": "2026-06-09T11:46:36.564182",
+      "closed_at": "2026-06-09T12:06:16.531487",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23150,
+      "entry_price": 29.8,
+      "exit_price": 28.65,
+      "sl_price": 20.9,
+      "target_price": 44.8,
+      "lot_size": 1,
+      "pnl": -74.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|7a14b5f3",
+      "hold_minutes": 19,
+      "strategy": "oi_velocity"
+    },
+    {
+      "placed_at": "2026-06-09T12:22:34.924249",
+      "closed_at": "2026-06-09T12:51:19.721693",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 73700,
+      "entry_price": 371.4,
+      "exit_price": 379.95,
+      "sl_price": 260.0,
+      "target_price": 538.5,
+      "lot_size": 1,
+      "pnl": 171.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|5cf47b78",
+      "hold_minutes": 28,
+      "strategy": "oi_velocity"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "oi_velocity",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "pnl": -2043.0,
+      "gross_win": 0.0,
+      "gross_loss": -2043.0,
+      "avg_r": -0.31,
+      "avg_hold": 22.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 3,
+      "total_pnl": -2043.0,
+      "avg_pnl": -681.0
+    }
+  ],
+  "mtd": {
+    "pnl": -6609.0,
+    "trades": 174,
+    "wins": 107,
+    "losses": 67
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2043.0,
+      "cumulative": -6609.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2043.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -476.0,
+      "gross_win": 0.0,
+      "gross_loss": -476.0,
+      "avg_hold": 19.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1567.0,
+      "gross_win": 0.0,
+      "gross_loss": -1567.0,
+      "avg_hold": 24.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -782.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -476.0
+    },
+    {
+      "bucket": "12:00-13:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -785.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2043.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -681.0,
+    "profit_factor": 0.0,
+    "expectancy": -681.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 22.0,
+    "avg_r": -0.31,
+    "max_win_streak": 0,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_analysis": "# Post-Market Debrief – June 9, 2026\n\nToday was a complete washout: 0 wins across 3 trades, a ₹2,043 loss, and a month-to-date drawdown now sitting at ₹6,609. The OI velocity strategy fired on all cylinders mechanically, but the market environment punished every entry. All three trades were Call sells that got stopped out via SMART_EXIT within 19–28 minutes—the bot correctly identified deteriorating setups (PE OI unwinding, Supertrend reversals) but had already entered on the wrong side of momentum. The best \"trade\" was the NIFTY 23150 CE short at 67.25, which fell to 60.85 for a −₹476 loss; the worst was a repeat short on SENSEX 73700 CE at 473.05 that bled ₹785 as put writers covered and the index rallied into your position. The critical pattern: you entered three Call shorts into a backdrop where put writers were covering (bullish signal), yet the entry logic still flagged these as tradeable despite RSI readings in the 36–37 zone and low confluence scores (1–2/10). Tomorrow, add a hard filter: if put OI is unwinding *and* PE LTP is climbing more than +10%, skip Call sells entirely—that's not a signal to fade, it's confirmation the bias has flipped. The regime tags (ranging vs. trending) aren't stopping you from entering losers, so consider them decision gates, not just labels.",
+  "generated_at": "2026-06-09T05:05:13.709476"
+}
