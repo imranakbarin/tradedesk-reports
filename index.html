@@ -15,12 +15,14 @@ body{background:#0f172a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFo
 .nav-btn{background:#1e293b;color:#94a3b8;border:1px solid #334155;border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer}
 .nav-btn:hover:not(:disabled){border-color:#6366f1;color:#e2e8f0}
 .nav-btn:disabled{opacity:0.3;cursor:default}
-main{max-width:1080px;margin:0 auto;padding:24px 28px}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px;margin-bottom:22px}
+main{max-width:1100px;margin:0 auto;padding:24px 28px}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(148px,1fr));gap:14px;margin-bottom:22px}
 .sc{background:#1e293b;border-radius:10px;padding:16px}
 .sc .lbl{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
 .sc .val{font-size:24px;font-weight:700;margin-top:5px}
 .sc .sub{font-size:12px;color:#94a3b8;margin-top:3px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+@media(max-width:700px){.two-col{grid-template-columns:1fr}}
 .hi-row{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:20px}
 .hi-card{flex:1;min-width:190px;background:#1e293b;border-radius:10px;padding:15px}
 .hi-label{font-size:11px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
@@ -31,17 +33,32 @@ main{max-width:1080px;margin:0 auto;padding:24px 28px}
 .ai-text{font-size:14px;line-height:1.8;color:#cbd5e1}
 .sec{background:#1e293b;border-radius:10px;padding:18px;margin-bottom:18px}
 .sec h2{font-size:12px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:14px}
+.contra-sec{border-left:3px solid #f59e0b}
+.contra-sec h2{color:#f59e0b}
 table{width:100%;border-collapse:collapse;font-size:13px}
 th{text-align:left;padding:7px 10px;color:#475569;font-weight:500;border-bottom:1px solid #334155;font-size:11px;text-transform:uppercase}
 td{padding:7px 10px;border-bottom:1px solid #263044}
 tr:last-child td{border-bottom:none}
 tr:hover td{background:#1e3a5f22}
 .c{text-align:center}.r{text-align:right}.muted{color:#64748b}
-.green{color:#22c55e}.red{color:#ef4444}
-.empty{padding:48px;text-align:center;color:#475569;font-size:15px}
+.green{color:#22c55e}.red{color:#ef4444}.amber{color:#f59e0b}
+/* bar chart */
+.bar-wrap{display:flex;flex-direction:column;gap:6px}
+.bar-row{display:flex;align-items:center;gap:10px;font-size:12px}
+.bar-day{width:80px;color:#94a3b8;flex-shrink:0;font-size:11px}
+.bar-track{flex:1;background:#0f172a;border-radius:3px;height:18px;position:relative;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px;transition:width .3s}
+.bar-fill.pos{background:#166534}
+.bar-fill.neg{background:#7f1d1d}
+.bar-val{width:80px;text-align:right;flex-shrink:0;font-weight:600;font-size:12px}
+.bar-wr{width:38px;text-align:right;flex-shrink:0;color:#64748b;font-size:11px}
+.bar-label{display:flex;align-items:center;gap:10px;font-size:10px;color:#475569;margin-bottom:4px}
+.bar-label .bar-day{color:#475569}
 #loading{display:none;padding:80px;text-align:center;color:#475569;font-size:15px}
 #error-msg{display:none;padding:40px;text-align:center;color:#ef4444;font-size:14px}
 .footer{text-align:center;color:#334155;font-size:11px;margin-top:28px;padding-bottom:24px}
+.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:4px;font-weight:600;margin-left:6px;vertical-align:middle}
+.badge-amber{background:#451a03;color:#f59e0b}
 </style>
 </head>
 <body>
@@ -72,25 +89,21 @@ function pnlColor(v) { return (v || 0) >= 0 ? '#22c55e' : '#ef4444'; }
 async function init() {
   try {
     const r = await fetch('data/dates.json?_=' + Date.now());
-    if (!r.ok) throw new Error('dates.json not found');
+    if (!r.ok) throw new Error('No reports available yet.');
     dates = await r.json();
   } catch(e) {
     document.getElementById('error-msg').style.display = 'block';
-    document.getElementById('error-msg').textContent = 'No reports available yet.';
+    document.getElementById('error-msg').textContent = e.message;
     return;
   }
-
   const picker = document.getElementById('date-picker');
-  dates.forEach((d, i) => {
+  dates.forEach(d => {
     const opt = document.createElement('option');
-    opt.value = d;
-    opt.textContent = d;
+    opt.value = d; opt.textContent = d;
     picker.appendChild(opt);
   });
-
-  // pick from URL hash or latest
-  const hash = location.hash.replace('#', '');
-  currentIdx = hash && dates.includes(hash) ? dates.indexOf(hash) : 0;
+  const hash = location.hash.replace('#','');
+  currentIdx = (hash && dates.includes(hash)) ? dates.indexOf(hash) : 0;
   picker.value = dates[currentIdx];
   loadReport(dates[currentIdx]);
 }
@@ -99,20 +112,18 @@ function navigate(dir) {
   const next = currentIdx + dir;
   if (next < 0 || next >= dates.length) return;
   currentIdx = next;
-  const d = dates[currentIdx];
-  document.getElementById('date-picker').value = d;
-  loadReport(d);
+  document.getElementById('date-picker').value = dates[currentIdx];
+  loadReport(dates[currentIdx]);
 }
 
 async function loadReport(date) {
   currentIdx = dates.indexOf(date);
   location.hash = date;
-  updateNavButtons();
-
+  document.getElementById('btn-prev').disabled = currentIdx >= dates.length - 1;
+  document.getElementById('btn-next').disabled = currentIdx <= 0;
   document.getElementById('loading').style.display = 'block';
   document.getElementById('report').innerHTML = '';
   document.getElementById('error-msg').style.display = 'none';
-
   try {
     const r = await fetch(`data/${date}.json?_=` + Date.now());
     if (!r.ok) throw new Error(`Report for ${date} not found`);
@@ -126,104 +137,111 @@ async function loadReport(date) {
   }
 }
 
-function updateNavButtons() {
-  document.getElementById('btn-prev').disabled = currentIdx >= dates.length - 1;
-  document.getElementById('btn-next').disabled = currentIdx <= 0;
+function barChart(rows, maxAbs) {
+  if (!rows || !rows.length) return '<div style="color:#475569;font-size:13px;padding:8px 0">No data</div>';
+  const cap = maxAbs || Math.max(...rows.map(r => Math.abs(r.pnl || 0)), 1);
+  const header = `<div class="bar-label"><span class="bar-day">Date</span><span style="flex:1;padding-left:4px">P&L</span><span class="bar-val"></span><span class="bar-wr">WR%</span></div>`;
+  const items = rows.map(r => {
+    const pnl = r.pnl || 0;
+    const pct = Math.min(Math.abs(pnl) / cap * 100, 100);
+    const wr = r.trades ? (r.wins / r.trades * 100).toFixed(0) : 0;
+    const cls = pnl >= 0 ? 'pos' : 'neg';
+    const col = pnl >= 0 ? '#22c55e' : '#ef4444';
+    return `<div class="bar-row">
+      <span class="bar-day">${r.day.substring(5)}</span>
+      <div class="bar-track"><div class="bar-fill ${cls}" style="width:${pct}%"></div></div>
+      <span class="bar-val" style="color:${col}">${signed(pnl)}</span>
+      <span class="bar-wr">${wr}%</span>
+    </div>`;
+  }).join('');
+  return header + `<div class="bar-wrap">${items}</div>`;
 }
 
 function renderReport(d) {
   const trades = d.trades || [];
-  const totalPnl = trades.reduce((s, t) => s + (t.pnl || 0), 0);
-  const wins = trades.filter(t => (t.pnl || 0) > 0).length;
+  const contra = d.contra_trades || [];
+  const totalPnl = trades.reduce((s,t) => s+(t.pnl||0), 0);
+  const wins = trades.filter(t=>(t.pnl||0)>0).length;
   const losses = trades.length - wins;
-  const wr = trades.length ? (wins / trades.length * 100).toFixed(1) : '0.0';
-  const best = trades.length ? trades.reduce((a, b) => (a.pnl||0) > (b.pnl||0) ? a : b) : null;
-  const worst = trades.length ? trades.reduce((a, b) => (a.pnl||0) < (b.pnl||0) ? a : b) : null;
-  const mtdPnl = (d.mtd || {}).pnl || 0;
-  const mtdTrades = (d.mtd || {}).trades || 0;
+  const wr = trades.length ? (wins/trades.length*100).toFixed(1) : '0.0';
+  const best = trades.length ? trades.reduce((a,b)=>(a.pnl||0)>(b.pnl||0)?a:b) : null;
+  const worst = trades.length ? trades.reduce((a,b)=>(a.pnl||0)<(b.pnl||0)?a:b) : null;
+  const mtd = d.mtd || {};
+  const mtdPnl = mtd.pnl || 0;
+  const mtdWr = mtd.trades ? ((mtd.wins||0)/mtd.trades*100).toFixed(1) : '0.0';
+
+  // 7-day totals
+  const wd = d.week_days || [];
+  const wPnl = wd.reduce((s,r)=>s+(r.pnl||0),0);
+  const wTrades = wd.reduce((s,r)=>s+(r.trades||0),0);
+  const wWins = wd.reduce((s,r)=>s+(r.wins||0),0);
+  const wWr = wTrades ? (wWins/wTrades*100).toFixed(1) : '0.0';
 
   // strategy rows
-  const sRows = (d.by_strategy || []).map(s => {
-    const swr = s.trades ? (s.wins / s.trades * 100).toFixed(1) : '0.0';
-    return `<tr>
-      <td>${s.strategy||''}</td>
-      <td class="c">${s.trades}</td>
-      <td class="c green">${s.wins}</td>
-      <td class="c red">${s.losses}</td>
-      <td class="c">${swr}%</td>
-      <td class="r" style="color:${pnlColor(s.pnl)};font-weight:600">${signed(s.pnl)}</td>
-    </tr>`;
-  }).join('') || `<tr><td colspan="6" class="empty" style="padding:16px">No strategy data</td></tr>`;
+  const sRows = (d.by_strategy||[]).map(s => {
+    const swr = s.trades ? (s.wins/s.trades*100).toFixed(1) : '0.0';
+    return `<tr><td>${s.strategy||''}</td><td class="c">${s.trades}</td><td class="c green">${s.wins}</td><td class="c red">${s.losses}</td><td class="c">${swr}%</td><td class="r" style="color:${pnlColor(s.pnl)};font-weight:600">${signed(s.pnl)}</td></tr>`;
+  }).join('') || `<tr><td colspan="6" style="color:#475569;padding:16px">No data</td></tr>`;
 
-  // exit reasons
-  const rRows = (d.reasons || []).map(r => `<tr>
-    <td>${r.status||''}</td>
-    <td class="c">${r.n}</td>
-    <td class="r" style="color:${pnlColor(r.total_pnl)}">${signed(r.total_pnl)}</td>
-    <td class="r">${signed(r.avg_pnl)}</td>
-  </tr>`).join('') || `<tr><td colspan="4" style="color:#475569;padding:16px">No exit data</td></tr>`;
+  // exit reason rows
+  const rRows = (d.reasons||[]).map(r =>
+    `<tr><td>${r.status||''}</td><td class="c">${r.n}</td><td class="r" style="color:${pnlColor(r.total_pnl)}">${signed(r.total_pnl)}</td><td class="r">${signed(r.avg_pnl)}</td></tr>`
+  ).join('') || `<tr><td colspan="4" style="color:#475569;padding:16px">No data</td></tr>`;
 
   // trade rows
-  const tRows = trades.map(t => {
-    const ep = t.exit_price != null ? t.exit_price.toFixed(0) : '—';
-    const hold = t.hold_minutes ? t.hold_minutes + 'm' : '—';
-    const reason = (t.reason || t.status || '').substring(0, 30);
-    return `<tr>
-      <td>${(t.placed_at||'').substring(11,16)}</td>
-      <td>${t.index_name} ${t.action} ${t.strike}</td>
-      <td style="font-size:11px">${(t.strategy||'').substring(0,22)}</td>
-      <td class="r">${(t.entry_price||0).toFixed(0)}</td>
-      <td class="r">${ep}</td>
-      <td class="r muted">${(t.sl_price||0).toFixed(0)}</td>
-      <td class="r muted">${(t.target_price||0).toFixed(0)}</td>
-      <td class="c">${hold}</td>
-      <td class="r" style="color:${pnlColor(t.pnl)};font-weight:600">${signed(t.pnl)}</td>
-      <td style="font-size:11px;color:#64748b">${reason}</td>
-    </tr>`;
-  }).join('') || `<tr><td colspan="10" style="color:#475569;padding:16px">No trades today</td></tr>`;
+  function tradeRows(list, cols) {
+    if (!list.length) return `<tr><td colspan="${cols}" style="color:#475569;padding:16px">None</td></tr>`;
+    return list.map(t => {
+      const ep = t.exit_price!=null ? t.exit_price.toFixed(0) : '—';
+      const hold = t.hold_minutes ? t.hold_minutes+'m' : '—';
+      const reason = (t.reason||t.status||'').substring(0,28);
+      return `<tr><td>${(t.placed_at||'').substring(11,16)}</td><td>${t.index_name} ${t.action} ${t.strike}</td><td style="font-size:11px">${(t.strategy||'').substring(0,20)}</td><td class="r">${(t.entry_price||0).toFixed(0)}</td><td class="r">${ep}</td><td class="r muted">${(t.sl_price||0).toFixed(0)}</td><td class="r muted">${(t.target_price||0).toFixed(0)}</td><td class="c">${hold}</td><td class="r" style="color:${pnlColor(t.pnl)};font-weight:600">${signed(t.pnl)}</td><td style="font-size:11px;color:#64748b">${reason}</td></tr>`;
+    }).join('');
+  }
 
-  const bestCard = best ? `
-    <div class="hi-card" style="border-left:3px solid #22c55e">
-      <div class="hi-label">Best Trade</div>
-      <div class="hi-val green">${signed(best.pnl)}</div>
-      <div class="hi-sub">${best.index_name} ${best.action} ${best.strike} &middot; ${best.strategy||''}</div>
-    </div>` : '';
+  const contraTotal = contra.reduce((s,t)=>s+(t.pnl||0),0);
+  const contraSection = `
+    <div class="sec contra-sec">
+      <h2>Contra Trades <span class="badge badge-amber">${contra.length}</span></h2>
+      ${contra.length ? `<div style="font-size:12px;color:#94a3b8;margin-bottom:10px">Net: <span style="color:${pnlColor(contraTotal)};font-weight:600">${signed(contraTotal)}</span></div>` : ''}
+      <table>
+        <thead><tr><th>Time</th><th>Symbol</th><th>Strategy</th><th class="r">Entry</th><th class="r">Exit</th><th class="r">SL</th><th class="r">Target</th><th class="c">Hold</th><th class="r">P&amp;L</th><th>Status</th></tr></thead>
+        <tbody>${tradeRows(contra, 10)}</tbody>
+      </table>
+    </div>`;
 
-  const worstCard = worst ? `
-    <div class="hi-card" style="border-left:3px solid #ef4444">
-      <div class="hi-label">Worst Trade</div>
-      <div class="hi-val red">${signed(worst.pnl)}</div>
-      <div class="hi-sub">${worst.index_name} ${worst.action} ${worst.strike} &middot; ${worst.strategy||''}</div>
-    </div>` : '';
+  const maxW = Math.max(...wd.map(r=>Math.abs(r.pnl||0)), 1);
+  const maxM = Math.max(...(d.monthly_days||[]).map(r=>Math.abs(r.pnl||0)), 1);
 
-  const aiText = (d.ai_analysis || 'No AI analysis available.')
-    .replace(/\n/g, '<br>');
+  const bestCard = best ? `<div class="hi-card" style="border-left:3px solid #22c55e"><div class="hi-label">Best Trade</div><div class="hi-val green">${signed(best.pnl)}</div><div class="hi-sub">${best.index_name} ${best.action} ${best.strike} &middot; ${best.strategy||''}</div></div>` : '';
+  const worstCard = worst ? `<div class="hi-card" style="border-left:3px solid #ef4444"><div class="hi-label">Worst Trade</div><div class="hi-val red">${signed(worst.pnl)}</div><div class="hi-sub">${worst.index_name} ${worst.action} ${worst.strike} &middot; ${worst.strategy||''}</div></div>` : '';
+
   const genTime = d.generated_at ? d.generated_at.substring(0,16).replace('T',' ') : '';
 
   document.getElementById('report').innerHTML = `
     <div class="stats">
-      <div class="sc">
-        <div class="lbl">Today P&amp;L</div>
-        <div class="val" style="color:${pnlColor(totalPnl)}">${signed(totalPnl)}</div>
-        <div class="sub">${trades.length} trades</div>
-      </div>
-      <div class="sc">
-        <div class="lbl">Win Rate</div>
-        <div class="val">${wr}%</div>
-        <div class="sub">${wins}W / ${losses}L</div>
-      </div>
-      <div class="sc">
-        <div class="lbl">MTD P&amp;L</div>
-        <div class="val" style="color:${pnlColor(mtdPnl)}">${signed(mtdPnl)}</div>
-        <div class="sub">${mtdTrades} trades this month</div>
-      </div>
+      <div class="sc"><div class="lbl">Today P&amp;L</div><div class="val" style="color:${pnlColor(totalPnl)}">${signed(totalPnl)}</div><div class="sub">${trades.length} trades</div></div>
+      <div class="sc"><div class="lbl">Win Rate</div><div class="val">${wr}%</div><div class="sub">${wins}W / ${losses}L</div></div>
+      <div class="sc"><div class="lbl">7-Day P&amp;L</div><div class="val" style="color:${pnlColor(wPnl)}">${signed(wPnl)}</div><div class="sub">${wTrades} trades · ${wWr}% WR</div></div>
+      <div class="sc"><div class="lbl">MTD P&amp;L</div><div class="val" style="color:${pnlColor(mtdPnl)}">${signed(mtdPnl)}</div><div class="sub">${mtd.trades||0} trades · ${mtdWr}% WR</div></div>
     </div>
 
     <div class="hi-row">${bestCard}${worstCard}</div>
 
     <div class="ai-box">
       <h2>AI Analysis &middot; Claude Haiku</h2>
-      <div class="ai-text">${aiText}</div>
+      <div class="ai-text">${(d.ai_analysis||'No analysis.').replace(/\n/g,'<br>')}</div>
+    </div>
+
+    <div class="two-col">
+      <div class="sec">
+        <h2>Last 7 Days</h2>
+        ${barChart(wd, maxW)}
+      </div>
+      <div class="sec">
+        <h2>This Month</h2>
+        ${barChart(d.monthly_days, maxM)}
+      </div>
     </div>
 
     <div class="sec">
@@ -246,9 +264,11 @@ function renderReport(d) {
       <h2>All Trades</h2>
       <table>
         <thead><tr><th>Time</th><th>Symbol</th><th>Strategy</th><th class="r">Entry</th><th class="r">Exit</th><th class="r">SL</th><th class="r">Target</th><th class="c">Hold</th><th class="r">P&amp;L</th><th>Reason</th></tr></thead>
-        <tbody>${tRows}</tbody>
+        <tbody>${tradeRows(trades, 10)}</tbody>
       </table>
     </div>
+
+    ${contraSection}
 
     <div class="footer">Generated ${genTime} local &middot; imranakbarin.github.io/tradedesk-reports</div>
   `;
