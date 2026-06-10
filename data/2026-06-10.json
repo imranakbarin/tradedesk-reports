@@ -1,0 +1,253 @@
+{
+  "date": "2026-06-10",
+  "trades": [
+    {
+      "placed_at": "2026-06-10T10:02:32.747704",
+      "closed_at": "2026-06-10T10:15:14.007790",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23350,
+      "entry_price": 199.35,
+      "exit_price": 174.55,
+      "sl_price": 174.55,
+      "target_price": 238.35,
+      "lot_size": 1,
+      "pnl": -1672.0,
+      "status": "SL_HIT",
+      "reason": "[C4] Inside-bar breakout — 5m close above OR high 23,349 (first 3 candles) [C4/10] → SL_HIT: SL ₹174.55 hit (trail=False)",
+      "hold_minutes": 12,
+      "high_price": 199.35,
+      "low_price": 184.7,
+      "r_multiple": -1.04,
+      "confluence": 4,
+      "trend_score_entry": 20.0,
+      "rsi_entry": 43.1,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-06-10T10:45:24.641577",
+      "closed_at": "2026-06-10T09:46:06.399522",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23350,
+      "entry_price": 188.1,
+      "exit_price": 211.8,
+      "sl_price": 188.1,
+      "target_price": 225.3,
+      "lot_size": 1,
+      "pnl": 1480.5,
+      "status": "STARTUP_SQUARE_OFF",
+      "reason": "[C2] Morning Star — opened below prev, closed above 23,255 [C2/10]",
+      "hold_minutes": null,
+      "high_price": 224.1,
+      "low_price": 185.25,
+      "r_multiple": null,
+      "confluence": 2,
+      "trend_score_entry": 20.0,
+      "rsi_entry": 41.8,
+      "regime": "ranging",
+      "strategy": "candle_pattern"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-10T10:02:33.185330",
+      "closed_at": "2026-06-10T10:15:14.090579",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23350,
+      "entry_price": 177.3,
+      "exit_price": 193.55,
+      "sl_price": 169.3,
+      "target_price": 192.3,
+      "lot_size": 1,
+      "pnl": 1056.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|aec57ee4",
+      "hold_minutes": 12,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-06-10T10:45:24.932274",
+      "closed_at": null,
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23350,
+      "entry_price": 176.6,
+      "exit_price": null,
+      "sl_price": 168.6,
+      "target_price": 191.6,
+      "lot_size": 1,
+      "pnl": -1352.0,
+      "status": "CONTRA_OPEN",
+      "reason": "CONTRA|e1f3b5fb",
+      "hold_minutes": null,
+      "strategy": "candle_pattern"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -1672.0,
+      "gross_win": 0.0,
+      "gross_loss": -1672.0,
+      "avg_r": -1.04,
+      "avg_hold": 12.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "STARTUP_SQUARE_OFF",
+      "n": 1,
+      "total_pnl": 1481.0,
+      "avg_pnl": 1481.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -1672.0,
+      "avg_pnl": -1672.0
+    }
+  ],
+  "mtd": {
+    "pnl": -7194.0,
+    "trades": 177,
+    "wins": 108,
+    "losses": 69
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1672.0,
+      "gross_win": 0.0,
+      "gross_loss": -1672.0,
+      "avg_hold": 12.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1480.0,
+    "avg_loss": -1672.0,
+    "profit_factor": 0.89,
+    "expectancy": -96.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 12.0,
+    "avg_r": -1.04,
+    "max_win_streak": 1,
+    "max_loss_streak": 1,
+    "current_streak": 1
+  },
+  "ai_analysis": "# Post-Market Debrief — June 10, 2026\n\nToday was a net loser despite a 50% win rate: you took home ₹192 in losses on two trades, pushing the month deeper into the red at ₹7,194 down. Your winning trade (Morning Star on NIFTY 23350 CE) delivered ₹1,481 profit by exiting at ₹211.80 after entering at ₹188.10 in a ranging regime—clean execution with low confluence (2/10) that proved reliable. The losing trade, however, cost ₹1,672 when your Inside-Bar Breakout setup (C4 confluence, 4/10) got stopped out in 12 minutes at ₹174.55; you entered at ₹199.35 into a trending regime with RSI at 43, which created weakness right into your stop level. The real issue isn't the patterns themselves but regime mismatch: your best trade triggered in *ranging* conditions while your worst played out in *trending* conditions where inside-bar breakouts are fragile. Tomorrow, tighten entry discipline on trending setups—either wait for RSI confirmation above 50 or reduce lot size on C4 patterns until you prove they work in momentum markets.",
+  "generated_at": "2026-06-10T09:55:23.234957"
+}
