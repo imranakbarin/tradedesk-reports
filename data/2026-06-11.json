@@ -1,0 +1,338 @@
+{
+  "date": "2026-06-11",
+  "trades": [
+    {
+      "placed_at": "2026-06-11T10:15:04.909834",
+      "closed_at": "2026-06-11T10:16:47.566646",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 73900,
+      "entry_price": 259.0,
+      "exit_price": 224.5,
+      "sl_price": 224.5,
+      "target_price": 310.8,
+      "lot_size": 1,
+      "pnl": -750.0,
+      "status": "SL_HIT",
+      "reason": "[C9] Supertrend SHORT + PUT (HIGH) [C9/10] → SL_HIT: SL ₹224.50 hit (trail=False)",
+      "hold_minutes": 1,
+      "high_price": 259.0,
+      "low_price": 251.55,
+      "r_multiple": -1.09,
+      "confluence": 9,
+      "trend_score_entry": 13.0,
+      "rsi_entry": 37.9,
+      "regime": "trending",
+      "strategy": "supertrend_follow"
+    },
+    {
+      "placed_at": "2026-06-11T10:18:47.516449",
+      "closed_at": "2026-06-11T10:41:17.484938",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23200,
+      "entry_price": 172.05,
+      "exit_price": 155.2,
+      "sl_price": 110.15,
+      "target_price": 309.65,
+      "lot_size": 1,
+      "pnl": -1155.25,
+      "status": "SMART_EXIT",
+      "reason": "[C9] False breakout near day high 23173: CE LTP +1.80% but OI flat (-1.019%), PE OI building (0.634%) — institutional trap [C9/10] → SMART_EXIT: 5m Supertrend LONG + RSI 54 — exit losing PE",
+      "hold_minutes": 22,
+      "high_price": 172.05,
+      "low_price": 155.2,
+      "r_multiple": -0.29,
+      "confluence": 9,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 37.9,
+      "regime": "ranging",
+      "strategy": "smart_money_divergence"
+    },
+    {
+      "placed_at": "2026-06-11T13:26:39.133649",
+      "closed_at": "2026-06-11T13:33:34.734859",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23250,
+      "entry_price": 160.2,
+      "exit_price": 138.8,
+      "sl_price": 138.8,
+      "target_price": 192.2,
+      "lot_size": 1,
+      "pnl": -1451.0,
+      "status": "SL_HIT",
+      "reason": "[C9] 15m Supertrend flipped SHORT (trend 20) — trend-aligned intraday entry [C9/10] → SL_HIT: SL ₹138.80 hit (trail=False)",
+      "hold_minutes": 6,
+      "high_price": 160.2,
+      "low_price": 142.15,
+      "r_multiple": -1.04,
+      "confluence": 9,
+      "trend_score_entry": 20.0,
+      "rsi_entry": 40.2,
+      "regime": "trending",
+      "strategy": "supertrend_pure"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-11T10:15:06.007645",
+      "closed_at": "2026-06-11T10:16:47.661455",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 73700,
+      "entry_price": 191.25,
+      "exit_price": 232.6,
+      "sl_price": 183.25,
+      "target_price": 206.25,
+      "lot_size": 1,
+      "pnl": 827.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|79d89624",
+      "hold_minutes": 1,
+      "strategy": "supertrend_follow"
+    },
+    {
+      "placed_at": "2026-06-11T10:18:49.192765",
+      "closed_at": "2026-06-11T10:41:17.670360",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23100,
+      "entry_price": 197.15,
+      "exit_price": 222.85,
+      "sl_price": 118.25,
+      "target_price": 354.85,
+      "lot_size": 1,
+      "pnl": 1670.5,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|07c581d4",
+      "hold_minutes": 22,
+      "strategy": "smart_money_divergence"
+    },
+    {
+      "placed_at": "2026-06-11T13:26:39.416992",
+      "closed_at": "2026-06-11T13:33:47.590001",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23150,
+      "entry_price": 203.3,
+      "exit_price": 225.0,
+      "sl_price": 195.3,
+      "target_price": 218.3,
+      "lot_size": 1,
+      "pnl": 1410.5,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|2dab98b9",
+      "hold_minutes": 6,
+      "strategy": "supertrend_pure"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "supertrend_follow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -750.0,
+      "gross_win": 0.0,
+      "gross_loss": -750.0,
+      "avg_r": -1.09,
+      "avg_hold": 1.0
+    },
+    {
+      "strategy": "smart_money_divergence",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -1155.0,
+      "gross_win": 0.0,
+      "gross_loss": -1155.0,
+      "avg_r": -0.29,
+      "avg_hold": 22.0
+    },
+    {
+      "strategy": "supertrend_pure",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -1451.0,
+      "gross_win": 0.0,
+      "gross_loss": -1451.0,
+      "avg_r": -1.04,
+      "avg_hold": 6.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -1155.0,
+      "avg_pnl": -1155.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 2,
+      "total_pnl": -2201.0,
+      "avg_pnl": -1101.0
+    }
+  ],
+  "mtd": {
+    "pnl": -10550.0,
+    "trades": 180,
+    "wins": 108,
+    "losses": 72
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -10550.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -750.0,
+      "gross_win": 0.0,
+      "gross_loss": -750.0,
+      "avg_hold": 1.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2606.0,
+      "gross_win": 0.0,
+      "gross_loss": -2606.0,
+      "avg_hold": 14.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1905.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1451.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -1119.0,
+    "profit_factor": 0.0,
+    "expectancy": -1119.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 10.0,
+    "avg_r": -0.81,
+    "max_win_streak": 0,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_analysis": "# Post-Market Debrief — June 11, 2026\n\nToday was a complete washout: zero wins across three trades, a ₹3,356 loss, and now sitting ₹10,550 underwater for the month. All three strategies—supertrend_follow, smart_money_divergence, and supertrend_pure—failed to generate a single profitable trade, with two stops hit cleanly and one smart exit that still cost ₹1,155. The 0% win rate combined with an average R-multiple near -0.8 signals the bot is entering choppy, counter-trend conditions where mechanical signals are getting hunted.\n\nThe \"best\" trade (SENSEX PE, -₹750, 1-minute hold) wasn't actually good—it just lost less than the others. The supertrend_follow caught a signal with 9 confluence points and a 13.0 trend score, but the market reversed immediately; this suggests the trend framework itself may be lagging or the entry timeframe (1-minute execution) is too tight for options premium capture. The worst trade (NIFTY PE, -₹1,451, 6-minute hold) had even stronger setup metrics (trend score 20, confluence 9, RSI 40), yet still stopped out hard, indicating that higher confidence levels are providing false reassurance rather than edge in the current regime.\n\nThe real pattern killing the account is regime mismatch: two trades labeled \"trending\" and one \"ranging,\" but all three moved immediately against entry direction. The smart_money_divergence trade correctly identified an institutional trap (false breakout, PE OI building), which shows the bot can recognize manipulation, but exiting a losing position at -0.29R instead of holding through a larger stop suggests the exit logic may be too eager and is locking in losses prematurely. \n\n**For tomorrow: disable or reduce lot size on all supertrend strategies until the regime stabilizes—the bot is showing 0-win streaks across multiple setups, which means the market environment has shifted and mechanical mean-reversion signals are getting frontrun.** Watch for at least two consecutive wins with 0.5+ R-multiples before re-upping position size, and consider widening stops by 20% on trend-following entries to avoid hair-trigger SL hits on minor noise.",
+  "generated_at": "2026-06-11T05:05:20.180789"
+}
