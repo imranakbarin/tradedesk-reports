@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Scanner / Selling — Daily Reports</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f172a;color:#e2e8f0;font-family:-apple-system,'Segoe UI',Roboto,sans-serif;min-height:100vh}
+.top{background:#0f172a;border-bottom:1px solid #1e293b;padding:14px 24px;display:flex;align-items:center;gap:14px;position:sticky;top:0;z-index:10}
+.top h1{font-size:16px;font-weight:700;color:#f8fafc;flex:1}
+select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;border-radius:8px;padding:7px 12px;font-size:14px;cursor:pointer}
+main{max-width:1080px;margin:0 auto;padding:20px}
+.head{background:#15203a;border:1px solid #243049;border-radius:10px;padding:14px 16px;margin-bottom:16px;font-size:14px;line-height:1.5;color:#cbd5e1}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin-bottom:20px}
+.sc{background:#1e293b;border-radius:10px;padding:13px 15px}
+.sc .lbl{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+.sc .val{font-size:21px;font-weight:700;margin-top:4px}
+h2{font-size:13px;color:#94a3b8;text-transform:uppercase;letter-spacing:.05em;margin:18px 0 8px}
+table{width:100%;border-collapse:collapse;font-size:12.5px;background:#1e293b;border-radius:10px;overflow:hidden}
+th,td{padding:8px 11px;text-align:left;border-bottom:1px solid #243049}
+th{color:#64748b;font-size:10px;text-transform:uppercase;letter-spacing:.05em}
+tr:last-child td{border-bottom:0}
+.g{color:#34d399}.r{color:#f87171}.m{color:#64748b}
+.empty{color:#64748b;padding:18px;text-align:center}
+</style></head><body>
+<div class="top"><h1>TradeDesk — Scanner / Selling</h1><select id="d" onchange="load(this.value)"></select></div>
+<main id="m"><div class="empty">Loading…</div></main>
+<script>
+const $=s=>document.querySelector(s);
+const pc=(v,u)=>{if(v==null||v==='')return'—';const n=+v,c=n>0?'g':(n<0?'r':'m');return `<span class="${c}">${n>0?'+':''}${u==='Rs'?'₹':''}${v}${u==='%'?'%':''}</span>`};
+function sc(l,v){return `<div class="sc"><div class="lbl">${l}</div><div class="val">${v}</div></div>`}
+function tbl(rows,cols){if(!rows||!rows.length)return '<div class="empty">None.</div>';
+  return `<table><tr>${cols.map(c=>`<th>${c.h}</th>`).join('')}</tr>`+
+    rows.map(r=>`<tr>${cols.map(c=>`<td>${c.f(r)}</td>`).join('')}</tr>`).join('')+`</table>`}
+async function load(date){
+  const d=await fetch('scanner/data/'+date+'.json').then(r=>r.json());
+  const rb=d.recorded_buys||{},rs=d.recorded_sells||{},sg=d.signals||{},se=d.selling||{},co=d.correlation||{};
+  let h=`<div class="head"><b>${d.date}</b> · ${d.headline||''}<div class="m" style="font-size:11px;margin-top:6px">generated ${d.generated_at||''}</div></div>`;
+  h+=`<div class="stats">
+    ${sc('Recorded buys',(rb.summary||{}).n+' · '+(rb.summary||{}).win_rate+'%')}
+    ${sc('Recorded sells',(rs.summary||{}).n+' · ₹'+(rs.summary||{}).total)}
+    ${sc('Selling net','₹'+(se.summary||{}).total)}
+    ${sc('NIFTY selling','₹'+((se.nifty||{}).total))}
+    ${sc('Buy↔Sell corr',(co.pearson!=null?co.pearson:'—'))}
+  </div>`;
+  h+=`<h2>Your recorded buy trades</h2>`+tbl(rb.rows,[
+    {h:'Name',f:r=>r.name||r.symbol},{h:'Setup',f:r=>r.strike||''},{h:'Entry',f:r=>r.entry_premium||'—'},
+    {h:'SL',f:r=>`<span class="r">${r.premium_sl||'—'}</span>`},{h:'Target',f:r=>`<span class="g">${r.premium_target||'—'}</span>`},
+    {h:'Exit',f:r=>r.exit_premium||'—'},{h:'P&L',f:r=>pc(r.pnl_pct,'%')},{h:'Status',f:r=>r.outcome||r.status}]);
+  h+=`<h2>Your recorded sells</h2>`+tbl(rs.rows,[
+    {h:'Name',f:r=>r.name||r.symbol},{h:'Playbook',f:r=>r.playbook},{h:'Credit',f:r=>r.net_credit||'—'},
+    {h:'P&L',f:r=>pc(r.pnl,'Rs')},{h:'Status',f:r=>r.outcome||r.status}]);
+  h+=`<h2>All signals (auto-logged)</h2>`+tbl(sg.rows,[
+    {h:'Name',f:r=>r.name||r.symbol},{h:'Strike',f:r=>(r.strike||'')+' '+(r.side||'')},{h:'Entry',f:r=>r.entry_premium||'—'},
+    {h:'SL',f:r=>r.premium_sl||'—'},{h:'Target',f:r=>r.premium_target||'—'},{h:'Outcome',f:r=>r.outcome||r.status},{h:'P&L',f:r=>pc(r.pnl_pct,'%')}]);
+  h+=`<h2>Selling structures (auto-logged)</h2>`+tbl(se.rows,[
+    {h:'Name',f:r=>r.name||r.symbol},{h:'Playbook',f:r=>r.playbook},{h:'Credit',f:r=>r.net_credit||'—'},
+    {h:'Max loss',f:r=>r.max_loss||'—'},{h:'P&L',f:r=>pc(r.pnl,'Rs')},{h:'Outcome',f:r=>r.outcome||r.status}]);
+  $('#m').innerHTML=h;
+}
+(async()=>{
+  const dates=await fetch('scanner/data/dates.json').then(r=>r.json()).catch(()=>[]);
+  if(!dates.length){$('#m').innerHTML='<div class="empty">No reports yet.</div>';return;}
+  $('#d').innerHTML=dates.map(x=>`<option value="${x}">${x}</option>`).join('');
+  load(dates[0]);
+})();
+</script></body></html>
