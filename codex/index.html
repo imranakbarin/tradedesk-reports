@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Codex Post-Market Reports</title>
+<style>
+:root {
+  --bg: #f5f7fb;
+  --ink: #111827;
+  --muted: #52627a;
+  --line: #dbe3ef;
+  --panel: #ffffff;
+  --good: #047857;
+  --bad: #dc2626;
+  --blue: #1d4ed8;
+  --amber: #b45309;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, Segoe UI, Arial, sans-serif; color: var(--ink); background: var(--bg); }
+header { padding: 26px 32px 18px; background: #111827; color: white; }
+header h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+header p { margin: 0; color: #cbd5e1; }
+main { padding: 22px 32px 40px; display: grid; gap: 18px; }
+.banner { border-left: 5px solid var(--blue); background: #eff6ff; padding: 13px 16px; border-radius: 8px; color: #1e3a8a; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); overflow: hidden; }
+.wide { overflow-x: auto; }
+h2 { margin: 0 0 12px; font-size: 17px; }
+.kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.kpi { border: 1px solid var(--line); border-radius: 8px; padding: 11px; min-height: 86px; }
+.kpi span, .kpi small { display: block; color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.kpi strong { display: block; margin: 8px 0 5px; font-size: 21px; }
+.good { color: var(--good); }
+.bad { color: var(--bad); }
+.flat { color: var(--muted); }
+ul { margin: 0; padding-left: 18px; }
+li { margin: 8px 0; line-height: 1.42; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 9px 10px; white-space: nowrap; }
+th { color: var(--muted); font-size: 11px; text-transform: uppercase; }
+svg { width: 100%; height: auto; display: block; }
+.chartTitle { font-size: 15px; font-weight: 800; fill: var(--ink); }
+.axis { stroke: #94a3b8; stroke-width: 1; }
+.barPos { fill: #059669; }
+.barNeg { fill: #ef4444; }
+.xLabel, .yLabel { fill: var(--muted); font-size: 11px; }
+.hbarRow { display: grid; grid-template-columns: 145px 1fr 95px; align-items: center; gap: 10px; margin: 10px 0; font-size: 13px; }
+.hbarTrack { height: 10px; background: #e5eaf2; border-radius: 999px; overflow: hidden; }
+.hbarTrack i { display: block; height: 100%; background: var(--muted); }
+.hbarTrack i.good { background: var(--good); }
+.hbarTrack i.bad { background: var(--bad); }
+.muted { color: var(--muted); }
+footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
+@media (max-width: 980px) {
+  header, main, footer { padding-left: 16px; padding-right: 16px; }
+  .grid, .two { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: 1fr; }
+}
+
+.toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.toolbar label { display: grid; gap: 5px; color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; }
+.toolbar select { min-width: 170px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 14px; background: white; color: var(--ink); }
+.segmented { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.segmented button { border: 0; border-right: 1px solid var(--line); background: white; padding: 11px 16px; cursor: pointer; font-weight: 800; color: var(--muted); }
+.segmented button:last-child { border-right: 0; }
+.segmented button.active { background: #eff6ff; color: var(--blue); }
+.openLink { color: var(--blue); font-weight: 800; text-decoration: none; margin-left: auto; }
+.viewer { min-height: 70vh; padding: 0; }
+.viewer iframe { display: block; width: 100%; height: 78vh; border: 0; background: white; }
+@media (max-width: 760px) {
+  .toolbar { align-items: stretch; }
+  .openLink { margin-left: 0; }
+  .segmented, .toolbar label, .openLink { width: 100%; }
+  .segmented button { flex: 1; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Codex Post-Market Reports</h1>
+  <p>Final post-market report set. Generated 2026-06-16 02:12:05 IST.</p>
+</header>
+<main>
+  <div class="banner">Public folder: https://imranakbarin.github.io/tradedesk-reports/codex/</div>
+  <section class="panel toolbar">
+    <label>
+      Report Day
+      <select id="daySelect"><option value='2026-06-15' selected>2026-06-15</option></select>
+    </label>
+    <div class="segmented" aria-label="Report type">
+      <button id="buyingBtn" class="active" type="button">Options Buying</button>
+      <button id="sellingBtn" type="button">Options Selling</button>
+    </div>
+    <a id="openLink" class="openLink" href="reports/options-buying/2026-06-15.html">Open full report</a>
+  </section>
+  <section class="panel viewer">
+    <iframe id="reportFrame" title="Selected report" src="reports/options-buying/2026-06-15.html"></iframe>
+  </section>
+</main>
+<footer>
+  This page only changes the embedded report when you filter by day or report type; existing TradeDesk app pages are outside this folder.
+</footer>
+<script>
+const reports = {"2026-06-15":{"buying":"reports/options-buying/2026-06-15.html","selling":"reports/options-selling/2026-06-15.html"}};
+let reportType = "buying";
+const daySelect = document.getElementById("daySelect");
+const frame = document.getElementById("reportFrame");
+const openLink = document.getElementById("openLink");
+const buyingBtn = document.getElementById("buyingBtn");
+const sellingBtn = document.getElementById("sellingBtn");
+function setType(nextType) {
+  reportType = nextType;
+  buyingBtn.classList.toggle("active", reportType === "buying");
+  sellingBtn.classList.toggle("active", reportType === "selling");
+  updateReport();
+}
+function updateReport() {
+  const day = daySelect.value;
+  const target = reports[day] && reports[day][reportType];
+  if (!target) return;
+  frame.src = target;
+  openLink.href = target;
+}
+daySelect.addEventListener("change", updateReport);
+buyingBtn.addEventListener("click", () => setType("buying"));
+sellingBtn.addEventListener("click", () => setType("selling"));
+</script>
+</body>
+</html>
