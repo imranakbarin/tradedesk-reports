@@ -59,6 +59,30 @@ footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
   .kpis { grid-template-columns: 1fr; }
 }
 
+.reportNav { margin: 0; }
+.reportNav a { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-weight: 800; text-decoration: none; }
+.calendarMeta { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.calendarMeta h2 { margin: 0; }
+.calendarMeta span { color: var(--muted); font-size: 13px; font-weight: 700; }
+.calendarGrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 7px; }
+.calendarWeekday { color: var(--muted); font-size: 11px; font-weight: 800; text-align: center; text-transform: uppercase; }
+.dayBox { border: 1px solid var(--line); border-radius: 8px; min-height: 62px; padding: 7px; display: grid; align-content: space-between; background: #f8fafc; }
+.dayBox strong { font-size: 12px; line-height: 1; }
+.dayBox span { font-size: 11px; font-weight: 800; overflow-wrap: anywhere; }
+.dayBox small { color: var(--muted); font-size: 10px; font-weight: 700; }
+.dayBox.good { background: #dcfce7; border-color: #86efac; color: #065f46; }
+.dayBox.bad { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+.dayBox.flat { background: #eef2ff; border-color: #c7d2fe; color: #3730a3; }
+.dayBox.empty { background: #f8fafc; color: var(--muted); }
+.dayBox.future { background: #f1f5f9; color: #94a3b8; }
+.dayBox.blank { visibility: hidden; }
+@media (max-width: 760px) {
+  .calendarGrid { gap: 4px; }
+  .dayBox { min-height: 52px; padding: 5px; }
+  .dayBox span { font-size: 10px; }
+  .dayBox small { display: none; }
+}
+
 .toolbar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
 .toolbar label { display: grid; gap: 5px; color: var(--muted); font-size: 12px; font-weight: 800; text-transform: uppercase; }
 .toolbar select { min-width: 170px; border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; font-size: 14px; background: white; color: var(--ink); }
@@ -67,6 +91,7 @@ footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
 .segmented button:last-child { border-right: 0; }
 .segmented button.active { background: #eff6ff; color: var(--blue); }
 .openLink { color: var(--blue); font-weight: 800; text-decoration: none; margin-left: auto; }
+.summaryCalendars { align-items: stretch; }
 .viewer { min-height: 70vh; padding: 0; }
 .viewer iframe { display: block; width: 100%; height: 78vh; border: 0; background: white; }
 @media (max-width: 760px) {
@@ -80,7 +105,7 @@ footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
 <body>
 <header>
   <h1>Codex Post-Market Reports</h1>
-  <p>Final post-market report set. Generated 2026-06-16 02:12:05 IST.</p>
+  <p>Final post-market report set. Generated 2026-06-16 02:22:54 IST.</p>
 </header>
 <main>
   <div class="banner">Public folder: https://imranakbarin.github.io/tradedesk-reports/codex/</div>
@@ -95,6 +120,10 @@ footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
     </div>
     <a id="openLink" class="openLink" href="reports/options-buying/2026-06-15.html">Open full report</a>
   </section>
+  <section class="two summaryCalendars">
+    <div id="buyingCalendar"></div>
+    <div id="sellingCalendar"></div>
+  </section>
   <section class="panel viewer">
     <iframe id="reportFrame" title="Selected report" src="reports/options-buying/2026-06-15.html"></iframe>
   </section>
@@ -104,12 +133,53 @@ footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
 </footer>
 <script>
 const reports = {"2026-06-15":{"buying":"reports/options-buying/2026-06-15.html","selling":"reports/options-selling/2026-06-15.html"}};
+const calendars = {"2026-06-15":{"buying":{"title":"Options Buying Monthly Calendar","month":"June 2026","net":"-Rs 31,373","active_days":6,"weeks":[[{"tone":"empty","label":"1","pnl":0.0,"money":"-","count":0,"date":"2026-06-01"},{"tone":"empty","label":"2","pnl":0.0,"money":"-","count":0,"date":"2026-06-02"},{"tone":"bad","label":"3","pnl":-5107.130000000001,"money":"-Rs 5,107","count":7,"date":"2026-06-03"},{"tone":"bad","label":"4","pnl":-1030.2600000000007,"money":"-Rs 1,030","count":30,"date":"2026-06-04"},{"tone":"bad","label":"5","pnl":-15541.109999999999,"money":"-Rs 15,541","count":36,"date":"2026-06-05"},{"tone":"empty","label":"6","pnl":0.0,"money":"-","count":0,"date":"2026-06-06"},{"tone":"empty","label":"7","pnl":0.0,"money":"-","count":0,"date":"2026-06-07"}],[{"tone":"bad","label":"8","pnl":-5511.659999999999,"money":"-Rs 5,512","count":14,"date":"2026-06-08"},{"tone":"good","label":"9","pnl":2.4600000000000364,"money":"Rs 2","count":5,"date":"2026-06-09"},{"tone":"bad","label":"10","pnl":-4185.34,"money":"-Rs 4,185","count":4,"date":"2026-06-10"},{"tone":"empty","label":"11","pnl":0.0,"money":"-","count":0,"date":"2026-06-11"},{"tone":"empty","label":"12","pnl":0.0,"money":"-","count":0,"date":"2026-06-12"},{"tone":"empty","label":"13","pnl":0.0,"money":"-","count":0,"date":"2026-06-13"},{"tone":"empty","label":"14","pnl":0.0,"money":"-","count":0,"date":"2026-06-14"}],[{"tone":"empty","label":"15","pnl":0.0,"money":"-","count":0,"date":"2026-06-15"},{"tone":"future","label":"16","pnl":0.0,"money":"-","count":0,"date":"2026-06-16"},{"tone":"future","label":"17","pnl":0.0,"money":"-","count":0,"date":"2026-06-17"},{"tone":"future","label":"18","pnl":0.0,"money":"-","count":0,"date":"2026-06-18"},{"tone":"future","label":"19","pnl":0.0,"money":"-","count":0,"date":"2026-06-19"},{"tone":"future","label":"20","pnl":0.0,"money":"-","count":0,"date":"2026-06-20"},{"tone":"future","label":"21","pnl":0.0,"money":"-","count":0,"date":"2026-06-21"}],[{"tone":"future","label":"22","pnl":0.0,"money":"-","count":0,"date":"2026-06-22"},{"tone":"future","label":"23","pnl":0.0,"money":"-","count":0,"date":"2026-06-23"},{"tone":"future","label":"24","pnl":0.0,"money":"-","count":0,"date":"2026-06-24"},{"tone":"future","label":"25","pnl":0.0,"money":"-","count":0,"date":"2026-06-25"},{"tone":"future","label":"26","pnl":0.0,"money":"-","count":0,"date":"2026-06-26"},{"tone":"future","label":"27","pnl":0.0,"money":"-","count":0,"date":"2026-06-27"},{"tone":"future","label":"28","pnl":0.0,"money":"-","count":0,"date":"2026-06-28"}],[{"tone":"future","label":"29","pnl":0.0,"money":"-","count":0,"date":"2026-06-29"},{"tone":"future","label":"30","pnl":0.0,"money":"-","count":0,"date":"2026-06-30"},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""}]]},"selling":{"title":"Options Selling Monthly Calendar","month":"June 2026","net":"Rs 2,555","active_days":2,"weeks":[[{"tone":"empty","label":"1","pnl":0.0,"money":"-","count":0,"date":"2026-06-01"},{"tone":"empty","label":"2","pnl":0.0,"money":"-","count":0,"date":"2026-06-02"},{"tone":"empty","label":"3","pnl":0.0,"money":"-","count":0,"date":"2026-06-03"},{"tone":"empty","label":"4","pnl":0.0,"money":"-","count":0,"date":"2026-06-04"},{"tone":"empty","label":"5","pnl":0.0,"money":"-","count":0,"date":"2026-06-05"},{"tone":"empty","label":"6","pnl":0.0,"money":"-","count":0,"date":"2026-06-06"},{"tone":"empty","label":"7","pnl":0.0,"money":"-","count":0,"date":"2026-06-07"}],[{"tone":"empty","label":"8","pnl":0.0,"money":"-","count":0,"date":"2026-06-08"},{"tone":"empty","label":"9","pnl":0.0,"money":"-","count":0,"date":"2026-06-09"},{"tone":"empty","label":"10","pnl":0.0,"money":"-","count":0,"date":"2026-06-10"},{"tone":"empty","label":"11","pnl":0.0,"money":"-","count":0,"date":"2026-06-11"},{"tone":"empty","label":"12","pnl":0.0,"money":"-","count":0,"date":"2026-06-12"},{"tone":"empty","label":"13","pnl":0.0,"money":"-","count":0,"date":"2026-06-13"},{"tone":"good","label":"14","pnl":625.0,"money":"Rs 625","count":29,"date":"2026-06-14"}],[{"tone":"good","label":"15","pnl":1930.0,"money":"Rs 1,930","count":12,"date":"2026-06-15"},{"tone":"future","label":"16","pnl":0.0,"money":"-","count":0,"date":"2026-06-16"},{"tone":"future","label":"17","pnl":0.0,"money":"-","count":0,"date":"2026-06-17"},{"tone":"future","label":"18","pnl":0.0,"money":"-","count":0,"date":"2026-06-18"},{"tone":"future","label":"19","pnl":0.0,"money":"-","count":0,"date":"2026-06-19"},{"tone":"future","label":"20","pnl":0.0,"money":"-","count":0,"date":"2026-06-20"},{"tone":"future","label":"21","pnl":0.0,"money":"-","count":0,"date":"2026-06-21"}],[{"tone":"future","label":"22","pnl":0.0,"money":"-","count":0,"date":"2026-06-22"},{"tone":"future","label":"23","pnl":0.0,"money":"-","count":0,"date":"2026-06-23"},{"tone":"future","label":"24","pnl":0.0,"money":"-","count":0,"date":"2026-06-24"},{"tone":"future","label":"25","pnl":0.0,"money":"-","count":0,"date":"2026-06-25"},{"tone":"future","label":"26","pnl":0.0,"money":"-","count":0,"date":"2026-06-26"},{"tone":"future","label":"27","pnl":0.0,"money":"-","count":0,"date":"2026-06-27"},{"tone":"future","label":"28","pnl":0.0,"money":"-","count":0,"date":"2026-06-28"}],[{"tone":"future","label":"29","pnl":0.0,"money":"-","count":0,"date":"2026-06-29"},{"tone":"future","label":"30","pnl":0.0,"money":"-","count":0,"date":"2026-06-30"},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""},{"tone":"blank","label":"","pnl":0.0,"money":"","count":0,"date":""}]]}}};
 let reportType = "buying";
 const daySelect = document.getElementById("daySelect");
 const frame = document.getElementById("reportFrame");
 const openLink = document.getElementById("openLink");
 const buyingBtn = document.getElementById("buyingBtn");
 const sellingBtn = document.getElementById("sellingBtn");
+const buyingCalendar = document.getElementById("buyingCalendar");
+const sellingCalendar = document.getElementById("sellingCalendar");
+const weekdays = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+function escapeHtml(value) {
+  return String(value ?? "").replace(/[&<>"']/g, (char) => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[char]));
+}
+function renderCalendar(payload) {
+  if (!payload) {
+    return "<section class='panel'><h2>Monthly Calendar</h2><p class='muted'>No calendar data available.</p></section>";
+  }
+  const headers = weekdays.map((day) => `<div class="calendarWeekday">${escapeHtml(day)}</div>`).join("");
+  const cells = payload.weeks.flat().map((cell) => `
+    <div class="dayBox ${escapeHtml(cell.tone)}" title="${escapeHtml(cell.date)} ${escapeHtml(cell.money)}">
+      <strong>${escapeHtml(cell.label)}</strong>
+      <span>${escapeHtml(cell.money)}</span>
+      <small>${cell.count ? escapeHtml(cell.count + " item(s)") : "No trades"}</small>
+    </div>
+  `).join("");
+  return `
+    <section class="panel">
+      <div class="calendarMeta">
+        <h2>${escapeHtml(payload.title)}</h2>
+        <span>${escapeHtml(payload.month)} | Net ${escapeHtml(payload.net)} | ${escapeHtml(payload.active_days)} active day(s)</span>
+      </div>
+      <div class="calendarGrid">${headers}${cells}</div>
+    </section>
+  `;
+}
+function updateCalendars() {
+  const day = daySelect.value;
+  const payload = calendars[day] || {};
+  buyingCalendar.innerHTML = renderCalendar(payload.buying);
+  sellingCalendar.innerHTML = renderCalendar(payload.selling);
+}
 function setType(nextType) {
   reportType = nextType;
   buyingBtn.classList.toggle("active", reportType === "buying");
@@ -122,10 +192,12 @@ function updateReport() {
   if (!target) return;
   frame.src = target;
   openLink.href = target;
+  updateCalendars();
 }
 daySelect.addEventListener("change", updateReport);
 buyingBtn.addEventListener("click", () => setType("buying"));
 sellingBtn.addEventListener("click", () => setType("selling"));
+updateCalendars();
 </script>
 </body>
 </html>

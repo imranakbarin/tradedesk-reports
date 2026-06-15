@@ -53,6 +53,31 @@ svg { width: 100%; height: auto; display: block; }
 .hbarTrack i.bad { background: var(--bad); }
 .muted { color: var(--muted); }
 footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
+
+.reportNav { margin: 0; }
+.reportNav a { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-weight: 800; text-decoration: none; }
+.calendarMeta { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.calendarMeta h2 { margin: 0; }
+.calendarMeta span { color: var(--muted); font-size: 13px; font-weight: 700; }
+.calendarGrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 7px; }
+.calendarWeekday { color: var(--muted); font-size: 11px; font-weight: 800; text-align: center; text-transform: uppercase; }
+.dayBox { border: 1px solid var(--line); border-radius: 8px; min-height: 62px; padding: 7px; display: grid; align-content: space-between; background: #f8fafc; }
+.dayBox strong { font-size: 12px; line-height: 1; }
+.dayBox span { font-size: 11px; font-weight: 800; overflow-wrap: anywhere; }
+.dayBox small { color: var(--muted); font-size: 10px; font-weight: 700; }
+.dayBox.good { background: #dcfce7; border-color: #86efac; color: #065f46; }
+.dayBox.bad { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+.dayBox.flat { background: #eef2ff; border-color: #c7d2fe; color: #3730a3; }
+.dayBox.empty { background: #f8fafc; color: var(--muted); }
+.dayBox.future { background: #f1f5f9; color: #94a3b8; }
+.dayBox.blank { visibility: hidden; }
+@media (max-width: 760px) {
+  .calendarGrid { gap: 4px; }
+  .dayBox { min-height: 52px; padding: 5px; }
+  .dayBox span { font-size: 10px; }
+  .dayBox small { display: none; }
+}
+
 @media (max-width: 980px) {
   header, main, footer { padding-left: 16px; padding-right: 16px; }
   .grid, .two { grid-template-columns: 1fr; }
@@ -63,15 +88,17 @@ footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
 <body>
 <header>
   <h1>Options Buying Post-Market Report - 2026-06-15</h1>
-  <p>Final post-market report generated 2026-06-16 02:12:05 IST from C:\Users\Imran\AppData\Local\Temp\hybridtrading_bot.sqlite</p>
+  <p>Final post-market report generated 2026-06-16 02:22:54 IST from C:\Users\Imran\AppData\Local\Temp\hybridtrading_bot.sqlite</p>
 </header>
 <main>
+  <nav class='reportNav'><a href='../../index.html'>&larr; Back to Codex summary</a></nav>
   <div class="banner">Market-close guard passed. This report is safe to use for end-of-day review.</div>
   <section class="grid">
     <section class='panel'><h2>Today</h2><div class='kpis'><div class='kpi flat'><span>Net P&amp;L</span><strong>Rs 0</strong><small>0 trades</small></div><div class='kpi '><span>Win rate</span><strong>0.0%</strong><small>0W / 0L</small></div><div class='kpi flat'><span>Average</span><strong>Rs 0</strong><small>per trade</small></div><div class='kpi '><span>Best / Worst</span><strong>Rs 0 / Rs 0</strong><small>0 open</small></div></div></section>
     <section class='panel'><h2>Last 7 Days</h2><div class='kpis'><div class='kpi bad'><span>Net P&amp;L</span><strong>-Rs 4,183</strong><small>9 trades</small></div><div class='kpi '><span>Win rate</span><strong>33.3%</strong><small>3W / 6L</small></div><div class='kpi bad'><span>Average</span><strong>-Rs 465</strong><small>per trade</small></div><div class='kpi '><span>Best / Worst</span><strong>Rs 1,269 / -Rs 1,898</strong><small>0 open</small></div></div></section>
     <section class='panel'><h2>Last 30 Days</h2><div class='kpis'><div class='kpi bad'><span>Net P&amp;L</span><strong>-Rs 31,373</strong><small>96 trades</small></div><div class='kpi '><span>Win rate</span><strong>36.5%</strong><small>35W / 59L</small></div><div class='kpi bad'><span>Average</span><strong>-Rs 327</strong><small>per trade</small></div><div class='kpi '><span>Best / Worst</span><strong>Rs 3,998 / -Rs 5,200</strong><small>0 open</small></div></div></section>
   </section>
+  <section class='panel'><div class='calendarMeta'><h2>Options Buying Monthly Calendar</h2><span>June 2026 | Net -Rs 31,373 | 6 active day(s)</span></div><div class='calendarGrid'><div class='calendarWeekday'>Mon</div><div class='calendarWeekday'>Tue</div><div class='calendarWeekday'>Wed</div><div class='calendarWeekday'>Thu</div><div class='calendarWeekday'>Fri</div><div class='calendarWeekday'>Sat</div><div class='calendarWeekday'>Sun</div><div class='dayBox empty' title='2026-06-01 -'><strong>1</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-06-02 -'><strong>2</strong><span>-</span><small>No trades</small></div><div class='dayBox bad' title='2026-06-03 -Rs 5,107'><strong>3</strong><span>-Rs 5,107</span><small>7 item(s)</small></div><div class='dayBox bad' title='2026-06-04 -Rs 1,030'><strong>4</strong><span>-Rs 1,030</span><small>30 item(s)</small></div><div class='dayBox bad' title='2026-06-05 -Rs 15,541'><strong>5</strong><span>-Rs 15,541</span><small>36 item(s)</small></div><div class='dayBox empty' title='2026-06-06 -'><strong>6</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-06-07 -'><strong>7</strong><span>-</span><small>No trades</small></div><div class='dayBox bad' title='2026-06-08 -Rs 5,512'><strong>8</strong><span>-Rs 5,512</span><small>14 item(s)</small></div><div class='dayBox good' title='2026-06-09 Rs 2'><strong>9</strong><span>Rs 2</span><small>5 item(s)</small></div><div class='dayBox bad' title='2026-06-10 -Rs 4,185'><strong>10</strong><span>-Rs 4,185</span><small>4 item(s)</small></div><div class='dayBox empty' title='2026-06-11 -'><strong>11</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-06-12 -'><strong>12</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-06-13 -'><strong>13</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-06-14 -'><strong>14</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-06-15 -'><strong>15</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-16 -'><strong>16</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-17 -'><strong>17</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-18 -'><strong>18</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-19 -'><strong>19</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-20 -'><strong>20</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-21 -'><strong>21</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-22 -'><strong>22</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-23 -'><strong>23</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-24 -'><strong>24</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-25 -'><strong>25</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-26 -'><strong>26</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-27 -'><strong>27</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-28 -'><strong>28</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-29 -'><strong>29</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-06-30 -'><strong>30</strong><span>-</span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div></div></section>
   <section class="two">
     <section class="panel">
       <h2>What Went Well</h2>
