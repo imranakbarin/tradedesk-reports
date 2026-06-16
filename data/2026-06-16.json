@@ -1,0 +1,277 @@
+{
+  "date": "2026-06-16",
+  "trades": [
+    {
+      "placed_at": "2026-06-16T10:45:17.200389",
+      "closed_at": "2026-06-16T11:01:18.381480",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23900,
+      "entry_price": 80.25,
+      "exit_price": 71.3,
+      "sl_price": 69.55,
+      "target_price": 96.35,
+      "lot_size": 1,
+      "pnl": -649.0,
+      "status": "SMART_EXIT",
+      "reason": "[C7] Daily uptrend (score 73) + RSI 58 pullback — sniper entry [C7/10] → SMART_EXIT: Near-SL exit: 84% of SL consumed (loss ₹9.0 of max ₹10.7) — cutting before full SL hit",
+      "hold_minutes": 16,
+      "high_price": 90.1,
+      "low_price": 71.3,
+      "r_multiple": -0.93,
+      "confluence": 7,
+      "trend_score_entry": 73.0,
+      "rsi_entry": 58.2,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-06-16T11:30:26.288629",
+      "closed_at": "2026-06-16T11:57:30.709063",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76500,
+      "entry_price": 421.0,
+      "exit_price": 404.6,
+      "sl_price": 364.9,
+      "target_price": 505.2,
+      "lot_size": 1,
+      "pnl": -408.43,
+      "status": "SMART_EXIT",
+      "reason": "[C5] Daily uptrend (score 83) + RSI 60 pullback — sniper entry [C5/10] → SMART_EXIT: 5m Supertrend SHORT + RSI 47 — exit losing CE",
+      "hold_minutes": 27,
+      "high_price": 442.4,
+      "low_price": 397.65,
+      "r_multiple": -0.36,
+      "confluence": 5,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 59.6,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-16T10:45:17.618377",
+      "closed_at": "2026-06-16T11:01:18.559649",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24000,
+      "entry_price": 67.2,
+      "exit_price": 71.1,
+      "sl_price": 59.2,
+      "target_price": 82.2,
+      "lot_size": 1,
+      "pnl": 253.5,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|a4c9e9d7",
+      "hold_minutes": 16,
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-06-16T11:30:26.998858",
+      "closed_at": "2026-06-16T11:57:30.873341",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 76700,
+      "entry_price": 413.95,
+      "exit_price": 430.15,
+      "sl_price": 405.95,
+      "target_price": 428.95,
+      "lot_size": 1,
+      "pnl": 324.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|6f5d4d43",
+      "hold_minutes": 27,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "mtf_sniper",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -1057.0,
+      "gross_win": 0.0,
+      "gross_loss": -1057.0,
+      "avg_r": -0.65,
+      "avg_hold": 22.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 2,
+      "total_pnl": -1057.0,
+      "avg_pnl": -529.0
+    }
+  ],
+  "mtd": {
+    "pnl": -13918.0,
+    "trades": 184,
+    "wins": 108,
+    "losses": 76
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -10550.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -12861.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -13918.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -408.0,
+      "gross_win": 0.0,
+      "gross_loss": -408.0,
+      "avg_hold": 27.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -649.0,
+      "gross_win": 0.0,
+      "gross_loss": -649.0,
+      "avg_hold": 16.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -649.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -408.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -529.0,
+    "profit_factor": 0.0,
+    "expectancy": -529.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 22.0,
+    "avg_r": -0.65,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_analysis": "# Post-Market Debrief — 2026-06-16\n\nToday was a clean loss: 0-for-2 with ₹1,057 down, bringing month-to-date drawdown to ₹13,918. Both losses came from the mtf_sniper strategy on what looked like solid daily setups (NIFTY trend score 73, SENSEX trend score 83), but neither trade had the follow-through to justify entry. The NIFTY trade was the worst damage—you entered a CE at 80.25 on an RSI 58 pullback in an uptrend, but it dove straight into the 71.3 low and you cut at 84% of your stop loss, crystallizing a -649 loss in just 16 minutes. The SENSEX trade played out slightly better on the surface (confluence score of 5 vs 7, cleaner 27-minute hold), but the 5-minute Supertrend flipped short almost immediately after entry and forced an exit at 404.6 from 421, locking in -408.\n\nNeither trade was outright wrong from a setup perspective—both had legitimate daily uptrend confirmation and RSI pullback conditions—but the 5-minute intraday structure failed to confirm, and you correctly exited before full stoploss bleed. The issue isn't your exits; it's that you're chasing pullbacks into daily uptrends that aren't materializing into continuation. Your confluence scores (5 and 7 out of 10) should have been a yellow flag, especially on the lower-scored SENSEX setup.\n\nFor tomorrow, tighten your entry filter: only take mtf_sniper setups with confluence scores of 8+ and verify that the 5-minute Supertrend is already aligned *before* you enter the daily pullback—don't assume it will flip in your favor after entry. You're currently entering the setup and hoping intraday confirmation follows, which costs you 16–27 minutes of slippage on every miss.",
+  "generated_at": "2026-06-16T05:05:15.068142"
+}
