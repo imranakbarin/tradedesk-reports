@@ -164,7 +164,7 @@ iframe.active{display:block}
     </div>
 
     <!-- App iframes -->
-    <iframe id="frame-bot"     src="about:blank" data-src="./index.html"   title="Bot Reports"></iframe>
+    <iframe id="frame-bot"     src="about:blank" data-src="./bot.html"   title="Bot Reports"></iframe>
     <iframe id="frame-scanner" src="about:blank" data-src="./scanner.html" title="Scanner"></iframe>
     <iframe id="frame-codex"   src="about:blank" data-src="./codex/index.html" title="Codex"></iframe>
   </div>
@@ -174,7 +174,7 @@ iframe.active{display:block}
 
 <script>
 const APPS = {
-  bot:     { label:'Bot Reports',  url:'./index.html',       frame:'frame-bot',     badge:'bot-badge'    },
+  bot:     { label:'Bot Reports',  url:'./bot.html',       frame:'frame-bot',     badge:'bot-badge'    },
   scanner: { label:'Scanner',      url:'./scanner.html',     frame:'frame-scanner', badge:'scanner-badge' },
   codex:   { label:'Codex',        url:'./codex/index.html', frame:'frame-codex',   badge:'codex-badge'  },
 };
@@ -208,7 +208,7 @@ function activate(btn, target) {
   const frame = document.getElementById(app.frame);
 
   // lazy-load iframe on first visit
-  if (frame.src === 'about:blank' || frame.src === location.href.replace(/hub\.html.*/, 'about:blank')) {
+  if (frame.src === 'about:blank' || frame.src === location.href.replace(/index\.html.*/, 'about:blank')) {
     frame.src = app.url;
   }
 
