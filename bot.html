@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TradeDesk — Daily Reports</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#0f172a;color:#e2e8f0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh}
+.topbar{background:#0f172a;border-bottom:1px solid #1e293b;padding:14px 28px;display:flex;align-items:center;gap:16px;position:sticky;top:0;z-index:10}
+.topbar h1{font-size:16px;font-weight:700;color:#f8fafc;flex:1}
+.date-select{background:#1e293b;color:#e2e8f0;border:1px solid #334155;border-radius:8px;padding:7px 12px;font-size:14px;cursor:pointer;outline:none}
+.date-select:hover{border-color:#6366f1}
+.date-select option{background:#1e293b}
+.nav-btn{background:#1e293b;color:#94a3b8;border:1px solid #334155;border-radius:8px;padding:7px 14px;font-size:13px;cursor:pointer}
+.nav-btn:hover:not(:disabled){border-color:#6366f1;color:#e2e8f0}
+.nav-btn:disabled{opacity:0.3;cursor:default}
+main{max-width:1140px;margin:0 auto;padding:22px 24px}
+
+/* stat cards */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(138px,1fr));gap:12px;margin-bottom:18px}
+.sc{background:#1e293b;border-radius:10px;padding:14px 16px}
+.sc .lbl{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+.sc .val{font-size:22px;font-weight:700;margin-top:4px;line-height:1.2}
+.sc .sub{font-size:11px;color:#94a3b8;margin-top:3px}
+.sc.accent{border-left:3px solid #6366f1}
+
+/* quality stat pills */
+.qstats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px}
+.qs{background:#1e293b;border-radius:8px;padding:10px 14px;flex:1;min-width:110px}
+.qs .ql{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+.qs .qv{font-size:17px;font-weight:700;margin-top:3px}
+
+/* highlight cards */
+.hi-row{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.hi-card{flex:1;min-width:180px;background:#1e293b;border-radius:10px;padding:14px}
+.hi-label{font-size:10px;color:#64748b;text-transform:uppercase;letter-spacing:.06em}
+.hi-val{font-size:20px;font-weight:700;margin-top:3px}
+.hi-sub{font-size:11px;color:#94a3b8;margin-top:3px}
+
+/* AI */
+.ai-box{background:#1e293b;border-radius:10px;padding:18px 20px;margin-bottom:18px;border-left:3px solid #6366f1}
+.ai-box h2{font-size:11px;font-weight:600;color:#6366f1;text-transform:uppercase;letter-spacing:.06em;margin-bottom:10px}
+.ai-text{font-size:14px;line-height:1.8;color:#cbd5e1}
+
+/* sections */
+.sec{background:#1e293b;border-radius:10px;padding:16px 18px;margin-bottom:16px}
+.sec h2{font-size:11px;font-weight:600;color:#64748b;text-transform:uppercase;letter-spacing:.06em;margin-bottom:12px}
+.contra-sec{border-left:3px solid #f59e0b}.contra-sec h2{color:#f59e0b}
+
+/* grid layouts */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:16px}
+@media(max-width:720px){.g2,.g3{grid-template-columns:1fr}}
+
+/* tables */
+table{width:100%;border-collapse:collapse;font-size:12px}
+th{text-align:left;padding:6px 10px;color:#475569;font-weight:500;border-bottom:1px solid #334155;font-size:10px;text-transform:uppercase}
+td{padding:6px 10px;border-bottom:1px solid #263044}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:#1e3a5f22}
+.c{text-align:center}.r{text-align:right}.muted{color:#64748b}
+.green{color:#22c55e}.red{color:#ef4444}.amber{color:#f59e0b}.purple{color:#a78bfa}
+
+/* bar chart */
+.bar-wrap{display:flex;flex-direction:column;gap:5px}
+.bar-row{display:flex;align-items:center;gap:8px;font-size:11px}
+.bar-lbl{width:76px;color:#94a3b8;flex-shrink:0;font-size:10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{flex:1;background:#0f172a;border-radius:3px;height:16px;overflow:hidden}
+.bar-fill{height:100%;border-radius:3px}
+.bar-fill.pos{background:#166534}.bar-fill.neg{background:#7f1d1d}
+.bar-val{width:72px;text-align:right;font-weight:600;font-size:11px;flex-shrink:0}
+.bar-meta{width:36px;text-align:right;color:#64748b;font-size:10px;flex-shrink:0}
+
+/* sparkline */
+.sparkline-wrap{padding:4px 0}
+.sparkline-label{display:flex;justify-content:space-between;font-size:10px;color:#64748b;margin-top:4px}
+
+/* streak badge */
+.streak{display:inline-block;font-size:11px;padding:2px 8px;border-radius:12px;font-weight:600}
+.streak.pos{background:#14532d;color:#22c55e}
+.streak.neg{background:#450a0a;color:#ef4444}
+.streak.neu{background:#1e293b;color:#94a3b8}
+
+/* misc */
+.badge{display:inline-block;font-size:10px;padding:1px 6px;border-radius:4px;font-weight:600;margin-left:5px;vertical-align:middle}
+.badge-amber{background:#451a03;color:#f59e0b}
+#loading{display:none;padding:80px;text-align:center;color:#475569}
+#error-msg{display:none;padding:40px;text-align:center;color:#ef4444;font-size:14px}
+.footer{text-align:center;color:#334155;font-size:10px;margin-top:24px;padding-bottom:20px}
+.no-data{color:#475569;font-size:12px;padding:12px 0}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <h1>TradeDesk</h1>
+  <button class="nav-btn" id="btn-prev" onclick="navigate(-1)">&#8592; Prev</button>
+  <select class="date-select" id="date-picker" onchange="loadReport(this.value)"></select>
+  <button class="nav-btn" id="btn-next" onclick="navigate(1)">Next &#8594;</button>
+</div>
+
+<main>
+  <div id="loading">Loading...</div>
+  <div id="error-msg"></div>
+  <div id="report"></div>
+</main>
+
+<script>
+let dates = [], currentIdx = 0;
+
+// ── helpers ──────────────────────────────────────────────────────────────────
+function fmt(v) {
+  v = v || 0;
+  return (v >= 0 ? '+₹' : '-₹') + Math.abs(v).toLocaleString('en-IN', {maximumFractionDigits:0});
+}
+function pc(v) { return (v||0) >= 0 ? '#22c55e' : '#ef4444'; }
+function wr(wins, total) { return total ? (wins/total*100).toFixed(1)+'%' : '—'; }
+function pf(gw, gl) {
+  if (!gl) return gw > 0 ? '∞' : '—';
+  return (gw / Math.abs(gl)).toFixed(2);
+}
+
+// ── bar chart ─────────────────────────────────────────────────────────────────
+function barChart(rows, lKey, pnlKey, metaFn, capOverride) {
+  if (!rows || !rows.length) return '<div class="no-data">No data</div>';
+  const cap = capOverride || Math.max(...rows.map(r => Math.abs(r[pnlKey]||0)), 1);
+  return '<div class="bar-wrap">' + rows.map(r => {
+    const v = r[pnlKey] || 0;
+    const pct = Math.min(Math.abs(v)/cap*100, 100);
+    const cls = v >= 0 ? 'pos' : 'neg';
+    const meta = metaFn ? metaFn(r) : '';
+    return `<div class="bar-row">
+      <span class="bar-lbl" title="${r[lKey]}">${r[lKey]}</span>
+      <div class="bar-track"><div class="bar-fill ${cls}" style="width:${pct}%"></div></div>
+      <span class="bar-val" style="color:${pc(v)}">${fmt(v)}</span>
+      <span class="bar-meta">${meta}</span>
+    </div>`;
+  }).join('') + '</div>';
+}
+
+// ── SVG sparkline (cumulative P&L) ────────────────────────────────────────────
+function sparkline(days) {
+  if (!days || days.length < 2) return '<div class="no-data">Need 2+ days for chart</div>';
+  const W = 600, H = 80, pad = 6;
+  const vals = days.map(d => d.cumulative || 0);
+  const min = Math.min(0, ...vals);
+  const max = Math.max(0, ...vals, 1);
+  const range = max - min;
+  const xs = vals.map((_, i) => pad + (i / (vals.length - 1)) * (W - pad*2));
+  const ys = vals.map(v => H - pad - ((v - min) / range * (H - pad*2)));
+  const pts = xs.map((x,i) => `${x},${ys[i]}`).join(' ');
+  const zY = H - pad - ((0 - min) / range * (H - pad*2));
+  const lastVal = vals[vals.length - 1];
+  const col = lastVal >= 0 ? '#22c55e' : '#ef4444';
+  const areaTop = ys.map((y,i) => `${xs[i]},${y}`).join(' ');
+  const areaBot = `${xs[xs.length-1]},${zY} ${xs[0]},${zY}`;
+  return `
+    <div class="sparkline-wrap">
+      <svg width="100%" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" style="display:block">
+        <defs>
+          <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="${col}" stop-opacity="0.25"/>
+            <stop offset="100%" stop-color="${col}" stop-opacity="0.02"/>
+          </linearGradient>
+        </defs>
+        <line x1="${pad}" y1="${zY}" x2="${W-pad}" y2="${zY}" stroke="#334155" stroke-width="1" stroke-dasharray="3,3"/>
+        <polygon points="${areaTop} ${areaBot}" fill="url(#sg)"/>
+        <polyline points="${pts}" fill="none" stroke="${col}" stroke-width="1.8" stroke-linejoin="round"/>
+        <circle cx="${xs[xs.length-1]}" cy="${ys[ys.length-1]}" r="3" fill="${col}"/>
+      </svg>
+      <div class="sparkline-label">
+        <span>${days[0].day}</span>
+        <span style="color:${col};font-weight:600">${fmt(lastVal)} cumulative</span>
+        <span>${days[days.length-1].day}</span>
+      </div>
+    </div>`;
+}
+
+// ── trade rows ────────────────────────────────────────────────────────────────
+function tradeRows(list) {
+  if (!list.length) return `<tr><td colspan="10" class="no-data" style="padding:14px">None</td></tr>`;
+  return list.map(t => {
+    const ep = t.exit_price != null ? (+t.exit_price).toFixed(0) : '—';
+    const hold = t.hold_minutes ? t.hold_minutes+'m' : '—';
+    const r = t.r_multiple != null ? (+t.r_multiple).toFixed(2)+'R' : '—';
+    const reason = (t.reason||t.status||'').substring(0,26);
+    return `<tr>
+      <td>${(t.placed_at||'').substring(11,16)}</td>
+      <td>${t.index_name} ${t.action} ${t.strike}</td>
+      <td style="font-size:10px;color:#94a3b8">${(t.strategy||'').substring(0,20)}</td>
+      <td class="r">${(+t.entry_price||0).toFixed(0)}</td>
+      <td class="r">${ep}</td>
+      <td class="r muted">${(+t.sl_price||0).toFixed(0)}</td>
+      <td class="r muted">${(+t.target_price||0).toFixed(0)}</td>
+      <td class="c">${hold}</td>
+      <td class="c purple">${r}</td>
+      <td class="r" style="color:${pc(t.pnl)};font-weight:600">${fmt(t.pnl)}</td>
+      <td style="font-size:10px;color:#64748b">${reason}</td>
+    </tr>`;
+  }).join('');
+}
+
+// ── main render ───────────────────────────────────────────────────────────────
+function renderReport(d) {
+  const trades = d.trades || [];
+  const contra = d.contra_trades || [];
+  const st = d.stats || {};
+  const totalPnl = trades.reduce((s,t) => s+(t.pnl||0), 0);
+  const wins = trades.filter(t=>(t.pnl||0)>0).length;
+  const losses = trades.length - wins;
+  const mtd = d.mtd || {};
+  const wdPnl = (d.week_days||[]).reduce((s,r)=>s+(r.pnl||0),0);
+  const wdT = (d.week_days||[]).reduce((s,r)=>s+(r.trades||0),0);
+  const wdW = (d.week_days||[]).reduce((s,r)=>s+(r.wins||0),0);
+  const best = trades.length ? trades.reduce((a,b)=>(a.pnl||0)>(b.pnl||0)?a:b) : null;
+  const worst = trades.length ? trades.reduce((a,b)=>(a.pnl||0)<(b.pnl||0)?a:b) : null;
+
+  // streak display
+  const sc = st.current_streak || 0;
+  let streakHtml = '<span class="streak neu">—</span>';
+  if (sc > 0) streakHtml = `<span class="streak pos">${sc}W streak</span>`;
+  else if (sc < 0) streakHtml = `<span class="streak neg">${Math.abs(sc)}L streak</span>`;
+
+  // best/worst cards
+  const bestCard = best ? `<div class="hi-card" style="border-left:3px solid #22c55e"><div class="hi-label">Best Trade</div><div class="hi-val green">${fmt(best.pnl)}</div><div class="hi-sub">${best.index_name} ${best.action} ${best.strike} · ${best.strategy||''}</div></div>` : '';
+  const worstCard = worst ? `<div class="hi-card" style="border-left:3px solid #ef4444"><div class="hi-label">Worst Trade</div><div class="hi-val red">${fmt(worst.pnl)}</div><div class="hi-sub">${worst.index_name} ${worst.action} ${worst.strike} · ${worst.strategy||''}</div></div>` : '';
+
+  // index breakdown cards
+  const idxCards = (d.index_breakdown||[]).map(ix => {
+    const ixWr = ix.trades ? (ix.wins/ix.trades*100).toFixed(0) : 0;
+    const ixPf = pf(ix.gross_win, ix.gross_loss);
+    return `<div class="sc"><div class="lbl">${ix.index_name}</div><div class="val" style="color:${pc(ix.pnl)}">${fmt(ix.pnl)}</div><div class="sub">${ix.trades}T · ${ixWr}%WR · PF ${ixPf}${ix.avg_hold ? ' · '+ix.avg_hold+'m hold':''}</div></div>`;
+  }).join('');
+
+  // CE vs PE
+  const dirCards = (d.direction_breakdown||[]).map(r => {
+    const dwr = r.trades ? (r.wins/r.trades*100).toFixed(0) : 0;
+    return `<div class="sc"><div class="lbl">${r.action} Options</div><div class="val" style="color:${pc(r.pnl)}">${fmt(r.pnl)}</div><div class="sub">${r.trades} trades · ${dwr}% WR</div></div>`;
+  }).join('');
+
+  // strategy table with extended stats
+  const sRows = (d.by_strategy||[]).map(s => {
+    const swr = s.trades ? (s.wins/s.trades*100).toFixed(0)+'%' : '—';
+    const spf = pf(s.gross_win, s.gross_loss);
+    const sr = s.avg_r != null ? (+s.avg_r).toFixed(2)+'R' : '—';
+    const sh = s.avg_hold != null ? s.avg_hold+'m' : '—';
+    return `<tr><td style="font-size:11px">${s.strategy||''}</td><td class="c">${s.trades}</td><td class="c green">${s.wins}</td><td class="c red">${s.losses}</td><td class="c">${swr}</td><td class="c amber">${spf}</td><td class="c purple">${sr}</td><td class="c muted">${sh}</td><td class="r" style="color:${pc(s.pnl)};font-weight:600">${fmt(s.pnl)}</td></tr>`;
+  }).join('') || `<tr><td colspan="9" class="no-data" style="padding:14px">No data</td></tr>`;
+
+  // time-of-day chart
+  const tbRows = (d.time_buckets||[]).map(b => {
+    const bwr = b.trades ? (b.wins/b.trades*100).toFixed(0)+'%' : '—';
+    return `<tr><td>${b.bucket}</td><td class="c">${b.trades}</td><td class="c">${bwr}</td><td class="r" style="color:${pc(b.pnl)};font-weight:600">${fmt(b.pnl)}</td></tr>`;
+  }).join('') || `<tr><td colspan="4" class="no-data" style="padding:14px">No data</td></tr>`;
+
+  // exit reasons
+  const rRows = (d.reasons||[]).map(r =>
+    `<tr><td>${r.status||''}</td><td class="c">${r.n}</td><td class="r" style="color:${pc(r.total_pnl)}">${fmt(r.total_pnl)}</td><td class="r">${fmt(r.avg_pnl)}</td></tr>`
+  ).join('') || `<tr><td colspan="4" class="no-data" style="padding:14px">No data</td></tr>`;
+
+  // contra
+  const contraTotal = contra.reduce((s,t)=>s+(t.pnl||0),0);
+
+  // max weekly cap for bar charts
+  const wCap = Math.max(...(d.week_days||[]).map(r=>Math.abs(r.pnl||0)),1);
+  const mCap = Math.max(...(d.monthly_days||[]).map(r=>Math.abs(r.pnl||0)),1);
+
+  const genTime = (d.generated_at||'').substring(0,16).replace('T',' ');
+
+  document.getElementById('report').innerHTML = `
+
+    <!-- TOP STAT CARDS -->
+    <div class="stats">
+      <div class="sc"><div class="lbl">Today P&L</div><div class="val" style="color:${pc(totalPnl)}">${fmt(totalPnl)}</div><div class="sub">${trades.length} trades · ${wr(wins,trades.length)}</div></div>
+      <div class="sc"><div class="lbl">7-Day P&L</div><div class="val" style="color:${pc(wdPnl)}">${fmt(wdPnl)}</div><div class="sub">${wdT} trades · ${wr(wdW,wdT)}</div></div>
+      <div class="sc"><div class="lbl">MTD P&L</div><div class="val" style="color:${pc(mtd.pnl)}">${fmt(mtd.pnl)}</div><div class="sub">${mtd.trades||0} trades · ${wr(mtd.wins,mtd.trades)}</div></div>
+      <div class="sc accent"><div class="lbl">Profit Factor</div><div class="val amber">${st.profit_factor != null ? st.profit_factor : '—'}</div><div class="sub">today · gross win / gross loss</div></div>
+      <div class="sc accent"><div class="lbl">Expectancy</div><div class="val" style="color:${pc(st.expectancy)}">${st.expectancy != null ? fmt(st.expectancy) : '—'}</div><div class="sub">per trade</div></div>
+      <div class="sc"><div class="lbl">Streak</div><div class="val" style="font-size:15px;margin-top:8px">${streakHtml}</div><div class="sub">max ${st.max_win_streak||0}W / ${st.max_loss_streak||0}L today</div></div>
+    </div>
+
+    <!-- TRADE QUALITY PILLS -->
+    <div class="qstats">
+      <div class="qs"><div class="ql">Avg Win</div><div class="qv green">${st.avg_win != null ? fmt(st.avg_win) : '—'}</div></div>
+      <div class="qs"><div class="ql">Avg Loss</div><div class="qv red">${st.avg_loss != null ? fmt(st.avg_loss) : '—'}</div></div>
+      <div class="qs"><div class="ql">Avg R</div><div class="qv purple">${st.avg_r != null ? st.avg_r+'R' : '—'}</div></div>
+      <div class="qs"><div class="ql">Hold (Wins)</div><div class="qv">${st.avg_hold_win != null ? st.avg_hold_win+'m' : '—'}</div></div>
+      <div class="qs"><div class="ql">Hold (Losses)</div><div class="qv">${st.avg_hold_loss != null ? st.avg_hold_loss+'m' : '—'}</div></div>
+      <div class="qs"><div class="ql">Wins</div><div class="qv green">${wins}</div></div>
+      <div class="qs"><div class="ql">Losses</div><div class="qv red">${losses}</div></div>
+    </div>
+
+    <!-- BEST / WORST -->
+    <div class="hi-row">${bestCard}${worstCard}</div>
+
+    <!-- AI ANALYSIS -->
+    <div class="ai-box">
+      <h2>AI Analysis · Claude Haiku</h2>
+      <div class="ai-text">${(d.ai_analysis||'No analysis.').replace(/\n/g,'<br>')}</div>
+    </div>
+
+    <!-- WEEKLY + MONTHLY BARS -->
+    <div class="g2">
+      <div class="sec"><h2>Last 7 Days</h2>${barChart(d.week_days,'day','pnl',r=>wr(r.wins,r.trades),wCap)}</div>
+      <div class="sec"><h2>This Month</h2>${barChart(d.monthly_days,'day','pnl',r=>wr(r.wins,r.trades),mCap)}</div>
+    </div>
+
+    <!-- CUMULATIVE SPARKLINE -->
+    <div class="sec"><h2>Monthly Cumulative P&L</h2>${sparkline(d.monthly_days)}</div>
+
+    <!-- INDEX + DIRECTION BREAKDOWN -->
+    <div class="stats" style="margin-bottom:16px">${idxCards}${dirCards}</div>
+
+    <!-- STRATEGY TABLE -->
+    <div class="sec">
+      <h2>Strategy Breakdown</h2>
+      <table>
+        <thead><tr><th>Strategy</th><th class="c">T</th><th class="c">W</th><th class="c">L</th><th class="c">WR%</th><th class="c amber">PF</th><th class="c purple">Avg R</th><th class="c">Hold</th><th class="r">P&L</th></tr></thead>
+        <tbody>${sRows}</tbody>
+      </table>
+    </div>
+
+    <!-- TIME OF DAY + EXIT REASONS -->
+    <div class="g2">
+      <div class="sec">
+        <h2>Time of Day</h2>
+        <table>
+          <thead><tr><th>Window</th><th class="c">Trades</th><th class="c">WR%</th><th class="r">P&L</th></tr></thead>
+          <tbody>${tbRows}</tbody>
+        </table>
+      </div>
+      <div class="sec">
+        <h2>Exit Reasons</h2>
+        <table>
+          <thead><tr><th>Exit Type</th><th class="c">n</th><th class="r">Total</th><th class="r">Avg</th></tr></thead>
+          <tbody>${rRows}</tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- ALL TRADES -->
+    <div class="sec">
+      <h2>All Trades</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Symbol</th><th>Strategy</th><th class="r">Entry</th><th class="r">Exit</th><th class="r">SL</th><th class="r">Tgt</th><th class="c">Hold</th><th class="c purple">R</th><th class="r">P&L</th><th>Reason</th></tr></thead>
+        <tbody>${tradeRows(trades)}</tbody>
+      </table>
+    </div>
+
+    <!-- CONTRA TRADES -->
+    <div class="sec contra-sec">
+      <h2>Contra Trades <span class="badge badge-amber">${contra.length}</span>${contra.length ? ` <span style="font-size:11px;color:${pc(contraTotal)};margin-left:8px">${fmt(contraTotal)}</span>` : ''}</h2>
+      <table>
+        <thead><tr><th>Time</th><th>Symbol</th><th>Strategy</th><th class="r">Entry</th><th class="r">Exit</th><th class="r">SL</th><th class="r">Tgt</th><th class="c">Hold</th><th class="c purple">R</th><th class="r">P&L</th><th>Status</th></tr></thead>
+        <tbody>${tradeRows(contra)}</tbody>
+      </table>
+    </div>
+
+    <div class="footer">Generated ${genTime} local · imranakbarin.github.io/tradedesk-reports</div>
+  `;
+}
+
+// ── routing ───────────────────────────────────────────────────────────────────
+async function init() {
+  try {
+    const r = await fetch('data/dates.json?_=' + Date.now());
+    if (!r.ok) throw new Error('No reports yet.');
+    dates = await r.json();
+  } catch(e) {
+    document.getElementById('error-msg').style.display='block';
+    document.getElementById('error-msg').textContent=e.message;
+    return;
+  }
+  const picker = document.getElementById('date-picker');
+  dates.forEach(d => { const o=document.createElement('option'); o.value=d; o.textContent=d; picker.appendChild(o); });
+  const hash = location.hash.replace('#','');
+  currentIdx = (hash && dates.includes(hash)) ? dates.indexOf(hash) : 0;
+  picker.value = dates[currentIdx];
+  loadReport(dates[currentIdx]);
+}
+
+function navigate(dir) {
+  const next = currentIdx + dir;
+  if (next < 0 || next >= dates.length) return;
+  currentIdx = next;
+  document.getElementById('date-picker').value = dates[currentIdx];
+  loadReport(dates[currentIdx]);
+}
+
+async function loadReport(date) {
+  currentIdx = dates.indexOf(date);
+  location.hash = date;
+  document.getElementById('btn-prev').disabled = currentIdx >= dates.length - 1;
+  document.getElementById('btn-next').disabled = currentIdx <= 0;
+  document.getElementById('loading').style.display='block';
+  document.getElementById('report').innerHTML='';
+  document.getElementById('error-msg').style.display='none';
+  try {
+    const r = await fetch(`data/${date}.json?_=`+Date.now());
+    if (!r.ok) throw new Error(`Report for ${date} not found`);
+    const data = await r.json();
+    document.getElementById('loading').style.display='none';
+    renderReport(data);
+  } catch(e) {
+    document.getElementById('loading').style.display='none';
+    document.getElementById('error-msg').style.display='block';
+    document.getElementById('error-msg').textContent=e.message;
+  }
+}
+
+init();
+</script>
+</body>
+</html>
