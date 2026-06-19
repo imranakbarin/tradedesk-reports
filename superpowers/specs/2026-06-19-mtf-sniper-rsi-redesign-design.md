@@ -12,9 +12,22 @@ drifts and pins near the window's edge during a slow trend.
 ## Background
 
 mtf_sniper's CE/PE entry condition (`backend/services/trading_bot.py:1220-1226`)
-gates on a **fixed absolute RSI(15m) band**: `45 < rsi < 60` for CE,
-`38 < rsi < 58` for PE (on top of the existing `daily_bullish`/`daily_bearish`
-trend gate, which is NOT changing — see Scope).
+gates on a **fixed absolute RSI band**: `45 < rsi < 60` for CE, `38 < rsi < 58`
+for PE (on top of the existing `daily_bullish`/`daily_bearish` trend gate,
+which is NOT changing — see Scope).
+
+**Correction from the original spec draft:** `rsi` here is `idx.get("rsi")`
+(`market_intelligence.py:802`, `_rsi(daily_close_series, 14)`) — a **daily-bar
+RSI(14), recomputed live** with the current price substituted as today's
+still-forming bar's close. It is NOT a true 15-minute RSI, despite the
+`bot_log.rsi_15m` column (used in the original diagnosis) logging this same
+value under that name — a genuinely intraday RSI exists separately as
+`intraday.get("15m",{}).get("rsi")` and is used in an unrelated overbought/
+oversold guard (`trading_bot.py:4479-4493`), not in the condition being
+redesigned here. The diagnosed failure mode is unaffected by this correction
+— a daily-bar value recomputed against a live-updating price still pins near
+a fixed ceiling during a sustained trend for the same reason — but it changes
+what data the replay needs to reconstruct (see Validation).
 
 This band has already needed one reactive widening: on 2026-06-15, RSI pinned
 at 57-59 all session against the then-ceiling of 55, producing zero signals;
@@ -49,7 +62,8 @@ trend drift.
 Per index, per session (reset at market open 09:15 IST):
 
 - Track a running `session_rsi_high` (for CE) and `session_rsi_low` (for PE)
-  — simple running max/min of RSI(15m) updated every evaluation cycle.
+  — simple running max/min of `idx["rsi"]` (the live-updating daily-bar RSI
+  described above) updated every evaluation cycle.
 - **CE** fires when: `daily_bullish` (unchanged) AND
   `(session_rsi_high - rsi) >= N` (real pullback depth, not absolute level)
   AND `rsi > FLOOR` (still bullish bias, not an actual reversal) AND
@@ -79,14 +93,27 @@ New script: `scripts/_mtf_sniper_rsi_redesign.py` (scratch analysis script,
 matches `scripts/_mtf_sniper_loop_iter1.py` / `scripts/_trend_sr_pullback_backtest.py`
 convention — safe to delete after use).
 
-**Data:** Reconstruct 15m RSI, `ema20`, `ema50`, `trend_score` per index from
-yfinance candles, full history 2026-04-15 → present (same reconstruction
-approach the Phase 0 diagnosis already validated for trend_score gaps).
+**Data:** yfinance intraday history only covers a live ~5-day window — there
+is no real historical 15m/5m OHLC to reconstruct from for this date range
+(confirmed in `_trend_sr_pullback_backtest.py`'s own docstring, which already
+solved this same problem; the original spec draft's claim that the Phase 0
+diagnosis validated a yfinance-candle reconstruction was a misattribution —
+Phase 0 actually *deferred* that exact reconstruction as infeasible). Instead,
+reuse `_trend_sr_pullback_backtest.py`'s approach directly: real yfinance
+**daily** (2y) + **weekly** (5y) OHLC for the indicator math (`_rsi`/`_ema`
+imported from `strategy_engine.py`, not reimplemented), walked forward through
+each historical trading day using `db/options_tick.sqlite`'s point-sampled
+live spot price (`options_ticks.spot`, ~1/min when the logger was up) as the
+substituted close of today's still-forming daily bar at each sampled instant
+— mirroring exactly how `idx["rsi"]`/`ema20`/`ema50`/`trend_score` are
+computed live. **Real coverage is ~36 of ~46 trading days since 2026-04-15**
+(tick-logger uptime gaps, not a clean continuous range) — the replay will
+report actual day coverage, not assume the full calendar window.
 
 **Candidate trade generation:** For each candidate `N` in `{3, 5, 8, 10}`
-points, walk the full reconstructed series and record every bar where the new
-CE/PE condition would have fired (respecting the unchanged macro gate, cooldown,
-and the existing 10:00-12:00 block). For each simulated entry, simulate the
+points, walk every sampled tick instant in the reconstructed series and record
+every point where the new CE/PE condition would have fired (respecting the
+unchanged macro gate, cooldown, and the existing 10:00-12:00 block). For each simulated entry, simulate the
 outcome using the **same exit formula mtf_sniper already uses live**
 (`_dynamic_sl_tgt`'s `strategy == "mtf_sniper"` branch: target = next pivot
 level in premium points or `atr_pts*2.0` fallback, SL = `atr_pts*1.2`, capped/
@@ -129,5 +156,6 @@ dated-comment convention recording what was tried and why.
 - Modeling trailing-SL or smart-exit in the replay (see Known simplification).
 - A shadow/log-only rollout period — user explicitly chose direct replacement
   if validation passes.
-- Reconstructing trend_score from anything other than yfinance candles (no
-  new data source).
+- Reconstructing `rsi`/`trend_score` from anything other than real yfinance
+  daily/weekly OHLC + `options_tick.sqlite`'s real spot ticks (no new data
+  source, e.g. no synthetic/simulated price paths).
