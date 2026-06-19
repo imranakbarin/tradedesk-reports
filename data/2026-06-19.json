@@ -1,0 +1,106 @@
+{
+  "date": "2026-06-19",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": -13918.0,
+    "trades": 184,
+    "wins": 108,
+    "losses": 76
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -10550.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -12861.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -13918.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_analysis": "# Post-Market Debrief — June 19, 2026\n\nToday was a complete washout with zero trades executed, which means you either faced unfavorable market conditions, missed setups entirely, or your bot's entry criteria weren't triggered. While avoiding trades is sometimes the right call, a zero-trade day leaves no data to analyze for performance, making it difficult to assess whether this was disciplined restraint or missed opportunity. Your month-to-date loss sits at ₹13,918, so the pressure is mounting to generate winning trades that can claw back this deficit. Since there were no individual trades to review, focus tomorrow on whether your setup filters are too strict (causing missed entries) or if market conditions genuinely didn't align with your strategy—the distinction is critical. Going forward, document the specific reason for every no-trade day: Was it IV crush, gap risks, low liquidity, or simply no valid signals? This clarity will help you distinguish between patient trading discipline and analysis paralysis.",
+  "generated_at": "2026-06-19T05:05:16.344784"
+}
