@@ -129,6 +129,27 @@ smart-exit (`_should_smart_exit`) logic — same simplification
 will tend to understate exits that would have trailed for more than the fixed
 target, and is a known conservative bias, not an oversight.
 
+**Known simplification — confluence score is partial, not full:** the exit
+formula above depends on `confluence` (`_dynamic_sl_tgt`'s `>=5`/`>=3` bonus
+tiers, and `_evaluate_strategy`'s own `min_conf=2` gate before a signal counts
+at all). Live `_confluence_score()` is a 10-point score: 6 daily sub-signals
+(supertrend, MACD, RSI, EMA20, options_rec, PCR) + 4 intraday sub-signals (5m
+signal, 15m signal, mtf_consensus, VWAP position). The replay can reconstruct
+5 of the 6 daily sub-signals from real data — supertrend/MACD/RSI/EMA20 from
+the daily-bar reconstruction above, and PCR from `options_ticks.pcr` (logged
+alongside spot on the same tick row). It **cannot** reconstruct `options_rec`
+(the live Black-Scholes recommendation engine's verdict — a separate live-only
+computation) or any of the 4 intraday sub-signals (need historical 5m/15m OHLC,
+unavailable per Data above). Max achievable confluence here is therefore 5/10,
+not 10/10. Practical effect: the `>=5` SL/target bonus tier is reachable only
+when every reconstructible signal agrees (rare); the live MTF confirmation
+gate at `trading_bot.py:1807-1817` is structurally skipped, since it only
+applies `if intraday:` and the replay passes none — identical to how the live
+function itself behaves when intraday data is unavailable, not an invented
+shortcut. This is a conservative bias (understates confluence, so understates
+how often the bonus tier and intraday-agreement fast-path apply), reported
+in the replay's output, not hidden.
+
 **Fit/confirm procedure (mirrors `_mtf_sniper_loop_iter1.py`):** For each of
 30 seeds, randomly split each candidate `N`'s full simulated trade list 50/50.
 On the fit half, compute aggregate PnL per candidate `N` among those with
