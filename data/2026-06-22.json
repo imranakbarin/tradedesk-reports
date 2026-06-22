@@ -1,0 +1,285 @@
+{
+  "date": "2026-06-22",
+  "trades": [
+    {
+      "placed_at": "2026-06-22T10:27:05.023047",
+      "closed_at": "2026-06-22T12:07:13.344165",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77200,
+      "entry_price": 442.35,
+      "exit_price": 419.15,
+      "sl_price": 383.35,
+      "target_price": 530.85,
+      "lot_size": 1,
+      "pnl": -545.52,
+      "status": "SMART_EXIT",
+      "reason": "[C8] CE vol dominant: ratio=0.64 (ce=110,380 vs pe=70,320) — accumulation flow, trend 77 [C8/10] → SMART_EXIT: 5m Supertrend SHORT + RSI 51 — exit losing CE",
+      "hold_minutes": 100,
+      "high_price": 469.55,
+      "low_price": 413.2,
+      "r_multiple": -0.46,
+      "confluence": 8,
+      "trend_score_entry": 77.0,
+      "rsi_entry": 60.6,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-06-22T13:59:12.118396",
+      "closed_at": "2026-06-22T14:14:23.381677",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24100,
+      "entry_price": 90.95,
+      "exit_price": 82.0,
+      "sl_price": 78.85,
+      "target_price": 109.15,
+      "lot_size": 1,
+      "pnl": -651.13,
+      "status": "SMART_EXIT",
+      "reason": "[C7] CE vol dominant: ratio=0.56 (ce=8,374,470 vs pe=4,700,930) — accumulation flow, trend 77 [C7/10] → SMART_EXIT: 5m Supertrend SHORT + RSI 51 — exit losing CE",
+      "hold_minutes": 15,
+      "high_price": 90.95,
+      "low_price": 82.1,
+      "r_multiple": -0.83,
+      "confluence": 7,
+      "trend_score_entry": 77.0,
+      "rsi_entry": 60.0,
+      "regime": "ranging",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-22T10:27:17.647305",
+      "closed_at": "2026-06-22T12:07:13.541922",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77400,
+      "entry_price": 472.7,
+      "exit_price": 472.65,
+      "sl_price": 464.7,
+      "target_price": 487.7,
+      "lot_size": 1,
+      "pnl": -1.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|68bda391",
+      "hold_minutes": 100,
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-06-22T13:59:13.119827",
+      "closed_at": "2026-06-22T14:14:23.551140",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24200,
+      "entry_price": 103.75,
+      "exit_price": 111.75,
+      "sl_price": 95.75,
+      "target_price": 118.75,
+      "lot_size": 1,
+      "pnl": 520.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|e6cbccd1",
+      "hold_minutes": 15,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -1197.0,
+      "gross_win": 0.0,
+      "gross_loss": -1197.0,
+      "avg_r": -0.65,
+      "avg_hold": 58.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 2,
+      "total_pnl": -1197.0,
+      "avg_pnl": -598.0
+    }
+  ],
+  "mtd": {
+    "pnl": -15181.0,
+    "trades": 187,
+    "wins": 108,
+    "losses": 79
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -10550.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -12861.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -13918.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -13985.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1197.0,
+      "cumulative": -15182.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1197.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -546.0,
+      "gross_win": 0.0,
+      "gross_loss": -546.0,
+      "avg_hold": 100.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -651.0,
+      "gross_win": 0.0,
+      "gross_loss": -651.0,
+      "avg_hold": 15.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -546.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -651.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1197.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -598.0,
+    "profit_factor": 0.0,
+    "expectancy": -598.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 58.0,
+    "avg_r": -0.65,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_analysis": "# Post-Market Debrief — June 22, 2026\n\nToday was a 0-for-2 session with a ₹1,197 loss, pushing the month into negative territory at -₹15,181. Both losses came from the vol_flow strategy, which is now showing a pattern of taking signals in high-confluence setups but exiting via Supertrend reversal before the intended targets materialize. The SENSEX CE trade had stronger confluence (8/10) and held for 100 minutes, giving the thesis more room to breathe, yet still closed at a -0.46R loss; the NIFTY CE was worse—higher confluence but only 15 minutes in the saddle before a -0.83R exit, suggesting the regime_ranging classification caught a violent micro-reversal. What's striking is that both entries showed trend_score of 77 (solid directional alignment) and RSI in the 60+ range (overbought), yet the 5-minute Supertrend kept flipping short, signaling capitulation before conviction could build. Tomorrow, reduce position size or extend hold windows on vol_flow trades that trigger in trending regime with 7+ confluence—the logic is sound but the execution windows are being murdered by short-term noise on the 5m chart. Consider moving Supertrend stops to the 15-minute or hourly timeframe to let accumulation plays breathe past the noise.",
+  "generated_at": "2026-06-22T05:05:13.789974"
+}
