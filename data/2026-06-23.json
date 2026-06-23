@@ -1,0 +1,236 @@
+{
+  "date": "2026-06-23",
+  "trades": [
+    {
+      "placed_at": "2026-06-23T11:24:03.585063",
+      "closed_at": "2026-06-23T11:31:58.465319",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24050,
+      "entry_price": 82.75,
+      "exit_price": 71.75,
+      "sl_price": 71.75,
+      "target_price": 99.35,
+      "lot_size": 1,
+      "pnl": -782.54,
+      "status": "SL_HIT",
+      "reason": "[C7] CE vol dominant: ratio=0.41 (ce=22,090,835 vs pe=9,021,350) — accumulation flow, trend 77 [C7/10] → SL_HIT: SL ₹71.75 hit (trail=False)",
+      "hold_minutes": 7,
+      "high_price": 82.95,
+      "low_price": 71.95,
+      "r_multiple": -1.09,
+      "confluence": 7,
+      "trend_score_entry": 77.0,
+      "rsi_entry": 60.1,
+      "regime": "ranging",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-23T11:24:04.144960",
+      "closed_at": "2026-06-23T11:31:58.632521",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24150,
+      "entry_price": 44.4,
+      "exit_price": 51.95,
+      "sl_price": 36.4,
+      "target_price": 59.4,
+      "lot_size": 1,
+      "pnl": 490.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|0b9725fa",
+      "hold_minutes": 7,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -783.0,
+      "gross_win": 0.0,
+      "gross_loss": -783.0,
+      "avg_r": -1.09,
+      "avg_hold": 7.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -783.0,
+      "avg_pnl": -783.0
+    }
+  ],
+  "mtd": {
+    "pnl": -16819.0,
+    "trades": 189,
+    "wins": 108,
+    "losses": 81
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -10550.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -12861.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -13918.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -13985.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0,
+      "cumulative": -16037.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "cumulative": -16820.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "gross_win": 0.0,
+      "gross_loss": -783.0,
+      "avg_hold": 7.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -783.0,
+    "profit_factor": 0.0,
+    "expectancy": -783.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 7.0,
+    "avg_r": -1.09,
+    "max_win_streak": 0,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# Post-Market Debrief – 2026-06-23\n\nToday was a loss day: one trade, one stop-loss hit, ₹783 down, and month-to-date you're now -₹16,819. The vol_flow strategy triggered on a NIFTY 24050 CE with strong confluence (7/10) and a dominant call volume ratio (0.41), backed by a trend score of 77 at entry—on paper, the setup looked sound. The problem was execution timing: you entered at ₹82.75 with a target of ₹99.35, but the market immediately rejected that level and reversed hard, taking out your ₹71.75 stop in just 7 minutes with a -1.09R loss. The regime was ranging, not trending, yet your bot treated the 77-point trend score as confirmation—a mismatch between signal strength and actual market structure that cost you. For tomorrow, tighten your regime filter: when the market is ranging, require either a higher confluence threshold (8+/10) or skip vol_flow entries entirely and wait for confirmed trend breaks instead of trading inside the range.",
+  "generated_at": "2026-06-23T05:05:16.441581"
+}
