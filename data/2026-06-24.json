@@ -1,0 +1,432 @@
+{
+  "date": "2026-06-24",
+  "trades": [
+    {
+      "placed_at": "2026-06-24T09:47:46.034185",
+      "closed_at": "2026-06-24T09:52:51.409431",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23850,
+      "entry_price": 155.25,
+      "exit_price": 170.15,
+      "sl_price": 136.62,
+      "target_price": 192.51,
+      "lot_size": 1,
+      "pnl": 908.5,
+      "status": "TIME_EXIT",
+      "reason": "trend_sr_agent: MTF S/R PE: higher down, lower rejection from resistance 23868, support 23796 (Slip: 1.0)",
+      "hold_minutes": 5,
+      "high_price": 171.15,
+      "low_price": null,
+      "r_multiple": 0.8,
+      "confluence": null,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "trend_sr_agent"
+    },
+    {
+      "placed_at": "2026-06-24T09:49:26.386281",
+      "closed_at": "2026-06-24T09:54:31.521075",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 76300,
+      "entry_price": 288.89,
+      "exit_price": 303.87,
+      "sl_price": 254.22,
+      "target_price": 358.22,
+      "lot_size": 1,
+      "pnl": 239.71,
+      "status": "TIME_EXIT",
+      "reason": "trend_sr_agent: MTF S/R PE: higher down, lower rejection from resistance 76382, support 76230 (Slip: 1.4)",
+      "hold_minutes": 5,
+      "high_price": 305.4,
+      "low_price": null,
+      "r_multiple": 0.43,
+      "confluence": null,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "trend_sr_agent"
+    },
+    {
+      "placed_at": "2026-06-24T09:51:03.895163",
+      "closed_at": "2026-06-24T09:56:12.453141",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24050,
+      "entry_price": 67.15,
+      "exit_price": 70.1,
+      "sl_price": 62.45,
+      "target_price": 75.21,
+      "lot_size": 1,
+      "pnl": 131.75,
+      "status": "TIME_EXIT",
+      "reason": "nifty_tick_fade_reversal: NIFTY tick-fade CE NSE:NIFTY26JUN24050CE strike 24050: paper_forward reversal_lb3 move=-6.39% bounce=2.74% oi_pct=1.19% ctx=fade CE_breadth=0.00 PE_breadth=0.95 (Slip: 1.0)",
+      "hold_minutes": 5,
+      "high_price": 71.1,
+      "low_price": null,
+      "r_multiple": 0.63,
+      "confluence": null,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "nifty_tick_fade_reversal"
+    },
+    {
+      "placed_at": "2026-06-24T10:17:28.721186",
+      "closed_at": "2026-06-24T10:29:28.428512",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76700,
+      "entry_price": 297.03,
+      "exit_price": 334.47,
+      "sl_price": 342.1,
+      "target_price": 392.08,
+      "lot_size": 1,
+      "pnl": 688.83,
+      "status": "TRAIL_SL_HIT",
+      "reason": "vov_breakout: VoV-gated ORB above 76453 (Slip: 1.5)",
+      "hold_minutes": 12,
+      "high_price": 336.15,
+      "low_price": null,
+      "r_multiple": null,
+      "confluence": null,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "vov_breakout"
+    },
+    {
+      "placed_at": "2026-06-24T10:58:20.998073",
+      "closed_at": "2026-06-24T11:16:26.603370",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76700,
+      "entry_price": 339.44,
+      "exit_price": 389.05,
+      "sl_price": 357.3,
+      "target_price": 414.12,
+      "lot_size": 1,
+      "pnl": 932.12,
+      "status": "TIME_EXIT",
+      "reason": "flow_confirmed_breakout: Flow breakout CE above 76453; PCR 1.13, PE OI +0/min (Slip: 1.7)",
+      "hold_minutes": 18,
+      "high_price": 391.0,
+      "low_price": null,
+      "r_multiple": null,
+      "confluence": null,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "flow_confirmed_breakout"
+    },
+    {
+      "placed_at": "2026-06-24T11:42:22.118047",
+      "closed_at": "2026-06-24T11:57:29.070961",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76900,
+      "entry_price": 285.52,
+      "exit_price": 321.14,
+      "sl_price": 304.78,
+      "target_price": 348.34,
+      "lot_size": 1,
+      "pnl": 652.31,
+      "status": "TIME_EXIT",
+      "reason": "vrp_momentum: VRP -0.6bps: RV > IV, buying CE (Slip: 1.4)",
+      "hold_minutes": 15,
+      "high_price": 322.75,
+      "low_price": null,
+      "r_multiple": null,
+      "confluence": null,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "vrp_momentum"
+    }
+  ],
+  "contra_trades": [],
+  "by_strategy": [
+    {
+      "strategy": "trend_sr_agent",
+      "trades": 2,
+      "wins": 2,
+      "losses": 0,
+      "pnl": 1148.0,
+      "gross_win": 1148.0,
+      "gross_loss": 0,
+      "avg_r": 0.61,
+      "avg_hold": 5.0
+    },
+    {
+      "strategy": "flow_confirmed_breakout",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 932.0,
+      "gross_win": 932.0,
+      "gross_loss": 0,
+      "avg_r": null,
+      "avg_hold": 18.0
+    },
+    {
+      "strategy": "vov_breakout",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 689.0,
+      "gross_win": 689.0,
+      "gross_loss": 0,
+      "avg_r": null,
+      "avg_hold": 12.0
+    },
+    {
+      "strategy": "vrp_momentum",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 652.0,
+      "gross_win": 652.0,
+      "gross_loss": 0,
+      "avg_r": null,
+      "avg_hold": 15.0
+    },
+    {
+      "strategy": "nifty_tick_fade_reversal",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 132.0,
+      "gross_win": 132.0,
+      "gross_loss": 0,
+      "avg_r": 0.63,
+      "avg_hold": 5.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TIME_EXIT",
+      "n": 5,
+      "total_pnl": 2864.0,
+      "avg_pnl": 573.0
+    },
+    {
+      "status": "TRAIL_SL_HIT",
+      "n": 1,
+      "total_pnl": 689.0,
+      "avg_pnl": 689.0
+    }
+  ],
+  "mtd": {
+    "pnl": -13267.0,
+    "trades": 195,
+    "wins": 114,
+    "losses": 81
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -331.0,
+      "cumulative": -46.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -5172.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6674.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4566.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -7002.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -192.0,
+      "cumulative": -7194.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -10550.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -12861.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -13918.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -13985.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0,
+      "cumulative": -16037.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "cumulative": -16820.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 6,
+      "wins": 6,
+      "pnl": 3553.0,
+      "cumulative": -13267.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -13985.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0,
+      "cumulative": -16037.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "cumulative": -16820.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 6,
+      "wins": 6,
+      "pnl": 3553.0,
+      "cumulative": -13267.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 2,
+      "pnl": 1040.0,
+      "gross_win": 1040.0,
+      "gross_loss": 0,
+      "avg_hold": 5.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 4,
+      "wins": 4,
+      "pnl": 2513.0,
+      "gross_win": 2513.0,
+      "gross_loss": 0,
+      "avg_hold": 12.5
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:00-10:00",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 1280.0
+    },
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 2,
+      "pnl": 1621.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 652.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 4,
+      "wins": 4,
+      "pnl": 2405.0
+    },
+    {
+      "action": "PE",
+      "trades": 2,
+      "wins": 2,
+      "pnl": 1148.0
+    }
+  ],
+  "stats": {
+    "avg_win": 592.0,
+    "avg_loss": 0,
+    "profit_factor": "inf",
+    "expectancy": 592.0,
+    "avg_hold_win": 10.0,
+    "avg_hold_loss": null,
+    "avg_r": 0.62,
+    "max_win_streak": 6,
+    "max_loss_streak": 0,
+    "current_streak": 6
+  },
+  "ai_analysis": "# Post-Market Debrief - 2026-06-24\n\nThe options-buying book closed green: 6 trades, 6 winners, INR 3,553.22 net. The strongest contribution came from trend_sr_agent, while the frozen nifty_tick_fade_reversal profile produced one small positive CE time-exit. This legacy feed covers bot_trades only; the separate Codex options-selling report shows the selling book loss and restart-close impact.",
+  "generated_at": "2026-06-24T13:35:55.496127"
+}
