@@ -1,0 +1,326 @@
+{
+  "date": "2026-06-25",
+  "trades": [
+    {
+      "placed_at": "2026-06-25T10:50:07.627304",
+      "closed_at": "2026-06-25T11:57:42.034787",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24150,
+      "entry_price": 138.3,
+      "exit_price": 166.0,
+      "sl_price": 138.3,
+      "target_price": 166.0,
+      "lot_size": 1,
+      "pnl": 1712.08,
+      "status": "TARGET_HIT",
+      "reason": "[C7] CE vol dominant: ratio=0.59 (ce=3,595,280 vs pe=2,133,430) — accumulation flow, trend 83 [C7/10] → TARGET_HIT: Target ₹166.00 reached",
+      "hold_minutes": 67,
+      "high_price": 165.4,
+      "low_price": 127.05,
+      "r_multiple": 1.43,
+      "confluence": 7,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 59.3,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-06-25T12:00:11.488102",
+      "closed_at": "2026-06-25T12:22:30.609456",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24200,
+      "entry_price": 145.35,
+      "exit_price": 145.35,
+      "sl_price": 145.35,
+      "target_price": 162.55,
+      "lot_size": 1,
+      "pnl": -85.07,
+      "status": "TRAIL_SL",
+      "reason": "[C9] Daily uptrend (score 83) + RSI 60 pullback — sniper entry [C9/10] → TRAIL_SL: SL ₹145.35 hit (trail=True)",
+      "hold_minutes": 22,
+      "high_price": 161.2,
+      "low_price": 145.35,
+      "r_multiple": -0.11,
+      "confluence": 9,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 59.9,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-25T10:50:26.167626",
+      "closed_at": "2026-06-25T11:57:42.298171",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24250,
+      "entry_price": 131.5,
+      "exit_price": 115.0,
+      "sl_price": 123.5,
+      "target_price": 146.5,
+      "lot_size": 1,
+      "pnl": -1072.5,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|3f1ef25e",
+      "hold_minutes": 67,
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-06-25T12:00:26.142336",
+      "closed_at": "2026-06-25T12:22:30.667485",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24300,
+      "entry_price": 132.1,
+      "exit_price": 134.45,
+      "sl_price": 124.1,
+      "target_price": 147.1,
+      "lot_size": 1,
+      "pnl": 152.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|09cda78b",
+      "hold_minutes": 22,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 1712.0,
+      "gross_win": 1712.0,
+      "gross_loss": 0.0,
+      "avg_r": 1.43,
+      "avg_hold": 67.0
+    },
+    {
+      "strategy": "mtf_sniper",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -85.0,
+      "gross_win": 0.0,
+      "gross_loss": -85.0,
+      "avg_r": -0.11,
+      "avg_hold": 22.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 1712.0,
+      "avg_pnl": 1712.0
+    },
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -85.0,
+      "avg_pnl": -85.0
+    }
+  ],
+  "mtd": {
+    "pnl": -12289.0,
+    "trades": 197,
+    "wins": 113,
+    "losses": 84
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -122.0,
+      "cumulative": 163.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -4963.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6465.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4357.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -6793.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -1604.0,
+      "cumulative": -8397.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -11753.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -14064.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -15121.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -15188.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0,
+      "cumulative": -17240.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "cumulative": -18023.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 4106.0,
+      "cumulative": -13917.0
+    },
+    {
+      "day": "2026-06-25",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1627.0,
+      "cumulative": -12290.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 4106.0
+    },
+    {
+      "day": "2026-06-25",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1627.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1627.0,
+      "gross_win": 1712.0,
+      "gross_loss": -85.0,
+      "avg_hold": 45.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1712.0
+    },
+    {
+      "bucket": "12:00-13:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -85.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1627.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1712.0,
+    "avg_loss": -85.0,
+    "profit_factor": 20.13,
+    "expectancy": 814.0,
+    "avg_hold_win": 67.0,
+    "avg_hold_loss": 22.0,
+    "avg_r": 0.66,
+    "max_win_streak": 1,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# Post-Market Debrief — 2026-06-25\n\nToday closed +₹1,627 on 2 trades (50% win rate), but the month is underwater at −₹12,289, so this single win doesn't erase the larger drawdown pattern. The vol_flow strategy delivered the heavy lifting: a 67-minute hold on NIFTY 24150 CE that caught 1,712 rupees by riding CE dominance (59% volume ratio) into a clean target hit at ₹166, anchored by a strong 83 trend score and 7-point confluence. That trade worked because you waited for accumulation flow confirmation and held through normal pullback noise rather than panicking. The mtf_sniper trade immediately after—same underlying, higher strike (24200 CE), 22 minutes to stoploss—is the warning sign: you entered on identical trend strength (83) and RSI (59.9) but got shaken out at entry, suggesting either the sniper setup lacks the confluence buffer of vol_flow or you're chasing momentum too quickly after a win. Tomorrow, enforce a minimum 8-confluence rule across both strategies (sniper had 9 but still failed) and wait at least 30 minutes after a target-hit trade before re-entering the same underlying to avoid revenge trading into weaker setups.",
+  "generated_at": "2026-06-25T05:05:11.341434"
+}
