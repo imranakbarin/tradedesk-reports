@@ -1,0 +1,153 @@
+{
+  "date": "2026-06-29",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": -13268.0,
+    "trades": 380,
+    "wins": 206,
+    "losses": 174
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -122.0,
+      "cumulative": 163.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -4963.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6465.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4357.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -6793.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -1604.0,
+      "cumulative": -8397.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -11753.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -14064.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -15121.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -15188.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0,
+      "cumulative": -17240.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "cumulative": -18023.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 4106.0,
+      "cumulative": -13917.0
+    },
+    {
+      "day": "2026-06-25",
+      "trades": 185,
+      "wins": 94,
+      "pnl": 648.0,
+      "cumulative": -13269.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 4106.0
+    },
+    {
+      "day": "2026-06-25",
+      "trades": 185,
+      "wins": 94,
+      "pnl": 648.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_analysis": "# Post-Market Debrief — June 29, 2026\n\nToday was a no-trade day, which means you either stayed disciplined on the sidelines or missed opportunities—either way, you preserved capital and avoided adding to the month's -₹13,268 drawdown. With zero entries across the session, there's nothing to analyze on strategy execution or win rate, so the real question becomes whether you were waiting for high-conviction setups that never materialized or if you were too cautious. Since you're down over ₹13k month-to-date, sitting out a session without clear reasoning risks extending the losing streak; tomorrow, define your exact entry criteria (volatility levels, support/resistance proximity, time-of-day filters) *before* market open so you're not frozen by fear or overconfidence. The goal isn't to force trades, but to have a mechanical rule that tells you when to act, so you can distinguish between disciplined patience and costly hesitation.",
+  "generated_at": "2026-06-29T22:34:05.132476"
+}
