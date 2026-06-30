@@ -1,0 +1,257 @@
+{
+  "date": "2026-06-30",
+  "trades": [
+    {
+      "placed_at": "2026-06-30T11:16:22.705909",
+      "closed_at": "2026-06-30T11:24:07.369411",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76600,
+      "entry_price": 471.15,
+      "exit_price": 565.35,
+      "sl_price": 408.35,
+      "target_price": 565.35,
+      "lot_size": 1,
+      "pnl": 1794.13,
+      "status": "TARGET_HIT",
+      "reason": "[C5] CE vol dominant: ratio=0.60 (ce=356,400 vs pe=214,920) — accumulation flow, trend 63 [C5/10] → TARGET_HIT: Target ₹565.35 reached",
+      "hold_minutes": 7,
+      "high_price": 506.25,
+      "low_price": 447.1,
+      "r_multiple": 1.43,
+      "confluence": 5,
+      "trend_score_entry": 63.0,
+      "rsi_entry": 54.6,
+      "regime": "ranging",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-06-30T11:16:23.018713",
+      "closed_at": "2026-06-30T11:24:07.898781",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 76800,
+      "entry_price": 398.95,
+      "exit_price": 319.25,
+      "sl_price": 390.95,
+      "target_price": 413.95,
+      "lot_size": 1,
+      "pnl": -1594.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|10c3ba87",
+      "hold_minutes": 7,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 1794.0,
+      "gross_win": 1794.0,
+      "gross_loss": 0.0,
+      "avg_r": 1.43,
+      "avg_hold": 7.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 1794.0,
+      "avg_pnl": 1794.0
+    }
+  ],
+  "mtd": {
+    "pnl": -11474.0,
+    "trades": 381,
+    "wins": 207,
+    "losses": 174
+  },
+  "monthly_days": [
+    {
+      "day": "2026-06-01",
+      "trades": 4,
+      "wins": 2,
+      "pnl": 3127.0,
+      "cumulative": 3127.0
+    },
+    {
+      "day": "2026-06-02",
+      "trades": 154,
+      "wins": 103,
+      "pnl": -2842.0,
+      "cumulative": 285.0
+    },
+    {
+      "day": "2026-06-03",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -122.0,
+      "cumulative": 163.0
+    },
+    {
+      "day": "2026-06-04",
+      "trades": 7,
+      "wins": 1,
+      "pnl": -5126.0,
+      "cumulative": -4963.0
+    },
+    {
+      "day": "2026-06-05",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1502.0,
+      "cumulative": -6465.0
+    },
+    {
+      "day": "2026-06-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 2108.0,
+      "cumulative": -4357.0
+    },
+    {
+      "day": "2026-06-09",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2436.0,
+      "cumulative": -6793.0
+    },
+    {
+      "day": "2026-06-10",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -1604.0,
+      "cumulative": -8397.0
+    },
+    {
+      "day": "2026-06-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -3356.0,
+      "cumulative": -11753.0
+    },
+    {
+      "day": "2026-06-12",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2311.0,
+      "cumulative": -14064.0
+    },
+    {
+      "day": "2026-06-16",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1057.0,
+      "cumulative": -15121.0
+    },
+    {
+      "day": "2026-06-19",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -67.0,
+      "cumulative": -15188.0
+    },
+    {
+      "day": "2026-06-22",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2052.0,
+      "cumulative": -17240.0
+    },
+    {
+      "day": "2026-06-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -783.0,
+      "cumulative": -18023.0
+    },
+    {
+      "day": "2026-06-24",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 4106.0,
+      "cumulative": -13917.0
+    },
+    {
+      "day": "2026-06-25",
+      "trades": 185,
+      "wins": 94,
+      "pnl": 648.0,
+      "cumulative": -13269.0
+    },
+    {
+      "day": "2026-06-30",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0,
+      "cumulative": -11475.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-24",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 4106.0
+    },
+    {
+      "day": "2026-06-25",
+      "trades": 185,
+      "wins": 94,
+      "pnl": 648.0
+    },
+    {
+      "day": "2026-06-30",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0,
+      "gross_win": 1794.0,
+      "gross_loss": 0.0,
+      "avg_hold": 7.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1794.0,
+    "avg_loss": 0,
+    "profit_factor": null,
+    "expectancy": 1794.0,
+    "avg_hold_win": 7.0,
+    "avg_hold_loss": null,
+    "avg_r": 1.43,
+    "max_win_streak": 1,
+    "max_loss_streak": 0,
+    "current_streak": 1
+  },
+  "ai_analysis": "# Post-Market Debrief — June 30, 2026\n\nToday delivered a solid single win: ₹1,794 profit on one trade with a perfect 100% win rate, though the monthly picture remains underwater at −₹11,474 YTD. The vol_flow strategy identified a clean CE accumulation setup in SENSEX 76600 (CE/PE ratio 0.60) with solid confluence (5/10) and caught a 7-minute scalp from ₹471.15 to ₹565.35, netting 1.43R and hitting target in a ranging regime—textbook execution on what the signal was designed for. Since the best and worst trades are identical (only one fill today), there's no negative pattern to dissect; the issue is volume and consistency rather than directional or entry quality. Watch tomorrow for whether the vol_flow scanner can generate multiple setups with similar confluence levels—one trade a day won't recover the monthly deficit, and the bot needs to prove it can chain wins across multiple entries in the same session without overtrading into noise.",
+  "generated_at": "2026-06-30T05:05:11.560366"
+}
