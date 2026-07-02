@@ -1,0 +1,169 @@
+{
+  "date": "2026-07-02",
+  "trades": [
+    {
+      "placed_at": "2026-07-02T10:12:49.249887",
+      "closed_at": "2026-07-02T10:13:44.516299",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77200,
+      "entry_price": 197.25,
+      "exit_price": 170.95,
+      "sl_price": 170.95,
+      "target_price": 236.75,
+      "lot_size": 1,
+      "pnl": -587.45,
+      "status": "SL_HIT",
+      "reason": "[C8] CE vol dominant: ratio=0.09 (ce=19,130,660 vs pe=1,722,540) — accumulation flow, trend 83 [C8/10] → SL_HIT: SL ₹170.95 hit (trail=False)",
+      "hold_minutes": 0,
+      "high_price": 197.25,
+      "low_price": 181.1,
+      "r_multiple": -1.12,
+      "confluence": 8,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 59.6,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-02T10:12:49.473599",
+      "closed_at": "2026-07-02T10:13:56.983868",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77400,
+      "entry_price": 221.9,
+      "exit_price": 266.45,
+      "sl_price": 213.9,
+      "target_price": 236.9,
+      "lot_size": 1,
+      "pnl": 891.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|dd89abfe",
+      "hold_minutes": 0,
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-02T13:05:49.514330",
+      "closed_at": null,
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24200,
+      "entry_price": 145.15,
+      "exit_price": null,
+      "sl_price": 137.15,
+      "target_price": 160.15,
+      "lot_size": 1,
+      "pnl": -1085.5,
+      "status": "CONTRA_OPEN",
+      "reason": "CONTRA|7b00474c",
+      "hold_minutes": null,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -587.0,
+      "gross_win": 0.0,
+      "gross_loss": -587.0,
+      "avg_r": -1.12,
+      "avg_hold": 0.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -587.0,
+      "avg_pnl": -587.0
+    }
+  ],
+  "mtd": {
+    "pnl": -2480.0,
+    "trades": 4,
+    "wins": 0,
+    "losses": 4
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -587.0,
+      "cumulative": -2480.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-30",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0
+    },
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -587.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -587.0,
+      "gross_win": 0.0,
+      "gross_loss": -587.0,
+      "avg_hold": 0.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -587.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -587.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -587.0,
+    "profit_factor": 0.0,
+    "expectancy": -587.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": null,
+    "avg_r": -1.12,
+    "max_win_streak": 0,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# Post-Market Debrief — 2026-07-02\n\nToday was a loss: one trade, one stop-hit, ₹587 down, bringing month-to-date drawdown to ₹2,480. The vol_flow strategy triggered on a SENSEX 77200 CE with strong confluence (8/10) and an 83 trend score, signaling what looked like accumulation flow in a bullish regime—the call option volume ratio of 0.09 (19.1M vs 1.7M puts) seemed to validate the directional bias. However, entry at ₹197.25 reversed immediately; the trade hit the ₹170.95 stop in under 55 seconds, clipping -1.12R before any reversal could develop.\n\nThe core issue wasn't strategy selection—the vol_flow logic and confluence were sound—but **execution timing and volatility expansion**. You entered into a spike that couldn't hold; the high of 197.25 was the candle high, meaning you bought at the worst possible point in that micro-move and got flushed on the next 26-point dip. For tomorrow, tighten your entry discipline: wait for a pullback or retest of support within the vol spike rather than chasing the peak. Also log whether IV rank was at extremes; if it was, mean reversion was fighting you from the start.",
+  "generated_at": "2026-07-02T05:05:12.682301"
+}
