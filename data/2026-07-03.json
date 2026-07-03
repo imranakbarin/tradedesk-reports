@@ -1,0 +1,218 @@
+{
+  "date": "2026-07-03",
+  "trades": [
+    {
+      "placed_at": "2026-07-03T10:26:34.077695",
+      "closed_at": "2026-07-03T11:11:38.024188",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24300,
+      "entry_price": 136.0,
+      "exit_price": 123.9,
+      "sl_price": 117.9,
+      "target_price": 163.2,
+      "lot_size": 1,
+      "pnl": -867.51,
+      "status": "SMART_EXIT",
+      "reason": "[C8] CE vol dominant: ratio=0.60 (ce=5,216,120 vs pe=3,146,520) — accumulation flow, trend 77 [C8/10] → SMART_EXIT: Near-SL exit: 79% of SL consumed (loss ₹14.3 of max ₹18.1) — cutting before full SL hit",
+      "hold_minutes": 45,
+      "high_price": 136.0,
+      "low_price": 121.7,
+      "r_multiple": -0.74,
+      "confluence": 8,
+      "trend_score_entry": 77.0,
+      "rsi_entry": 62.1,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-03T11:45:35.483363",
+      "closed_at": "2026-07-03T12:42:40.773069",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24300,
+      "entry_price": 123.4,
+      "exit_price": 123.4,
+      "sl_price": 123.4,
+      "target_price": 148.1,
+      "lot_size": 1,
+      "pnl": -79.71,
+      "status": "TRAIL_SL",
+      "reason": "[C8] CE vol dominant: ratio=0.61 (ce=3,772,080 vs pe=2,314,455) — accumulation flow, trend 77 [C8/10] → TRAIL_SL: SL ₹123.40 hit (trail=True)",
+      "hold_minutes": 57,
+      "high_price": 142.6,
+      "low_price": 123.4,
+      "r_multiple": -0.07,
+      "confluence": 8,
+      "trend_score_entry": 77.0,
+      "rsi_entry": 62.0,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-03T10:26:41.808685",
+      "closed_at": "2026-07-03T11:11:38.224477",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24400,
+      "entry_price": 123.5,
+      "exit_price": 127.65,
+      "sl_price": 115.5,
+      "target_price": 138.5,
+      "lot_size": 1,
+      "pnl": 269.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|58e59e9e",
+      "hold_minutes": 45,
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-03T11:45:35.869574",
+      "closed_at": "2026-07-03T12:42:53.158303",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24400,
+      "entry_price": 124.9,
+      "exit_price": 120.75,
+      "sl_price": 116.9,
+      "target_price": 139.9,
+      "lot_size": 1,
+      "pnl": -269.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|df8856e9",
+      "hold_minutes": 57,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -947.0,
+      "gross_win": 0.0,
+      "gross_loss": -947.0,
+      "avg_r": -0.41,
+      "avg_hold": 51.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -80.0,
+      "avg_pnl": -80.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -868.0,
+      "avg_pnl": -868.0
+    }
+  ],
+  "mtd": {
+    "pnl": -2733.0,
+    "trades": 8,
+    "wins": 1,
+    "losses": 7
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-06-30",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1794.0
+    },
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "gross_win": 0.0,
+      "gross_loss": -947.0,
+      "avg_hold": 51.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -868.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -80.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -474.0,
+    "profit_factor": 0.0,
+    "expectancy": -474.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 51.0,
+    "avg_r": -0.41,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_analysis": "# 2026-07-03 Post-Market Debrief\n\nToday was a challenging session: zero wins across two trades, a net loss of ₹947, and a month-to-date drawdown now at ₹2,733. Both trades relied on the same vol_flow signal (CE dominance, 77 trend score, C8 confluence), which means the strategy itself faced headwinds rather than execution variance. The first trade at 10:26 on NIFTY 24300 CE was the real damage—entered at 136, cut at 123.9 after holding 45 minutes, burning ₹867.51 as price collapsed into the low 121s; the SMART_EXIT logic triggered at 79% of max loss consumed, but the signal quality itself appears suspect in hindsight. The second trade at 11:45 showed better discipline: it tagged the entry price (123.4) as SL on the trailing mechanism after climbing to 142.6, keeping the bleed to just ₹79.71 and demonstrating that the exit framework can protect when conviction is weak. The pattern screaming for attention is confluent but wrongly-timed entries—both trades had identical regime (trending, RSI 62) and identical vol ratios (0.60–0.61), yet neither worked; watch whether the market regime actually shifted to mean-reversion or choppy consolidation around 24300, and consider whether vol ratios alone need filtering by price action divergence or multi-timeframe confirmation before firing fresh CE calls tomorrow.",
+  "generated_at": "2026-07-03T05:05:10.081913"
+}
