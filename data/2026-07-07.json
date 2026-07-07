@@ -1,0 +1,305 @@
+{
+  "date": "2026-07-07",
+  "trades": [
+    {
+      "placed_at": "2026-07-07T10:02:49.169144",
+      "closed_at": "2026-07-07T10:32:16.940961",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24450,
+      "entry_price": 53.0,
+      "exit_price": 53.0,
+      "sl_price": 53.0,
+      "target_price": 68.0,
+      "lot_size": 1,
+      "pnl": -60.73,
+      "status": "TRAIL_SL",
+      "reason": "[C9] Inside-bar breakout — 5m close above OR high 24,482 (first 3 candles), trend 93 [C9/10] → TRAIL_SL: SL ₹53.00 hit (trail=True)",
+      "hold_minutes": 29,
+      "high_price": 65.0,
+      "low_price": 44.6,
+      "r_multiple": -0.09,
+      "confluence": 9,
+      "trend_score_entry": 93.0,
+      "rsi_entry": 64.8,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-07T10:42:53.845527",
+      "closed_at": "2026-07-07T10:45:12.806428",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24450,
+      "entry_price": 51.3,
+      "exit_price": 41.3,
+      "sl_price": 41.3,
+      "target_price": 66.3,
+      "lot_size": 1,
+      "pnl": -709.4,
+      "status": "SL_HIT",
+      "reason": "[C9] Inside-bar breakout — 5m close above OR high 24,482 (first 3 candles), trend 93 [C9/10] → SL_HIT: SL ₹41.30 hit (trail=False)",
+      "hold_minutes": 2,
+      "high_price": 52.95,
+      "low_price": 44.15,
+      "r_multiple": -1.09,
+      "confluence": 9,
+      "trend_score_entry": 93.0,
+      "rsi_entry": 65.2,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-07T11:58:09.904444",
+      "closed_at": "2026-07-07T12:14:12.323572",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 78500,
+      "entry_price": 352.35,
+      "exit_price": 315.0,
+      "sl_price": 305.35,
+      "target_price": 422.85,
+      "lot_size": 1,
+      "pnl": -820.59,
+      "status": "SMART_EXIT",
+      "reason": "[C9] CE vol dominant: ratio=0.62 (ce=417,600 vs pe=257,320) — accumulation flow, trend 83 [C9/10] → SMART_EXIT: Near-SL exit: 79% of SL consumed (loss ₹37.4 of max ₹47.0) — cutting before full SL hit",
+      "hold_minutes": 16,
+      "high_price": 366.7,
+      "low_price": 315.0,
+      "r_multiple": -0.87,
+      "confluence": 9,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 66.2,
+      "regime": "ranging",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-07T10:02:49.819105",
+      "closed_at": "2026-07-07T10:32:17.106443",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24550,
+      "entry_price": 87.6,
+      "exit_price": 86.0,
+      "sl_price": 79.6,
+      "target_price": 102.6,
+      "lot_size": 1,
+      "pnl": -104.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|26870610",
+      "hold_minutes": 29,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-07T10:42:54.117196",
+      "closed_at": "2026-07-07T10:45:24.155770",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24550,
+      "entry_price": 83.75,
+      "exit_price": 99.75,
+      "sl_price": 75.75,
+      "target_price": 98.75,
+      "lot_size": 1,
+      "pnl": 1040.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|73b5356d",
+      "hold_minutes": 2,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-07T11:58:10.215298",
+      "closed_at": "2026-07-07T12:14:12.694985",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78700,
+      "entry_price": 340.5,
+      "exit_price": 363.4,
+      "sl_price": 332.5,
+      "target_price": 355.5,
+      "lot_size": 1,
+      "pnl": 458.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|bfa7e375",
+      "hold_minutes": 16,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -770.0,
+      "gross_win": 0.0,
+      "gross_loss": -770.0,
+      "avg_r": -0.59,
+      "avg_hold": 16.0
+    },
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -821.0,
+      "gross_win": 0.0,
+      "gross_loss": -821.0,
+      "avg_r": -0.87,
+      "avg_hold": 16.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -61.0,
+      "avg_pnl": -61.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -709.0,
+      "avg_pnl": -709.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -821.0,
+      "avg_pnl": -821.0
+    }
+  ],
+  "mtd": {
+    "pnl": -4128.0,
+    "trades": 17,
+    "wins": 3,
+    "losses": 14
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -770.0,
+      "gross_win": 0.0,
+      "gross_loss": -770.0,
+      "avg_hold": 16.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -821.0,
+      "gross_win": 0.0,
+      "gross_loss": -821.0,
+      "avg_hold": 16.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -770.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -821.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -530.0,
+    "profit_factor": 0.0,
+    "expectancy": -530.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 16.0,
+    "avg_r": -0.68,
+    "max_win_streak": 0,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_analysis": "# Post-Market Debrief — 2026-07-07\n\nToday was a complete washout: 0 wins across 3 trades, -₹1,591 net loss, and a month-to-date deficit now sitting at -₹4,128. The win rate is 0%, which means the bot's signal quality or execution timing is fundamentally broken right now. Both strategies underperformed—candle_pattern gave up ₹770 across 2 trades, and vol_flow bled ₹821 in a single position—leaving no bright spots to build on.\n\nThe \"best\" trade (NIFTY 24450 CE, closed at -61) is a grim indicator of how bad things are: it hit the trailing stop after climbing to 65 paise (above the 68 target), then reversed hard enough to trip SL at entry. That tells you the setup had merit but the market rejected it almost immediately, and the trailing mechanism locked in a small loss rather than letting you ride the initial spike. The 29-minute hold suggests you weren't even wrong for long—just unlucky or slightly early. The real killer was trade 2: a 2-minute scalp attempt on the same strike that immediately gapped down 10 points, forcing an SL hit for -709 and a -1.09R. This was pure knee-jerk re-entry desperation after the first loss.\n\nThe SENSEX vol_flow trade (78500 CE) encapsulates the worst habit: you entered on \"accumulation flow\" at 352.35 with a trend score of only 83 in a ranging regime, then watched it drop to 315 and cut at 79% of max loss. The bot's \"smart exit\" logic prevented a full blowout, but you shouldn't have been in a ranging market on a vol signal in the first place—that's fighting the regime. You had high RSI (66.2) and weak regime confirmation, classic overheating setup.\n\n**Tomorrow: pause the bot entirely if the regime flips to \"ranging\" and disable candle_pattern trades within 5 minutes of the previous loss closing.** The 2-minute re-entry on NIFTY was the session's worst decision. Also, if trend_score is below 85 and regime is \"ranging,\" vol_flow should sit out—you need confluence, not desperation.",
+  "generated_at": "2026-07-07T05:05:17.233899"
+}
