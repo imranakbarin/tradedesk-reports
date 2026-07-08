@@ -1,0 +1,89 @@
+{
+  "date": "2026-07-08",
+  "generated_at": "2026-07-08 15:36:22 IST",
+  "headline": "Selling book: 1 closed, net Rs-663.0 (NIFTY Rs-663.0).",
+  "recorded_buys": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "recorded_sells": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "signals": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "by_outcome": {},
+    "rows": []
+  },
+  "selling": {
+    "summary": {
+      "n": 1,
+      "wins": 0,
+      "win_rate": 0,
+      "total": -663.0,
+      "unit": "Rs",
+      "avg": -663.0
+    },
+    "nifty": {
+      "n": 1,
+      "total": -663.0
+    },
+    "rows": [
+      {
+        "id": "2026-07-08_NSE:NIFTY50-INDEX_IRON_CONDOR_23850-24550",
+        "logged_at": "2026-07-08 09:43:52",
+        "trade_date": "2026-07-08",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "12.0",
+        "spot_entry": "24227.1",
+        "dte": "6.24",
+        "net_credit": "14.8",
+        "width": "50",
+        "max_profit": "962.0",
+        "max_loss": "2288.0",
+        "rr": "0.42",
+        "net_delta": "-0.0084",
+        "breakevens": "{\"upper\": 24564.8, \"lower\": 23835.2}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24550, \"symbol\": \"NSE:NIFTY2671424550CE\", \"fill\": 36.0, \"delta\": 0.1941}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24600, \"symbol\": \"NSE:NIFTY2671424600CE\", \"fill\": 28.4, \"delta\": 0.1589}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 23850, \"symbol\": \"NSE:NIFTY2671423850PE\", \"fill\": 39.5, \"delta\": -0.1704}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23800, \"symbol\": \"NSE:NIFTY2671423800PE\", \"fill\": 32.3, \"delta\": -0.1436}]",
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_value": "25.0",
+        "pnl": "-663.0",
+        "pnl_pct": "-29.0",
+        "exit_at": "2026-07-08 15:25:00",
+        "reconciled_at": "2026-07-08 15:35:50"
+      }
+    ]
+  },
+  "correlation": {
+    "pearson": -0.403,
+    "overlap_days": 10,
+    "reading": "hedge confirmed (negative)"
+  }
+}
