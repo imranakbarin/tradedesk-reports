@@ -1,0 +1,429 @@
+{
+  "date": "2026-07-09",
+  "trades": [
+    {
+      "placed_at": "2026-07-09T09:41:55.294580",
+      "closed_at": "2026-07-09T10:37:13.742959",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24000,
+      "entry_price": 168.35,
+      "exit_price": 151.25,
+      "sl_price": 145.65,
+      "target_price": 218.85,
+      "lot_size": 1,
+      "pnl": -1200.44,
+      "status": "SMART_EXIT",
+      "reason": "[C7] ORB breakout above 24,038 — held 128s, VWAP confirms, trend 83 [C7/10] → SMART_EXIT: Near-SL exit: 75% of SL consumed (loss ₹17.1 of max ₹22.7) — cutting before full SL hit",
+      "hold_minutes": 55,
+      "high_price": 181.25,
+      "low_price": 151.25,
+      "r_multiple": -0.81,
+      "confluence": 7,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 51.8,
+      "regime": "trending",
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-07-09T10:40:19.957506",
+      "closed_at": "2026-07-09T10:41:41.040392",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24000,
+      "entry_price": 161.4,
+      "exit_price": 193.7,
+      "sl_price": 161.4,
+      "target_price": 193.7,
+      "lot_size": 1,
+      "pnl": 2004.04,
+      "status": "TARGET_HIT",
+      "reason": "[C7] Inside-bar breakout — 5m close above OR high 24,038 (first 3 candles), trend 83 [C7/10] → TARGET_HIT: Target ₹193.70 reached",
+      "hold_minutes": 1,
+      "high_price": 185.05,
+      "low_price": 160.1,
+      "r_multiple": 1.43,
+      "confluence": 7,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 52.2,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-09T10:56:40.269498",
+      "closed_at": "2026-07-09T11:01:18.922428",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76900,
+      "entry_price": 197.75,
+      "exit_price": 171.35,
+      "sl_price": 171.35,
+      "target_price": 237.35,
+      "lot_size": 1,
+      "pnl": -589.48,
+      "status": "SL_HIT",
+      "reason": "[C7] CE vol dominant: ratio=0.50 (ce=82,583,440 vs pe=41,383,120) — accumulation flow, trend 83 [C7/10] → SL_HIT: SL ₹171.35 hit (trail=False)",
+      "hold_minutes": 4,
+      "high_price": 221.5,
+      "low_price": 173.15,
+      "r_multiple": -1.12,
+      "confluence": 7,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 52.8,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-09T11:01:39.718432",
+      "closed_at": "2026-07-09T11:26:09.487692",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76800,
+      "entry_price": 212.75,
+      "exit_price": 319.15,
+      "sl_price": 265.45,
+      "target_price": 319.15,
+      "lot_size": 1,
+      "pnl": 2058.55,
+      "status": "TARGET_HIT",
+      "reason": "[C8] Expiry day — trend 83% bullish, +0.48% from open [C8/10] → TARGET_HIT: Target ₹319.15 reached",
+      "hold_minutes": 24,
+      "high_price": 318.15,
+      "low_price": 204.05,
+      "r_multiple": 2.15,
+      "confluence": 8,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 52.8,
+      "regime": "trending",
+      "strategy": "expiry_theta"
+    },
+    {
+      "placed_at": "2026-07-09T11:46:29.555665",
+      "closed_at": "2026-07-09T11:47:53.381448",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77000,
+      "entry_price": 195.55,
+      "exit_price": 169.45,
+      "sl_price": 169.45,
+      "target_price": 234.65,
+      "lot_size": 1,
+      "pnl": -583.35,
+      "status": "SL_HIT",
+      "reason": "[C8] CE vol dominant: ratio=0.64 (ce=3,094,280 vs pe=1,979,140) — accumulation flow, trend 83 [C8/10] → SL_HIT: SL ₹169.45 hit (trail=False)",
+      "hold_minutes": 1,
+      "high_price": 195.55,
+      "low_price": 174.65,
+      "r_multiple": -1.12,
+      "confluence": 8,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 52.5,
+      "regime": "ranging",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-09T09:41:55.615464",
+      "closed_at": "2026-07-09T10:37:14.240616",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24100,
+      "entry_price": 179.3,
+      "exit_price": 187.55,
+      "sl_price": 152.4,
+      "target_price": 233.1,
+      "lot_size": 1,
+      "pnl": 536.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|beb03d6b",
+      "hold_minutes": 55,
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-07-09T10:40:20.444166",
+      "closed_at": "2026-07-09T10:41:41.197913",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24100,
+      "entry_price": 173.85,
+      "exit_price": 138.4,
+      "sl_price": 165.85,
+      "target_price": 188.85,
+      "lot_size": 1,
+      "pnl": -2304.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|742a9e24",
+      "hold_minutes": 1,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-09T10:56:55.998311",
+      "closed_at": "2026-07-09T11:01:40.707611",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77100,
+      "entry_price": 253.9,
+      "exit_price": 325.25,
+      "sl_price": 245.9,
+      "target_price": 268.9,
+      "lot_size": 1,
+      "pnl": 1427.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|6c04203d",
+      "hold_minutes": 4,
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-09T11:01:40.714104",
+      "closed_at": "2026-07-09T11:26:21.593216",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77000,
+      "entry_price": 256.35,
+      "exit_price": 127.0,
+      "sl_price": 192.25,
+      "target_price": 384.55,
+      "lot_size": 1,
+      "pnl": -2587.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|04ed015c",
+      "hold_minutes": 24,
+      "strategy": "expiry_theta"
+    },
+    {
+      "placed_at": "2026-07-09T11:46:30.136808",
+      "closed_at": "2026-07-09T11:47:53.986876",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77200,
+      "entry_price": 224.0,
+      "exit_price": 259.95,
+      "sl_price": 216.0,
+      "target_price": 239.0,
+      "lot_size": 1,
+      "pnl": 719.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|1454bd47",
+      "hold_minutes": 1,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "expiry_theta",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 2059.0,
+      "gross_win": 2059.0,
+      "gross_loss": 0.0,
+      "avg_r": 2.15,
+      "avg_hold": 24.0
+    },
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 2004.0,
+      "gross_win": 2004.0,
+      "gross_loss": 0.0,
+      "avg_r": 1.43,
+      "avg_hold": 1.0
+    },
+    {
+      "strategy": "vol_flow",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -1173.0,
+      "gross_win": 0.0,
+      "gross_loss": -1173.0,
+      "avg_r": -1.12,
+      "avg_hold": 3.0
+    },
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -1200.0,
+      "gross_win": 0.0,
+      "gross_loss": -1200.0,
+      "avg_r": -0.81,
+      "avg_hold": 55.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 2,
+      "total_pnl": 4063.0,
+      "avg_pnl": 2031.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 2,
+      "total_pnl": -1173.0,
+      "avg_pnl": -586.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -1200.0,
+      "avg_pnl": -1200.0
+    }
+  ],
+  "mtd": {
+    "pnl": -5181.0,
+    "trades": 25,
+    "wins": 5,
+    "losses": 20
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 5,
+      "wins": 2,
+      "pnl": 1689.0,
+      "cumulative": -5182.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 5,
+      "wins": 2,
+      "pnl": 1689.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 886.0,
+      "gross_win": 2059.0,
+      "gross_loss": -1173.0,
+      "avg_hold": 10.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 804.0,
+      "gross_win": 2004.0,
+      "gross_loss": -1200.0,
+      "avg_hold": 28.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1200.0
+    },
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1415.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1475.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 5,
+      "wins": 2,
+      "pnl": 1689.0
+    }
+  ],
+  "stats": {
+    "avg_win": 2031.0,
+    "avg_loss": -791.0,
+    "profit_factor": 1.71,
+    "expectancy": 338.0,
+    "avg_hold_win": 12.0,
+    "avg_hold_loss": 20.0,
+    "avg_r": 0.11,
+    "max_win_streak": 1,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# 2026-07-09 Debrief\n\nToday you printed ₹1,689 in live P&L across 5 trades, but the 40% win rate and -₹5,181 month-to-date tells the real story: you're fighting an uphill battle despite some bright spots. Your two winners—the expiry theta trade on SENSEX (2.15R in 24 minutes) and the candle pattern scalp on NIFTY (1.43R in 60 seconds)—generated ₹4,063 combined, which means your three losers cost ₹2,374. The expiry day SENSEX call worked precisely because you had 8/10 confluence, a confirmed bullish trend, and an exact target hit on expiry theta decay; that's your A-setup and you executed it cleanly.\n\nThe vol_flow strategy is your leak: two trades, zero wins, -₹1,173 total, both stopped at SL with identical -1.12R multiples despite flagging \"accumulation flow\" signals. This suggests the vol ratio dominance signal you're using either lacks edge or is triggering too early in choppy intraday action. Worse, your ORB breakout on NIFTY at 09:41 (the -₹1,200 worst trade) held for 55 minutes into a slow bleed, and even though you took a \"smart exit\" at 75% of SL consumed, you'd already lost conviction—that's a sign the setup didn't have the follow-through the 83% trend score promised.\n\nFor tomorrow, stop trading vol_flow until you backtest the entry timing more rigorously; you're seeing phantom accumulation and paying real money for it. Stick to your proven edge: expiry theta with high confluence (8+) on trending days and clean candle pattern breakouts, which are your only strategies hitting targets today.",
+  "generated_at": "2026-07-09T05:05:14.528642"
+}
