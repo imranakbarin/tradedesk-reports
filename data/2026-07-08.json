@@ -48,6 +48,30 @@
       "rsi_entry": 49.1,
       "regime": "ranging",
       "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-08T14:28:21.091253",
+      "closed_at": "2026-07-08T15:02:49.463928",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23950,
+      "entry_price": 230.6,
+      "exit_price": 230.6,
+      "sl_price": 230.6,
+      "target_price": 273.7,
+      "lot_size": 1,
+      "pnl": -108.0,
+      "status": "TRAIL_SL",
+      "reason": "[C7] Bearish Engulfing — body 371pts, closed below prev 24,355 [C7/10] → TRAIL_SL: SL ₹230.60 hit (trail=True)",
+      "hold_minutes": 34,
+      "high_price": 273.1,
+      "low_price": 219.85,
+      "r_multiple": -0.07,
+      "confluence": 7,
+      "trend_score_entry": 27.0,
+      "rsi_entry": 48.8,
+      "regime": "ranging",
+      "strategy": "candle_pattern"
     }
   ],
   "contra_trades": [
@@ -87,19 +111,19 @@
     },
     {
       "placed_at": "2026-07-08T14:28:21.395601",
-      "closed_at": null,
+      "closed_at": "2026-07-08T15:02:49.947584",
       "index_name": "NIFTY",
       "action": "CE",
       "strike": 23850,
       "entry_price": 223.95,
-      "exit_price": null,
+      "exit_price": 205.25,
       "sl_price": 215.95,
       "target_price": 238.95,
       "lot_size": 1,
-      "pnl": -195.0,
-      "status": "CONTRA_OPEN",
+      "pnl": -1215.5,
+      "status": "CONTRA_CLOSED",
       "reason": "CONTRA|6ccb3bc2",
-      "hold_minutes": null,
+      "hold_minutes": 34,
       "strategy": "candle_pattern"
     }
   ],
@@ -117,17 +141,23 @@
     },
     {
       "strategy": "candle_pattern",
-      "trades": 1,
+      "trades": 2,
       "wins": 0,
-      "losses": 1,
-      "pnl": -1560.0,
+      "losses": 2,
+      "pnl": -1668.0,
       "gross_win": 0.0,
-      "gross_loss": -1560.0,
-      "avg_r": -1.08,
-      "avg_hold": 6.0
+      "gross_loss": -1668.0,
+      "avg_r": -0.58,
+      "avg_hold": 20.0
     }
   ],
   "reasons": [
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -108.0,
+      "avg_pnl": -108.0
+    },
     {
       "status": "SMART_EXIT",
       "n": 1,
@@ -142,10 +172,10 @@
     }
   ],
   "mtd": {
-    "pnl": -6763.0,
-    "trades": 19,
+    "pnl": -6871.0,
+    "trades": 20,
     "wins": 3,
-    "losses": 16
+    "losses": 17
   },
   "monthly_days": [
     {
@@ -185,10 +215,10 @@
     },
     {
       "day": "2026-07-08",
-      "trades": 2,
+      "trades": 3,
       "wins": 0,
-      "pnl": -2635.0,
-      "cumulative": -6763.0
+      "pnl": -2743.0,
+      "cumulative": -6871.0
     }
   ],
   "week_days": [
@@ -218,20 +248,20 @@
     },
     {
       "day": "2026-07-08",
-      "trades": 2,
+      "trades": 3,
       "wins": 0,
-      "pnl": -2635.0
+      "pnl": -2743.0
     }
   ],
   "index_breakdown": [
     {
       "index_name": "NIFTY",
-      "trades": 2,
+      "trades": 3,
       "wins": 0,
-      "pnl": -2635.0,
+      "pnl": -2743.0,
       "gross_win": 0.0,
-      "gross_loss": -2635.0,
-      "avg_hold": 11.0
+      "gross_loss": -2743.0,
+      "avg_hold": 18.0
     }
   ],
   "time_buckets": [
@@ -243,9 +273,9 @@
     },
     {
       "bucket": "14:00-15:30",
-      "trades": 1,
+      "trades": 2,
       "wins": 0,
-      "pnl": -1560.0
+      "pnl": -1668.0
     }
   ],
   "direction_breakdown": [
@@ -257,23 +287,23 @@
     },
     {
       "action": "PE",
-      "trades": 1,
+      "trades": 2,
       "wins": 0,
-      "pnl": -1560.0
+      "pnl": -1668.0
     }
   ],
   "stats": {
     "avg_win": 0,
-    "avg_loss": -1318.0,
+    "avg_loss": -914.0,
     "profit_factor": 0.0,
-    "expectancy": -1318.0,
+    "expectancy": -914.0,
     "avg_hold_win": null,
-    "avg_hold_loss": 10.0,
-    "avg_r": -0.96,
+    "avg_hold_loss": 18.0,
+    "avg_r": -0.66,
     "max_win_streak": 0,
-    "max_loss_streak": 2,
-    "current_streak": -2
+    "max_loss_streak": 3,
+    "current_streak": -3
   },
-  "ai_analysis": "# 2026-07-08 Post-Market Debrief\n\nToday was a complete washout: 0-for-2 with ₹2,635 in losses, bringing the month to -₹6,763. The vol_flow strategy bled ₹1,076 on a 15-minute hold where the bot executed a smart exit at 77% of the stop-loss after detecting weakening CE accumulation flow, while the candle_pattern strategy took a harder hit with -₹1,560 when a bearish engulfing setup on the 24,000 PE strike got stopped out in just 6 minutes during a ranging regime (trend score 27). The morning trade showed decent pattern recognition—5 confluence points and a 70 trend score suggested a trending setup—but the vol ratio reversal (0.57 CE/PE) forced an early exit that still couldn't prevent mid-range slippage. The afternoon blowup is the real concern: entering a PE trade with only 7 confluence points and 27 trend score in a *ranging* market violated core regime filtering, and the 1.08R loss confirms the entry had weak conviction despite the candle pattern trigger. Going forward, add a hard filter rejecting candle_pattern entries when trend_score_entry is below 50—today's second trade never should've been placed, and enforcing that single rule would have cut the daily loss in half.",
-  "generated_at": "2026-07-08T05:05:10.170556"
+  "ai_analysis": "# 2026-07-08 NSE Options Debrief\n\nToday was a complete washout with zero wins across three trades and a ₹2,743 loss that pushes the month into a ₹6,871 hole. The candle_pattern strategy was the primary culprit, losing ₹1,668 over two trades, while the vol_flow trade that should have been a quick setup instead turned into a ₹1,076 near-SL exit after 15 minutes. The worst damage came from the 24000 PE short at 14:11—entered on a bearish engulfing signal with 27 trend score in a ranging regime, it got stopped out in 6 minutes for a -1.08R loss when price immediately reversed higher to 271.95, suggesting the signal was a false break into support. The only marginally \"better\" trade was the final 23950 PE where the trailing SL at least let the position breathe to 273.1 before cutting at entry, keeping the loss to -108, though this reflects poor R-reward setup rather than skill.\n\nThe pattern is clear: you're chasing candle reversals in ranging markets with weak confluence (trend_score 27-49 is not bullish), and the 6-minute hold on trade two indicates panic entries without proper setup maturation. For tomorrow, add a filter: do not take candle_pattern trades unless trend_score is above 55 or you have a confirmed confluence cluster of 9+, and give ranging-regime setups at least 30 minutes to develop before entry—your best trade (despite the loss) had 34 minutes and higher high-price action, showing the setup needed time to prove itself.",
+  "generated_at": "2026-07-10T02:31:46.017602"
 }
