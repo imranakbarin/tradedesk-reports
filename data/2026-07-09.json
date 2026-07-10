@@ -120,6 +120,30 @@
       "rsi_entry": 52.5,
       "regime": "ranging",
       "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-09T14:36:13.258502",
+      "closed_at": "2026-07-09T14:41:03.834499",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24000,
+      "entry_price": 169.75,
+      "exit_price": 147.15,
+      "sl_price": 147.15,
+      "target_price": 203.75,
+      "lot_size": 1,
+      "pnl": -1557.67,
+      "status": "SL_HIT",
+      "reason": "[C7] CE vol dominant: ratio=0.59 (ce=1,766,830 vs pe=1,039,740) — accumulation flow, trend 83 [C7/10] → SL_HIT: SL ₹147.15 hit (trail=False)",
+      "hold_minutes": 4,
+      "high_price": 169.75,
+      "low_price": 151.95,
+      "r_multiple": -1.06,
+      "confluence": 7,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 52.2,
+      "regime": "ranging",
+      "strategy": "vol_flow"
     }
   ],
   "contra_trades": [
@@ -207,6 +231,23 @@
       "reason": "CONTRA|1454bd47",
       "hold_minutes": 1,
       "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-09T14:36:38.859796",
+      "closed_at": "2026-07-09T14:41:04.072085",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24100,
+      "entry_price": 151.65,
+      "exit_price": 179.65,
+      "sl_price": 143.65,
+      "target_price": 166.65,
+      "lot_size": 1,
+      "pnl": 1820.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|a46b0d8d",
+      "hold_minutes": 4,
+      "strategy": "vol_flow"
     }
   ],
   "by_strategy": [
@@ -233,17 +274,6 @@
       "avg_hold": 1.0
     },
     {
-      "strategy": "vol_flow",
-      "trades": 2,
-      "wins": 0,
-      "losses": 2,
-      "pnl": -1173.0,
-      "gross_win": 0.0,
-      "gross_loss": -1173.0,
-      "avg_r": -1.12,
-      "avg_hold": 3.0
-    },
-    {
       "strategy": "orb_breakout",
       "trades": 1,
       "wins": 0,
@@ -253,6 +283,17 @@
       "gross_loss": -1200.0,
       "avg_r": -0.81,
       "avg_hold": 55.0
+    },
+    {
+      "strategy": "vol_flow",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "pnl": -2731.0,
+      "gross_win": 0.0,
+      "gross_loss": -2731.0,
+      "avg_r": -1.1,
+      "avg_hold": 3.0
     }
   ],
   "reasons": [
@@ -263,23 +304,23 @@
       "avg_pnl": 2031.0
     },
     {
-      "status": "SL_HIT",
-      "n": 2,
-      "total_pnl": -1173.0,
-      "avg_pnl": -586.0
-    },
-    {
       "status": "SMART_EXIT",
       "n": 1,
       "total_pnl": -1200.0,
       "avg_pnl": -1200.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 3,
+      "total_pnl": -2731.0,
+      "avg_pnl": -910.0
     }
   ],
   "mtd": {
-    "pnl": -5181.0,
-    "trades": 25,
+    "pnl": -6739.0,
+    "trades": 26,
     "wins": 5,
-    "losses": 20
+    "losses": 21
   },
   "monthly_days": [
     {
@@ -326,10 +367,10 @@
     },
     {
       "day": "2026-07-09",
-      "trades": 5,
+      "trades": 6,
       "wins": 2,
-      "pnl": 1689.0,
-      "cumulative": -5182.0
+      "pnl": 132.0,
+      "cumulative": -6739.0
     }
   ],
   "week_days": [
@@ -359,9 +400,9 @@
     },
     {
       "day": "2026-07-09",
-      "trades": 5,
+      "trades": 6,
       "wins": 2,
-      "pnl": 1689.0
+      "pnl": 132.0
     }
   ],
   "index_breakdown": [
@@ -376,12 +417,12 @@
     },
     {
       "index_name": "NIFTY",
-      "trades": 2,
+      "trades": 3,
       "wins": 1,
-      "pnl": 804.0,
+      "pnl": -754.0,
       "gross_win": 2004.0,
-      "gross_loss": -1200.0,
-      "avg_hold": 28.0
+      "gross_loss": -2758.0,
+      "avg_hold": 20.0
     }
   ],
   "time_buckets": [
@@ -402,28 +443,34 @@
       "trades": 2,
       "wins": 1,
       "pnl": 1475.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1558.0
     }
   ],
   "direction_breakdown": [
     {
       "action": "CE",
-      "trades": 5,
+      "trades": 6,
       "wins": 2,
-      "pnl": 1689.0
+      "pnl": 132.0
     }
   ],
   "stats": {
     "avg_win": 2031.0,
-    "avg_loss": -791.0,
-    "profit_factor": 1.71,
-    "expectancy": 338.0,
+    "avg_loss": -983.0,
+    "profit_factor": 1.03,
+    "expectancy": 22.0,
     "avg_hold_win": 12.0,
-    "avg_hold_loss": 20.0,
-    "avg_r": 0.11,
+    "avg_hold_loss": 16.0,
+    "avg_r": -0.09,
     "max_win_streak": 1,
-    "max_loss_streak": 1,
-    "current_streak": -1
+    "max_loss_streak": 2,
+    "current_streak": -2
   },
-  "ai_analysis": "# 2026-07-09 Debrief\n\nToday you printed ₹1,689 in live P&L across 5 trades, but the 40% win rate and -₹5,181 month-to-date tells the real story: you're fighting an uphill battle despite some bright spots. Your two winners—the expiry theta trade on SENSEX (2.15R in 24 minutes) and the candle pattern scalp on NIFTY (1.43R in 60 seconds)—generated ₹4,063 combined, which means your three losers cost ₹2,374. The expiry day SENSEX call worked precisely because you had 8/10 confluence, a confirmed bullish trend, and an exact target hit on expiry theta decay; that's your A-setup and you executed it cleanly.\n\nThe vol_flow strategy is your leak: two trades, zero wins, -₹1,173 total, both stopped at SL with identical -1.12R multiples despite flagging \"accumulation flow\" signals. This suggests the vol ratio dominance signal you're using either lacks edge or is triggering too early in choppy intraday action. Worse, your ORB breakout on NIFTY at 09:41 (the -₹1,200 worst trade) held for 55 minutes into a slow bleed, and even though you took a \"smart exit\" at 75% of SL consumed, you'd already lost conviction—that's a sign the setup didn't have the follow-through the 83% trend score promised.\n\nFor tomorrow, stop trading vol_flow until you backtest the entry timing more rigorously; you're seeing phantom accumulation and paying real money for it. Stick to your proven edge: expiry theta with high confluence (8+) on trending days and clean candle pattern breakouts, which are your only strategies hitting targets today.",
-  "generated_at": "2026-07-09T05:05:14.528642"
+  "ai_analysis": "# 2026-07-09 Trading Debrief\n\nToday was a modest recovery day: +₹132 on six trades, salvaging a deeply underwater month (MTD: -₹6,739). The 33% win rate masks a brutal asymmetry—two clean target hits generated ₹4,063 in gains, but three vol_flow losses and one ORB exit gave back ₹2,731, leaving almost nothing on the table. The expiry_theta trade on SENSEX 76800 CE was the session's anchor, hitting a 2.15R gain in 24 minutes on an 83% bullish trend with 8/10 confluence, while the candle_pattern scalp added another ₹2,004 in just 60 seconds—both benefited from high-conviction setups with clean chart structure and strong regime alignment. The vol_flow strategy was the session killer: it fired three trades in rapid succession (all in the 10:56–14:36 window), averaging -1.1R per trade and -910 loss each, despite showing \"accumulation flow\" signals; the pattern suggests the bot is conflating high CE volume with directional conviction in choppy intraday conditions, especially during the ranging regime trades that lacked real momentum. Tomorrow, either disable vol_flow entirely on ranging regimes or add a volatility filter—three quick bleeds from the same flawed signal is pattern abuse, not opportunity, and at this month's deficit it cannot be carried as a \"learning cost\" any longer.",
+  "generated_at": "2026-07-10T02:32:26.717510"
 }
