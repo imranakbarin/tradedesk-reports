@@ -1,0 +1,277 @@
+{
+  "date": "2026-07-14",
+  "trades": [
+    {
+      "placed_at": "2026-07-14T10:11:33.628707",
+      "closed_at": "2026-07-14T10:12:28.801398",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24100,
+      "entry_price": 94.4,
+      "exit_price": 81.8,
+      "sl_price": 81.8,
+      "target_price": 113.3,
+      "lot_size": 1,
+      "pnl": -888.7,
+      "status": "SL_HIT",
+      "reason": "[C5] Inside-bar breakdown — 5m close below OR low 24,051 (first 3 candles), trend 47 [C5/10] → SL_HIT: SL ₹81.80 hit (trail=False)",
+      "hold_minutes": 0,
+      "high_price": 94.4,
+      "low_price": 86.7,
+      "r_multiple": -1.09,
+      "confluence": 5,
+      "trend_score_entry": 47.0,
+      "rsi_entry": 52.8,
+      "regime": "mixed",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-14T11:07:14.693097",
+      "closed_at": "2026-07-14T11:25:24.626763",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24100,
+      "entry_price": 61.75,
+      "exit_price": 52.45,
+      "sl_price": 51.75,
+      "target_price": 76.75,
+      "lot_size": 1,
+      "pnl": -666.04,
+      "status": "SMART_EXIT",
+      "reason": "[C7] CE vol dominant: ratio=0.42 (ce=22,484,085 vs pe=9,439,560) — accumulation flow, trend 60 [C7/10] → SMART_EXIT: Near-SL exit: 93% of SL consumed (loss ₹9.3 of max ₹10.0) — cutting before full SL hit",
+      "hold_minutes": 18,
+      "high_price": 62.8,
+      "low_price": 52.0,
+      "r_multiple": -1.02,
+      "confluence": 7,
+      "trend_score_entry": 60.0,
+      "rsi_entry": 53.6,
+      "regime": "ranging",
+      "strategy": "vol_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-14T10:11:33.939466",
+      "closed_at": "2026-07-14T10:12:58.834270",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24000,
+      "entry_price": 69.3,
+      "exit_price": 83.45,
+      "sl_price": 61.3,
+      "target_price": 84.3,
+      "lot_size": 1,
+      "pnl": 919.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|f9a8b70e",
+      "hold_minutes": 0,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-14T11:07:15.024268",
+      "closed_at": "2026-07-14T11:25:25.272314",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24200,
+      "entry_price": 89.6,
+      "exit_price": 97.25,
+      "sl_price": 81.6,
+      "target_price": 104.6,
+      "lot_size": 1,
+      "pnl": 497.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|da064b4b",
+      "hold_minutes": 18,
+      "strategy": "vol_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -666.0,
+      "gross_win": 0.0,
+      "gross_loss": -666.0,
+      "avg_r": -1.02,
+      "avg_hold": 18.0
+    },
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -889.0,
+      "gross_win": 0.0,
+      "gross_loss": -889.0,
+      "avg_r": -1.09,
+      "avg_hold": 0.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -666.0,
+      "avg_pnl": -666.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -889.0,
+      "avg_pnl": -889.0
+    }
+  ],
+  "mtd": {
+    "pnl": -11185.0,
+    "trades": 32,
+    "wins": 5,
+    "losses": 27
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "gross_win": 0.0,
+      "gross_loss": -1555.0,
+      "avg_hold": 9.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -889.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -666.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -666.0
+    },
+    {
+      "action": "PE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -889.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -777.0,
+    "profit_factor": 0.0,
+    "expectancy": -777.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 18.0,
+    "avg_r": -1.06,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_analysis": "# Post-Market Debrief – 2026-07-14\n\nToday was a clean loss across the board: 0 wins, 2 losses, -₹1,555 in a single session that extends the month-to-date drawdown to -₹11,185. Both trades hit their invalidation points quickly, with the candle_pattern entry lasting just 55 seconds before the stop loss was triggered at the exact level (PE 24100 @ ₹81.80), and the vol_flow trade spending 18 minutes slowly bleeding to 93% of max loss before the smart exit kicked in. On the positive side, the vol_flow trade showed good confluence (7/10) and a trend score of 60, meaning the setup had structural merit—the issue was pure execution and timing in a ranging regime, not the logic itself. The candle_pattern trade, however, entered on a trend score of only 47 in a \"mixed\" regime with just 5/10 confluence; that inside-bar breakdown pattern lacked conviction and paid the price immediately. Going forward, tighten the entry filter to require **minimum trend_score of 55+ and confluence of 6+** before taking any trade, and avoid candle_pattern setups altogether when regime signals \"mixed\"—the month's losses are accumulating from low-confluence early morning entries that violate basic regime discipline.",
+  "generated_at": "2026-07-14T06:35:12.178801"
+}
