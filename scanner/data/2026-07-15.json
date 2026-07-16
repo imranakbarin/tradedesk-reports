@@ -1,7 +1,7 @@
 {
   "date": "2026-07-15",
-  "generated_at": "2026-07-15 17:58:24 IST",
-  "headline": "No closed trades or signals today.",
+  "generated_at": "2026-07-15 22:02:08 IST",
+  "headline": "Selling book: 2 closed, net Rs-136.5 (NIFTY Rs-136.5).",
   "recorded_buys": {
     "summary": {
       "n": 0,
@@ -38,16 +38,16 @@
   },
   "selling": {
     "summary": {
-      "n": 0,
+      "n": 2,
       "wins": 0,
       "win_rate": 0,
-      "total": 0,
+      "total": -136.5,
       "unit": "Rs",
-      "avg": 0
+      "avg": -68.2
     },
     "nifty": {
-      "n": 0,
-      "total": 0
+      "n": 2,
+      "total": -136.5
     },
     "rows": [
       {
@@ -71,13 +71,13 @@
         "breakevens": "{\"upper\": 24564.75, \"lower\": 23785.25}",
         "lot_size": "65",
         "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24550, \"symbol\": \"NSE:NIFTY2672124550CE\", \"fill\": 33.75, \"delta\": 0.1797}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24600, \"symbol\": \"NSE:NIFTY2672124600CE\", \"fill\": 26.0, \"delta\": 0.1452}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 23800, \"symbol\": \"NSE:NIFTY2672123800PE\", \"fill\": 43.6, \"delta\": -0.1746}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23750, \"symbol\": \"NSE:NIFTY2672123750PE\", \"fill\": 36.6, \"delta\": -0.1502}]",
-        "status": "OPEN",
-        "outcome": "",
-        "exit_value": "",
-        "pnl": "",
-        "pnl_pct": "",
-        "exit_at": "",
-        "reconciled_at": ""
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_value": "15.25",
+        "pnl": "-32.5",
+        "pnl_pct": "-1.4",
+        "exit_at": "2026-07-15 15:25:00",
+        "reconciled_at": "2026-07-15 22:01:47"
       },
       {
         "id": "2026-07-15_NSE:NIFTY50-INDEX_IRON_CONDOR_23850-24550",
@@ -100,6 +100,35 @@
         "breakevens": "{\"upper\": 24565.55, \"lower\": 23834.45}",
         "lot_size": "65",
         "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24550, \"symbol\": \"NSE:NIFTY2672124550CE\", \"fill\": 35.3, \"delta\": 0.1888}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24600, \"symbol\": \"NSE:NIFTY2672124600CE\", \"fill\": 27.25, \"delta\": 0.1532}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 23850, \"symbol\": \"NSE:NIFTY2672123850PE\", \"fill\": 46.4, \"delta\": -0.1872}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23800, \"symbol\": \"NSE:NIFTY2672123800PE\", \"fill\": 38.9, \"delta\": -0.161}]",
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_value": "17.15",
+        "pnl": "-104.0",
+        "pnl_pct": "-4.6",
+        "exit_at": "2026-07-15 15:25:00",
+        "reconciled_at": "2026-07-15 22:01:48"
+      },
+      {
+        "id": "2026-07-15_NSE:NIFTY50-INDEX_IRON_CONDOR_23700-24450",
+        "logged_at": "2026-07-15 22:02:03",
+        "trade_date": "2026-07-15",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "12.7",
+        "spot_entry": "24123.9",
+        "dte": "5.73",
+        "net_credit": "13.65",
+        "width": "50",
+        "max_profit": "887.25",
+        "max_loss": "2362.75",
+        "rr": "0.376",
+        "net_delta": "-0.0066",
+        "breakevens": "{\"upper\": 24463.65, \"lower\": 23686.35}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24450, \"symbol\": \"NSE:NIFTY2672124450CE\", \"fill\": 29.6, \"delta\": 0.1751}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24500, \"symbol\": \"NSE:NIFTY2672124500CE\", \"fill\": 23.55, \"delta\": 0.1427}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 23700, \"symbol\": \"NSE:NIFTY2672123700PE\", \"fill\": 42.3, \"delta\": -0.1672}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23650, \"symbol\": \"NSE:NIFTY2672123650PE\", \"fill\": 34.7, \"delta\": -0.1414}]",
         "status": "OPEN",
         "outcome": "",
         "exit_value": "",
