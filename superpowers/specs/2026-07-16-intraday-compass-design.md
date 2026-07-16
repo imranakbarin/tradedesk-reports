@@ -66,7 +66,6 @@ Threshold conventions mirror today's daily-score usage so gate rewiring is mecha
 | PDH CE / PDL PE (`~1285`, `~1302`) | daily ts ≥52 / ≤48 | intraday ≥55 / ≤45 |
 | ORB inside-bar CE/PE (`~1396`, `~1401`) | daily ts ≥52 / ≤48 | intraday ≥55 / ≤45 |
 | ORB main CE/PE (`~1573`, `~1592`) | daily ts ≥52 / ≤48 | intraday ≥55 / ≤45 |
-| inst_flow bounds (`~1716`, `~1733`) | daily ts ≤55 / ≥45 | intraday |
 | Daily-bias extreme override (`~357-361`) | daily ts ≥65→CE_ONLY, ≤35→PE_ONLY | same thresholds on intraday score; gap-based ±0.3% bias unchanged |
 | mtf_sniper (`~1331`) | daily ts>70 + price>ema50 | **keep daily condition** (multi-TF thesis) + require intraday ≥55 for CE / ≤45 for PE as added confirm |
 
@@ -79,6 +78,8 @@ Threshold conventions mirror today's daily-score usage so gate rewiring is mecha
 - SL-widening trend check (`~2582-2590`).
 - snapback_scalper exemptions.
 - vol_flow gate logic (moot — pruned).
+- inst_flow — correction during planning: it has no trend_score gate (the `ts ≤55/≥45`
+  bounds at ~1716/1733 belong to the already-pruned oi_velocity). Nothing to rewire.
 
 ### Observability
 
