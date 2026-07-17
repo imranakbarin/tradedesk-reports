@@ -1,0 +1,348 @@
+{
+  "date": "2026-07-17",
+  "trades": [
+    {
+      "placed_at": "2026-07-17T11:32:27.385263",
+      "closed_at": "2026-07-17T13:24:53.882387",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77800,
+      "entry_price": 547.15,
+      "exit_price": 547.15,
+      "sl_price": 547.15,
+      "target_price": 656.55,
+      "lot_size": 1,
+      "pnl": -91.64,
+      "status": "TRAIL_SL",
+      "reason": "[C6] CE vol dominant: ratio=0.55 (ce=100,940 vs pe=55,180) — accumulation flow, trend 73 [C6/10] → TRAIL_SL: SL ₹547.15 hit (trail=True)",
+      "hold_minutes": 112,
+      "high_price": 632.85,
+      "low_price": 547.15,
+      "r_multiple": -0.06,
+      "confluence": 6,
+      "trend_score_entry": 73.0,
+      "rsi_entry": 58.0,
+      "regime": "trending",
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-17T13:30:35.442411",
+      "closed_at": "2026-07-17T13:47:03.431889",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77900,
+      "entry_price": 498.55,
+      "exit_price": 442.8,
+      "sl_price": 432.05,
+      "target_price": 598.25,
+      "lot_size": 1,
+      "pnl": -1199.96,
+      "status": "SMART_EXIT",
+      "reason": "[C7] Daily uptrend (score 73) + RSI 59 pullback — sniper entry (intraday 92) [C7/10] → SMART_EXIT: Near-SL exit: 84% of SL consumed (loss ₹55.8 of max ₹66.5) — cutting before full SL hit",
+      "hold_minutes": 16,
+      "high_price": 508.8,
+      "low_price": 442.8,
+      "r_multiple": -0.9,
+      "confluence": 7,
+      "trend_score_entry": 73.0,
+      "rsi_entry": 58.9,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-07-17T14:16:08.589468",
+      "closed_at": "2026-07-17T14:19:01.031311",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24300,
+      "entry_price": 134.9,
+      "exit_price": 134.9,
+      "sl_price": 134.9,
+      "target_price": 161.9,
+      "lot_size": 1,
+      "pnl": -82.99,
+      "status": "TRAIL_SL",
+      "reason": "[C7] Daily uptrend (score 73) + RSI 57 pullback — sniper entry (intraday 92) [C7/10] → TRAIL_SL: SL ₹134.90 hit (trail=True)",
+      "hold_minutes": 2,
+      "high_price": 159.7,
+      "low_price": 134.9,
+      "r_multiple": -0.07,
+      "confluence": 7,
+      "trend_score_entry": 73.0,
+      "rsi_entry": 56.6,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-17T11:32:45.383799",
+      "closed_at": "2026-07-17T13:24:54.131063",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78000,
+      "entry_price": 667.8,
+      "exit_price": 654.6,
+      "sl_price": 659.8,
+      "target_price": 682.8,
+      "lot_size": 1,
+      "pnl": -264.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|5800848f",
+      "hold_minutes": 112,
+      "strategy": "vol_flow"
+    },
+    {
+      "placed_at": "2026-07-17T13:30:35.827618",
+      "closed_at": "2026-07-17T13:47:03.483793",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78100,
+      "entry_price": 700.4,
+      "exit_price": 740.85,
+      "sl_price": 692.4,
+      "target_price": 715.4,
+      "lot_size": 1,
+      "pnl": 809.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|c11e1dff",
+      "hold_minutes": 16,
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-07-17T14:16:08.927857",
+      "closed_at": "2026-07-17T14:19:01.309759",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24400,
+      "entry_price": 166.6,
+      "exit_price": 176.3,
+      "sl_price": 158.6,
+      "target_price": 181.6,
+      "lot_size": 1,
+      "pnl": 630.5,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|c62a19e4",
+      "hold_minutes": 2,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "vol_flow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -92.0,
+      "gross_win": 0.0,
+      "gross_loss": -92.0,
+      "avg_r": -0.06,
+      "avg_hold": 112.0
+    },
+    {
+      "strategy": "mtf_sniper",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -1283.0,
+      "gross_win": 0.0,
+      "gross_loss": -1283.0,
+      "avg_r": -0.48,
+      "avg_hold": 9.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TRAIL_SL",
+      "n": 2,
+      "total_pnl": -175.0,
+      "avg_pnl": -87.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -1200.0,
+      "avg_pnl": -1200.0
+    }
+  ],
+  "mtd": {
+    "pnl": -13459.0,
+    "trades": 41,
+    "wins": 6,
+    "losses": 35
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -83.0,
+      "gross_win": 0.0,
+      "gross_loss": -83.0,
+      "avg_hold": 2.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1292.0,
+      "gross_win": 0.0,
+      "gross_loss": -1292.0,
+      "avg_hold": 64.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -92.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1200.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -83.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -458.0,
+    "profit_factor": 0.0,
+    "expectancy": -458.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 43.0,
+    "avg_r": -0.34,
+    "max_win_streak": 0,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_analysis": "# Post-Market Debrief — 2026-07-17\n\nToday was a losing session across the board: three trades, zero wins, ₹1,375 in the red, bringing the month to −₹13,459. The win rate sits at 0%, and with an average R-multiple of −0.26, this is simply not a sustainable trading day.\n\nThe vol_flow strategy held up slightly better, losing only ₹92 on a single SENSEX 77800 CE over 112 minutes—a longer hold that at least explored both sides of the price action before trailing stop kicked in. That trade had lower confluence (C6) but respectable trend confirmation (73 score), so the setup wasn't broken; the execution just didn't materialize.\n\nThe mtf_sniper strategy, which showed promise with its 92 intraday confluence score, cost ₹1,283 across two trades and blew up spectacularly on the SENSEX 77900 CE at 13:47, where you exited via smart_exit at −0.9R after consuming 84% of your stop loss in just 16 minutes. The entry itself was solid—C7 confluence, RSI pullback in a daily uptrend—but the trade reversed hard, and your near-SL exit, while damage control, still handed over ₹1,200. The follow-up NIFTY sniper two minutes later (entry at 134.90, immediate SL hit at 134.90) suggests you were already emotionally tilted and chasing confirmation in a deteriorating market.\n\nFor tomorrow: **Stop trading the mtf_sniper setup after the first loss of the session.** Your two consecutive sniper trades came within 29 minutes of each other, both on pullbacks in a \"trending\" regime that was actually breaking down. Trending regimes with RSI 56–59 are pullback traps, not setups; wait for either a clearer regime shift or at minimum sit out the next two hours after your first sniper exit.",
+  "generated_at": "2026-07-17T06:35:10.856048"
+}
