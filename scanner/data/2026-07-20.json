@@ -1,0 +1,147 @@
+{
+  "date": "2026-07-20",
+  "generated_at": "2026-07-20 15:35:41 IST",
+  "headline": "Selling book: 3 closed, net Rs666.2 (NIFTY Rs666.2).",
+  "recorded_buys": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "recorded_sells": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "signals": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "by_outcome": {},
+    "rows": []
+  },
+  "selling": {
+    "summary": {
+      "n": 3,
+      "wins": 3,
+      "win_rate": 100,
+      "total": 666.2,
+      "unit": "Rs",
+      "avg": 222.1
+    },
+    "nifty": {
+      "n": 3,
+      "total": 666.2
+    },
+    "rows": [
+      {
+        "id": "2026-07-20_NSE:NIFTY50-INDEX_IRON_CONDOR_23950-24400",
+        "logged_at": "2026-07-20 10:02:35",
+        "trade_date": "2026-07-20",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "16.1",
+        "spot_entry": "24190.85",
+        "dte": "1.23",
+        "net_credit": "12.25",
+        "width": "50",
+        "max_profit": "796.25",
+        "max_loss": "2453.75",
+        "rr": "0.325",
+        "net_delta": "-0.0059",
+        "breakevens": "{\"upper\": 24412.25, \"lower\": 23937.75}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24400, \"symbol\": \"NSE:NIFTY2672124400CE\", \"fill\": 18.6, \"delta\": 0.1677}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24450, \"symbol\": \"NSE:NIFTY2672124450CE\", \"fill\": 12.7, \"delta\": 0.1206}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 23950, \"symbol\": \"NSE:NIFTY2672123950PE\", \"fill\": 21.35, \"delta\": -0.16}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23900, \"symbol\": \"NSE:NIFTY2672123900PE\", \"fill\": 15.0, \"delta\": -0.1188}]",
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_value": "9.85",
+        "pnl": "156.0",
+        "pnl_pct": "6.4",
+        "exit_at": "2026-07-20 15:25:00",
+        "reconciled_at": "2026-07-20 15:35:26"
+      },
+      {
+        "id": "2026-07-20_NSE:NIFTY50-INDEX_IRON_CONDOR_24000-24400",
+        "logged_at": "2026-07-20 10:08:37",
+        "trade_date": "2026-07-20",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "16.0",
+        "spot_entry": "24198.6",
+        "dte": "1.22",
+        "net_credit": "14.55",
+        "width": "50",
+        "max_profit": "945.75",
+        "max_loss": "2304.25",
+        "rr": "0.41",
+        "net_delta": "0.0024",
+        "breakevens": "{\"upper\": 24414.55, \"lower\": 23985.45}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24400, \"symbol\": \"NSE:NIFTY2672124400CE\", \"fill\": 18.95, \"delta\": 0.1728}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24450, \"symbol\": \"NSE:NIFTY2672124450CE\", \"fill\": 12.95, \"delta\": 0.1241}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 24000, \"symbol\": \"NSE:NIFTY2672124000PE\", \"fill\": 29.05, \"delta\": -0.2055}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23950, \"symbol\": \"NSE:NIFTY2672123950PE\", \"fill\": 20.5, \"delta\": -0.1544}]",
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_value": "11.05",
+        "pnl": "227.5",
+        "pnl_pct": "9.9",
+        "exit_at": "2026-07-20 15:25:00",
+        "reconciled_at": "2026-07-20 15:35:27"
+      },
+      {
+        "id": "2026-07-20_NSE:NIFTY50-INDEX_IRON_CONDOR_24000-24450",
+        "logged_at": "2026-07-20 10:30:37",
+        "trade_date": "2026-07-20",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "16.0",
+        "spot_entry": "24231.4",
+        "dte": "1.21",
+        "net_credit": "11.7",
+        "width": "50",
+        "max_profit": "760.5",
+        "max_loss": "2489.5",
+        "rr": "0.305",
+        "net_delta": "-0.0015",
+        "breakevens": "{\"upper\": 24461.7, \"lower\": 23988.3}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24450, \"symbol\": \"NSE:NIFTY2672124450CE\", \"fill\": 16.3, \"delta\": 0.1525}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24500, \"symbol\": \"NSE:NIFTY2672124500CE\", \"fill\": 11.05, \"delta\": 0.1085}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 24000, \"symbol\": \"NSE:NIFTY2672124000PE\", \"fill\": 22.2, \"delta\": -0.1678}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 23950, \"symbol\": \"NSE:NIFTY2672123950PE\", \"fill\": 15.75, \"delta\": -0.1253}]",
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_value": "7.35",
+        "pnl": "282.75",
+        "pnl_pct": "11.4",
+        "exit_at": "2026-07-20 15:25:00",
+        "reconciled_at": "2026-07-20 15:35:28"
+      }
+    ]
+  },
+  "correlation": {
+    "pearson": -0.403,
+    "overlap_days": 11,
+    "reading": "hedge confirmed (negative)"
+  }
+}
