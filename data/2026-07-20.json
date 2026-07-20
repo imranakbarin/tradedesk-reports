@@ -1,0 +1,131 @@
+{
+  "date": "2026-07-20",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": -13459.0,
+    "trades": 41,
+    "wins": 6,
+    "losses": 35
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_analysis": "# Post-Market Debrief — July 20, 2026\n\nToday was a no-trade day, which means you sat on your hands while the market moved—sometimes the hardest decision in trading. Your month-to-date drawdown sits at -13,459, so patience today was actually prudent risk management rather than missed opportunity. With zero trades executed, there's nothing to analyze in terms of strategy execution or individual trade quality, but this does highlight an important pattern: you need to establish clear entry criteria that filter out low-conviction setups, because inactivity is only valuable if it's *deliberate* rather than indecision masquerading as discipline. For tomorrow, review your watchlist and identify 2-3 specific price levels or volatility conditions that would constitute a valid setup—having these triggers defined in advance will help you distinguish between quality trading days and days where the risk-reward simply isn't there.",
+  "generated_at": "2026-07-20T06:35:08.993733"
+}
