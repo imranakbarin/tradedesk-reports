@@ -1,0 +1,235 @@
+{
+  "date": "2026-07-21",
+  "trades": [
+    {
+      "placed_at": "2026-07-21T10:17:20.999024",
+      "closed_at": "2026-07-21T10:27:22.318050",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24250,
+      "entry_price": 68.75,
+      "exit_price": 83.75,
+      "sl_price": 68.75,
+      "target_price": 83.75,
+      "lot_size": 1,
+      "pnl": 907.66,
+      "status": "TARGET_HIT",
+      "reason": "[C4] Inside-bar breakdown — 5m close below OR low 24,207 (first 3 candles), intraday 25 [C4/10] → TARGET_HIT: Target ₹83.75 reached",
+      "hold_minutes": 10,
+      "high_price": 82.35,
+      "low_price": 64.7,
+      "r_multiple": 1.4,
+      "confluence": 4,
+      "trend_score_entry": 53.0,
+      "rsi_entry": 55.2,
+      "regime": "mixed",
+      "strategy": "candle_pattern"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-21T10:17:22.020554",
+      "closed_at": "2026-07-21T10:27:34.305550",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24150,
+      "entry_price": 74.1,
+      "exit_price": 60.1,
+      "sl_price": 66.1,
+      "target_price": 89.1,
+      "lot_size": 1,
+      "pnl": -910.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|176bd8e7",
+      "hold_minutes": 10,
+      "strategy": "candle_pattern"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 908.0,
+      "gross_win": 908.0,
+      "gross_loss": 0.0,
+      "avg_r": 1.4,
+      "avg_hold": 10.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 908.0,
+      "avg_pnl": 908.0
+    }
+  ],
+  "mtd": {
+    "pnl": -12552.0,
+    "trades": 42,
+    "wins": 7,
+    "losses": 35
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "gross_win": 908.0,
+      "gross_loss": 0.0,
+      "avg_hold": 10.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    }
+  ],
+  "stats": {
+    "avg_win": 908.0,
+    "avg_loss": 0,
+    "profit_factor": null,
+    "expectancy": 908.0,
+    "avg_hold_win": 10.0,
+    "avg_hold_loss": null,
+    "avg_r": 1.4,
+    "max_win_streak": 1,
+    "max_loss_streak": 0,
+    "current_streak": 1
+  },
+  "ai_analysis": "# Post-Market Debrief — 2026-07-21\n\n**Session Quality:** Today was a micro win operationally but a macro concern contextually—you landed one perfect trade for ₹908 profit with a 100% win rate, but you're down ₹12,552 month-to-date, which means this single trade barely made a dent in the bleeding. One trade does not a recovery make.\n\n**What Worked:** The candle_pattern strategy fired cleanly on the NIFTY 24250 PE with a [C4] inside-bar breakdown setup. Entry at ₹68.75 with a tight 1.4R risk-reward ratio and strong confluence (4/10 signals aligned) got you to target ₹83.75 in just 10 minutes—textbook execution. The setup had 53 trend score and mixed regime confirmation, suggesting the bot identified a legitimate micro-volatility edge.\n\n**What Didn't Work:** There is no worst trade today because you only took one trade, which is both good and revealing—your bot either had poor signal generation or high entry filters, meaning most of the day was silent. Missing volume or opportunity cost is harder to measure than losses, but across 23 trading days this month with a -₹12.5K drawdown, one-trade days aren't fixing the underlying leak.\n\n**Watch Tomorrow:** Before scaling or adding strategies, audit your entry signal frequency and false-positive rate across the full month. One 1.4R win per day won't close a ₹12K monthly gap—you need either higher win rate consistency or significantly fewer stop-outs. Review the losing trades (the 0 shown here masks the real damage from earlier in July) to identify if exits are premature or entries are thesis-broken.",
+  "generated_at": "2026-07-21T06:35:11.489321"
+}
