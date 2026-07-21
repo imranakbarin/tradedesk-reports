@@ -1,0 +1,195 @@
+{
+  "date": "2026-07-21",
+  "generated_at": "2026-07-21 15:35:31 IST",
+  "headline": "Recorded buys: 1/1 green, avg 19.9%. Selling book: 2 closed, net Rs832.0 (NIFTY Rs832.0). Signals: TARGET 1.",
+  "recorded_buys": {
+    "summary": {
+      "n": 1,
+      "wins": 1,
+      "win_rate": 100,
+      "total": 19.9,
+      "unit": "%",
+      "avg": 19.9
+    },
+    "rows": [
+      {
+        "id": "2026-07-21_NSE:INDUSINDBK-EQ_CE_1060",
+        "opened_at": "2026-07-21 10:03:57",
+        "trade_date": "2026-07-21",
+        "symbol": "NSE:INDUSINDBK-EQ",
+        "name": "IndusInd Bank",
+        "direction": "Long Call (CE)",
+        "strike": "1060 CE (ATM)",
+        "option_symbol": "NSE:INDUSINDBK26JUL1060CE",
+        "entry_premium": "25.6",
+        "premium_sl": "22.5",
+        "premium_target": "30.7",
+        "underlying_sl": "1051.8",
+        "underlying_target": "1067.9",
+        "lots": "1",
+        "confidence": "6",
+        "source": "scan",
+        "status": "CLOSED",
+        "outcome": "TARGET",
+        "exit_premium": "30.7",
+        "pnl_pct": "19.9",
+        "exit_at": "2026-07-21 10:10:00",
+        "reconciled_at": "2026-07-21 15:35:13"
+      }
+    ]
+  },
+  "recorded_sells": {
+    "summary": {
+      "n": 1,
+      "wins": 1,
+      "win_rate": 100,
+      "total": 422.5,
+      "unit": "Rs",
+      "avg": 422.5
+    },
+    "rows": [
+      {
+        "id": "2026-07-21_NSE:NIFTY50-INDEX_IRON_CONDOR_24100-24300",
+        "opened_at": "2026-07-21 10:02:58",
+        "trade_date": "2026-07-21",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "net_credit": "11.55",
+        "max_loss": "2499.25",
+        "rr": "0.3",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24300, \"symbol\": \"NSE:NIFTY2672124300CE\", \"fill\": 13.8, \"delta\": 0.232}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24350, \"symbol\": \"NSE:NIFTY2672124350CE\", \"fill\": 6.45, \"delta\": 0.1213}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 24100, \"symbol\": \"NSE:NIFTY2672124100PE\", \"fill\": 9.0, \"delta\": -0.1471}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 24050, \"symbol\": \"NSE:NIFTY2672124050PE\", \"fill\": 4.8, \"delta\": -0.083}]",
+        "status": "CLOSED",
+        "outcome": "TARGET",
+        "exit_value": "5.05",
+        "pnl": "422.5",
+        "pnl_pct": "16.9",
+        "exit_at": "2026-07-21 13:20:00",
+        "reconciled_at": "2026-07-21 15:35:17"
+      }
+    ]
+  },
+  "signals": {
+    "summary": {
+      "n": 1,
+      "wins": 1,
+      "win_rate": 100,
+      "total": 19.9,
+      "unit": "%",
+      "avg": 19.9
+    },
+    "by_outcome": {
+      "TARGET": 1
+    },
+    "rows": [
+      {
+        "id": "2026-07-21_NSE:INDUSINDBK-EQ_CE_1060",
+        "logged_at": "2026-07-21 10:03:30",
+        "trade_date": "2026-07-21",
+        "symbol": "NSE:INDUSINDBK-EQ",
+        "name": "IndusInd Bank",
+        "direction": "Long Call (CE)",
+        "side": "CE",
+        "strike": "1060",
+        "label": "ATM",
+        "option_symbol": "NSE:INDUSINDBK26JUL1060CE",
+        "entry_premium": "25.6",
+        "premium_sl": "22.5",
+        "premium_target": "30.7",
+        "underlying_sl": "1051.8",
+        "underlying_target": "1067.9",
+        "confidence": "6",
+        "phase": "PRIMARY",
+        "news_sentiment": "Neutral",
+        "alignment": "Neutral - no news lean",
+        "factors": "Price 1057.55 above VWAP 1055.02 (bullish) | ORB breakout above 1047.0 | 15m MA20(1033.42) > MA50(1027.49) - uptrend | ATM CE: Long buildup (dOI 149,100) | ATM PE: Long buildup (dOI 86,800) - bearish | Trending (ER 0.54 >= 0.4)",
+        "status": "CLOSED",
+        "outcome": "TARGET",
+        "exit_premium": "30.7",
+        "pnl_pct": "19.9",
+        "exit_at": "2026-07-21 10:10:00",
+        "reconciled_at": "2026-07-21 15:35:13"
+      }
+    ]
+  },
+  "selling": {
+    "summary": {
+      "n": 2,
+      "wins": 2,
+      "win_rate": 100,
+      "total": 832.0,
+      "unit": "Rs",
+      "avg": 416.0
+    },
+    "nifty": {
+      "n": 2,
+      "total": 832.0
+    },
+    "rows": [
+      {
+        "id": "2026-07-21_NSE:NIFTY50-INDEX_IRON_CONDOR_24150-24350",
+        "logged_at": "2026-07-21 09:53:36",
+        "trade_date": "2026-07-21",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "17.4",
+        "spot_entry": "24239.6",
+        "dte": "0.23",
+        "net_credit": "10.7",
+        "width": "50",
+        "max_profit": "695.5",
+        "max_loss": "2554.5",
+        "rr": "0.272",
+        "net_delta": "0.0132",
+        "breakevens": "{\"upper\": 24360.7, \"lower\": 24139.3}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24350, \"symbol\": \"NSE:NIFTY2672124350CE\", \"fill\": 9.15, \"delta\": 0.16}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24400, \"symbol\": \"NSE:NIFTY2672124400CE\", \"fill\": 4.5, \"delta\": 0.0845}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 24150, \"symbol\": \"NSE:NIFTY2672124150PE\", \"fill\": 13.2, \"delta\": -0.2086}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 24100, \"symbol\": \"NSE:NIFTY2672124100PE\", \"fill\": 7.15, \"delta\": -0.1199}]",
+        "status": "CLOSED",
+        "outcome": "TARGET",
+        "exit_value": "4.4",
+        "pnl": "409.5",
+        "pnl_pct": "16.0",
+        "exit_at": "2026-07-21 14:45:00",
+        "reconciled_at": "2026-07-21 15:35:15"
+      },
+      {
+        "id": "2026-07-21_NSE:NIFTY50-INDEX_IRON_CONDOR_24100-24300",
+        "logged_at": "2026-07-21 10:02:37",
+        "trade_date": "2026-07-21",
+        "symbol": "NSE:NIFTY50-INDEX",
+        "name": "NIFTY",
+        "playbook": "IRON_CONDOR",
+        "regime": "range",
+        "bias": "neutral",
+        "atm_iv": "17.3",
+        "spot_entry": "24223.25",
+        "dte": "0.23",
+        "net_credit": "11.55",
+        "width": "50",
+        "max_profit": "750.75",
+        "max_loss": "2499.25",
+        "rr": "0.3",
+        "net_delta": "-0.0466",
+        "breakevens": "{\"upper\": 24311.55, \"lower\": 24088.45}",
+        "lot_size": "65",
+        "legs_json": "[{\"action\": \"SELL\", \"side\": \"CE\", \"strike\": 24300, \"symbol\": \"NSE:NIFTY2672124300CE\", \"fill\": 13.8, \"delta\": 0.232}, {\"action\": \"BUY\", \"side\": \"CE\", \"strike\": 24350, \"symbol\": \"NSE:NIFTY2672124350CE\", \"fill\": 6.45, \"delta\": 0.1213}, {\"action\": \"SELL\", \"side\": \"PE\", \"strike\": 24100, \"symbol\": \"NSE:NIFTY2672124100PE\", \"fill\": 9.0, \"delta\": -0.1471}, {\"action\": \"BUY\", \"side\": \"PE\", \"strike\": 24050, \"symbol\": \"NSE:NIFTY2672124050PE\", \"fill\": 4.8, \"delta\": -0.083}]",
+        "status": "CLOSED",
+        "outcome": "TARGET",
+        "exit_value": "5.05",
+        "pnl": "422.5",
+        "pnl_pct": "16.9",
+        "exit_at": "2026-07-21 13:20:00",
+        "reconciled_at": "2026-07-21 15:35:16"
+      }
+    ]
+  },
+  "correlation": {
+    "pearson": -0.331,
+    "overlap_days": 12,
+    "reading": "hedge confirmed (negative)"
+  }
+}
