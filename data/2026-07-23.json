@@ -1,0 +1,249 @@
+{
+  "date": "2026-07-23",
+  "trades": [
+    {
+      "placed_at": "2026-07-23T13:40:54.776529",
+      "closed_at": "2026-07-23T13:58:43.183817",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23900,
+      "entry_price": 155.6,
+      "exit_price": 152.4,
+      "sl_price": 134.9,
+      "target_price": 186.7,
+      "lot_size": 1,
+      "pnl": -295.79,
+      "status": "SMART_EXIT",
+      "reason": "[C8] Daily downtrend (score 10) + RSI 44 bounce — sniper entry (intraday 8) [C8/10] → SMART_EXIT: 5m Supertrend LONG + RSI 45 — exit losing PE",
+      "hold_minutes": 17,
+      "high_price": 163.3,
+      "low_price": 149.75,
+      "r_multiple": -0.22,
+      "confluence": 8,
+      "trend_score_entry": 10.0,
+      "rsi_entry": 44.4,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-23T13:41:06.901991",
+      "closed_at": "2026-07-23T13:58:43.580337",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23800,
+      "entry_price": 160.55,
+      "exit_price": 162.6,
+      "sl_price": 152.55,
+      "target_price": 175.55,
+      "lot_size": 1,
+      "pnl": 133.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|bb91efd3",
+      "hold_minutes": 17,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "mtf_sniper",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -296.0,
+      "gross_win": 0.0,
+      "gross_loss": -296.0,
+      "avg_r": -0.22,
+      "avg_hold": 17.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -296.0,
+      "avg_pnl": -296.0
+    }
+  ],
+  "mtd": {
+    "pnl": -10154.0,
+    "trades": 46,
+    "wins": 10,
+    "losses": 36
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0,
+      "cumulative": -9859.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "cumulative": -10155.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "gross_win": 0.0,
+      "gross_loss": -296.0,
+      "avg_hold": 17.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -296.0,
+    "profit_factor": 0.0,
+    "expectancy": -296.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 17.0,
+    "avg_r": -0.22,
+    "max_win_streak": 0,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# Post-Market Debrief — July 23, 2026\n\nToday was a losing session with a single NIFTY PE trade that dropped ₹296, pushing the month-to-date drawdown to ₹10,154 on a 0% win rate. The mtf_sniper strategy triggered a short PE position on NIFTY 23900 at 155.6 based on a daily downtrend score of 10 and RSI bounce at 44.4—solid confluence on paper with an 8/10 rating—but the trade reversed against the thesis when the 5-minute Supertrend flipped long and RSI ticked up to 45, forcing an early exit at 152.4 just 17 minutes into the hold. The entry had merit given the daily regime was trending and the strike was well-positioned, but the smart exit logic correctly prevented the trade from bleeding further toward the 134.9 stop; the premium never recovered and hit a low of 149.75 before the close signal triggered. Going forward, the pattern to monitor is whether the intraday Supertrend reversals on the 5-minute chart are creating false exits from otherwise valid multi-timeframe setups—consider widening the exit logic or requiring a second confirmation bar before abandoning daily-regime shorts, as one-bar reversals in choppy midday sessions are eating into your edge.",
+  "generated_at": "2026-07-23T06:35:11.863697"
+}
