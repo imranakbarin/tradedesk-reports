@@ -1,0 +1,59 @@
+{
+  "date": "2026-07-23",
+  "generated_at": "2026-07-23 15:36:02 IST",
+  "headline": "No closed trades or signals today.",
+  "recorded_buys": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "recorded_sells": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "signals": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "by_outcome": {},
+    "rows": []
+  },
+  "selling": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "nifty": {
+      "n": 0,
+      "total": 0
+    },
+    "rows": []
+  },
+  "correlation": {
+    "pearson": -0.331,
+    "overlap_days": 12,
+    "reading": "hedge confirmed (negative)"
+  }
+}
