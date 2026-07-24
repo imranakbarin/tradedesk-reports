@@ -1,0 +1,323 @@
+{
+  "date": "2026-07-24",
+  "trades": [
+    {
+      "placed_at": "2026-07-24T10:01:01.191038",
+      "closed_at": "2026-07-24T11:24:16.474806",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 75700,
+      "entry_price": 586.65,
+      "exit_price": 520.75,
+      "sl_price": 507.45,
+      "target_price": 762.65,
+      "lot_size": 1,
+      "pnl": -1409.04,
+      "status": "SMART_EXIT",
+      "reason": "[C9] ORB breakdown below 75,670 — held 132s, VWAP confirms, intraday 8 [C9/10] → SMART_EXIT: Near-SL exit: 83% of SL consumed (loss ₹65.9 of max ₹79.2) — cutting before full SL hit",
+      "hold_minutes": 83,
+      "high_price": 664.6,
+      "low_price": 520.75,
+      "r_multiple": -0.89,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 40.8,
+      "regime": "trending",
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-07-24T13:35:55.443272",
+      "closed_at": "2026-07-24T13:52:41.028893",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23800,
+      "entry_price": 131.95,
+      "exit_price": 118.45,
+      "sl_price": 114.35,
+      "target_price": 158.35,
+      "lot_size": 1,
+      "pnl": -957.57,
+      "status": "SMART_EXIT",
+      "reason": "[C5] Daily downtrend (score 17) + RSI 43 bounce — sniper entry (intraday 42) [C5/10] → SMART_EXIT: Near-SL exit: 80% of SL consumed (loss ₹14.1 of max ₹17.6) — cutting before full SL hit",
+      "hold_minutes": 16,
+      "high_price": 138.75,
+      "low_price": 117.8,
+      "r_multiple": -0.84,
+      "confluence": 5,
+      "trend_score_entry": 17.0,
+      "rsi_entry": 42.9,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-24T10:01:01.720515",
+      "closed_at": "2026-07-24T11:24:17.126877",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 75500,
+      "entry_price": 695.0,
+      "exit_price": 730.65,
+      "sl_price": 590.8,
+      "target_price": 903.5,
+      "lot_size": 1,
+      "pnl": 713.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|8e6c2bec",
+      "hold_minutes": 83,
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-07-24T13:35:55.655877",
+      "closed_at": "2026-07-24T13:52:41.351878",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23700,
+      "entry_price": 164.8,
+      "exit_price": 175.35,
+      "sl_price": 156.8,
+      "target_price": 179.8,
+      "lot_size": 1,
+      "pnl": 685.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|46545c19",
+      "hold_minutes": 16,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "mtf_sniper",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -958.0,
+      "gross_win": 0.0,
+      "gross_loss": -958.0,
+      "avg_r": -0.84,
+      "avg_hold": 16.0
+    },
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -1409.0,
+      "gross_win": 0.0,
+      "gross_loss": -1409.0,
+      "avg_r": -0.89,
+      "avg_hold": 83.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 2,
+      "total_pnl": -2367.0,
+      "avg_pnl": -1183.0
+    }
+  ],
+  "mtd": {
+    "pnl": -12521.0,
+    "trades": 48,
+    "wins": 10,
+    "losses": 38
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0,
+      "cumulative": -9859.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "cumulative": -10155.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0,
+      "cumulative": -12522.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -958.0,
+      "gross_win": 0.0,
+      "gross_loss": -958.0,
+      "avg_hold": 16.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1409.0,
+      "gross_win": 0.0,
+      "gross_loss": -1409.0,
+      "avg_hold": 83.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1409.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -958.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -1183.0,
+    "profit_factor": 0.0,
+    "expectancy": -1183.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 50.0,
+    "avg_r": -0.86,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_analysis": "# Post-Market Debrief — July 24, 2026\n\nToday was a tough session: zero wins across two trades, losing ₹2,367 and pushing the month into a ₹12,521 hole. Both exits were triggered by the SMART_EXIT logic cutting losses at 80–83% of the stop level, which shows the risk management is working as designed—but it also signals that entry conditions were weak or market regime shifted against both setups.\n\nThe ORB breakout trade on SENSEX (worst loss: ₹1,409) had strong confluence (9/10) and a clean breakdown below 75,670 with VWAP confirmation; the system held it for 83 minutes, giving it time to work, yet price collapsed hard into the stop zone anyway. Meanwhile, the MTF sniper on NIFTY was lighter on confluence (5/10) with a low trend score (17) and RSI bounce at 42—a thinner signal that got stopped out in just 16 minutes. Neither trade was unreasonable at entry, but both landed in a market environment that rejected them aggressively.\n\nThe pattern across both losses is revealing: both opened with depressed RSI (40–43) as if bounce opportunities existed, yet neither bounce materialized. This suggests the algo may be over-weighting RSI reversal signals when broader market structure (trend score on NIFTY, VWAP on SENSEX) is fragile. On a day when the regime was marked \"trending,\" the bot entered shorts into indices that had momentum weakness—a mismatch worth examining.\n\nTomorrow, before taking either the sniper or ORB setup, tighten the confluence threshold and require trend score ≥25 on daily MTF entries to filter out low-conviction setups. Also watch whether RSI oversold bounces are working at all in the current market regime; if they're not, disable them temporarily and rely solely on structural breakdowns.",
+  "generated_at": "2026-07-24T06:35:21.745687"
+}
