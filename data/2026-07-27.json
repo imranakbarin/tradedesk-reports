@@ -1,0 +1,159 @@
+{
+  "date": "2026-07-27",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": -12521.0,
+    "trades": 48,
+    "wins": 10,
+    "losses": 38
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0,
+      "cumulative": -9859.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "cumulative": -10155.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0,
+      "cumulative": -12522.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_analysis": "# Post-Market Debrief — July 27, 2026\n\nToday was a no-trade day, which means you stayed on the sidelines while your month-to-date drawdown sits at -₹12,521. This isn't necessarily a loss—disciplined inaction is often better than forced trades—but you need to audit whether you were genuinely waiting for setup confirmation or if market conditions simply didn't align with your edge. With zero fills across the session, there's no win rate to analyze and no individual trades to learn from, so the real question is whether your entry filters were too tight or if volatility and liquidity were genuinely absent in your watchlist. Tomorrow, review your scanning criteria and the intraday charts from today to pinpoint whether the setups were there but didn't trigger, or whether the market truly offered nothing tradeable. Going forward, keep a log of \"setups rejected\" versus \"no setups found\"—this distinction will tell you if your bot's logic needs calibration or if you're simply in a period requiring patience while the month closes out.",
+  "generated_at": "2026-07-27T06:35:10.010215"
+}
