@@ -1,0 +1,336 @@
+{
+  "date": "2026-07-28",
+  "trades": [
+    {
+      "placed_at": "2026-07-28T10:08:58.790738",
+      "closed_at": "2026-07-28T10:15:14.076073",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24000,
+      "entry_price": 55.05,
+      "exit_price": 45.05,
+      "sl_price": 45.05,
+      "target_price": 70.05,
+      "lot_size": 1,
+      "pnl": -710.14,
+      "status": "SL_HIT",
+      "reason": "[C8] Inside-bar breakdown — 5m close below OR low 23,969 (first 3 candles), intraday 42 [C8/10] → SL_HIT: SL ₹45.05 hit (trail=False)",
+      "hold_minutes": 6,
+      "high_price": 60.15,
+      "low_price": 46.7,
+      "r_multiple": -1.09,
+      "confluence": 8,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 49.0,
+      "regime": "mixed",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-28T14:30:09.989477",
+      "closed_at": "2026-07-28T15:15:59.034133",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 76900,
+      "entry_price": 339.6,
+      "exit_price": 298.2,
+      "sl_price": 294.3,
+      "target_price": 407.5,
+      "lot_size": 1,
+      "pnl": -900.69,
+      "status": "SMART_EXIT",
+      "reason": "[C7] Daily downtrend (score 7) + RSI 50 bounce — sniper entry (intraday 25) [C7/10] → SMART_EXIT: Near-SL exit: 91% of SL consumed (loss ₹41.4 of max ₹45.3) — cutting before full SL hit",
+      "hold_minutes": 45,
+      "high_price": 369.15,
+      "low_price": 298.2,
+      "r_multiple": -0.99,
+      "confluence": 7,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 49.5,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-28T10:08:59.331272",
+      "closed_at": "2026-07-28T10:15:14.256536",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23900,
+      "entry_price": 86.6,
+      "exit_price": 98.45,
+      "sl_price": 78.6,
+      "target_price": 101.6,
+      "lot_size": 1,
+      "pnl": 770.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|cb426bc1",
+      "hold_minutes": 6,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-07-28T14:30:27.559932",
+      "closed_at": "2026-07-28T15:15:59.510740",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76700,
+      "entry_price": 361.8,
+      "exit_price": 413.35,
+      "sl_price": 353.8,
+      "target_price": 376.8,
+      "lot_size": 1,
+      "pnl": 1031.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|c7a18404",
+      "hold_minutes": 45,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -710.0,
+      "gross_win": 0.0,
+      "gross_loss": -710.0,
+      "avg_r": -1.09,
+      "avg_hold": 6.0
+    },
+    {
+      "strategy": "mtf_sniper",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -901.0,
+      "gross_win": 0.0,
+      "gross_loss": -901.0,
+      "avg_r": -0.99,
+      "avg_hold": 45.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -710.0,
+      "avg_pnl": -710.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -901.0,
+      "avg_pnl": -901.0
+    }
+  ],
+  "mtd": {
+    "pnl": -14132.0,
+    "trades": 50,
+    "wins": 10,
+    "losses": 40
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0,
+      "cumulative": -9859.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "cumulative": -10155.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0,
+      "cumulative": -12522.0
+    },
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0,
+      "cumulative": -14133.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0
+    },
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -710.0,
+      "gross_win": 0.0,
+      "gross_loss": -710.0,
+      "avg_hold": 6.0
+    },
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -901.0,
+      "gross_win": 0.0,
+      "gross_loss": -901.0,
+      "avg_hold": 45.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -710.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -901.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -805.0,
+    "profit_factor": 0.0,
+    "expectancy": -805.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 26.0,
+    "avg_r": -1.04,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_analysis": "# 2026-07-28 Post-Market Debrief\n\nToday was a difficult session with zero wins across two trades and a ₹1,611 loss, bringing the month to -₹14,132—the bot is struggling to find edge right now. Both trades were PE shorts on index options, but neither conviction level nor setup quality translated into profitable execution; the candle pattern trade hit its 15-point SL in just 6 minutes after the 5m close broke below the opening range, while the mtf_sniper entry on SENSEX sat for 45 minutes and bled out to a near-SL exit at 91% of max loss consumed. What stands out across both losses is the entry signal itself: both came in at RSI 49–50, a zone that feels neutral rather than directional, combined with regime calls (mixed/trending) that didn't anchor the thesis strongly enough—the bot had confluence scores of 8 and 7, yet neither prevented reversals. The critical adjustment for tomorrow is to tighten the RSI filter on PE shorts: if the daily trend score is solid but RSI is sitting at midpoint (45–55), the signal quality degrades significantly, and the bot should either require a lower RSI or wait for a stronger multi-timeframe alignment before entering. Until the confluence of timing and momentum improves, reducing lot size or sitting out these marginal setups would preserve capital better than grinding through sub-50% win-rate days.",
+  "generated_at": "2026-07-28T06:35:12.514629"
+}
