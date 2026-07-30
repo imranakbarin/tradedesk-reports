@@ -1,0 +1,324 @@
+{
+  "date": "2026-07-30",
+  "trades": [
+    {
+      "placed_at": "2026-07-30T12:32:30.936569",
+      "closed_at": "2026-07-30T12:33:21.510121",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24250,
+      "entry_price": 124.9,
+      "exit_price": 142.1,
+      "sl_price": 113.4,
+      "target_price": 142.1,
+      "lot_size": 1,
+      "pnl": 1035.28,
+      "status": "TARGET_HIT",
+      "reason": "[C5] Intraday break above PDH 24,284 (+0.00%) — trend 63, VWAP confirms [C5/10] → TARGET_HIT: Target ₹142.10 reached",
+      "hold_minutes": 0,
+      "high_price": 135.95,
+      "low_price": 124.9,
+      "r_multiple": 1.38,
+      "confluence": 5,
+      "trend_score_entry": 63.0,
+      "rsi_entry": 56.5,
+      "regime": "mixed",
+      "strategy": "pdh_pdl_break"
+    },
+    {
+      "placed_at": "2026-07-30T12:46:40.109852",
+      "closed_at": "2026-07-30T13:00:28.264731",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24250,
+      "entry_price": 142.05,
+      "exit_price": 130.55,
+      "sl_price": 130.55,
+      "target_price": 159.25,
+      "lot_size": 1,
+      "pnl": -829.77,
+      "status": "SL_HIT",
+      "reason": "[C6] Intraday break above PDH 24,284 (+0.09%) — trend 63, VWAP confirms [C6/10] → SL_HIT: SL ₹130.55 hit (trail=False)",
+      "hold_minutes": 13,
+      "high_price": 142.05,
+      "low_price": 132.15,
+      "r_multiple": -1.11,
+      "confluence": 6,
+      "trend_score_entry": 63.0,
+      "rsi_entry": 56.5,
+      "regime": "mixed",
+      "strategy": "pdh_pdl_break"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-30T12:32:43.221498",
+      "closed_at": "2026-07-30T12:33:47.680091",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24350,
+      "entry_price": 143.25,
+      "exit_price": 134.0,
+      "sl_price": 135.25,
+      "target_price": 171.95,
+      "lot_size": 1,
+      "pnl": -601.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|6ad69e5b",
+      "hold_minutes": 0,
+      "strategy": "pdh_pdl_break"
+    },
+    {
+      "placed_at": "2026-07-30T12:46:40.350972",
+      "closed_at": "2026-07-30T13:00:28.396812",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24350,
+      "entry_price": 136.5,
+      "exit_price": 146.5,
+      "sl_price": 128.5,
+      "target_price": 163.8,
+      "lot_size": 1,
+      "pnl": 650.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|c06f2881",
+      "hold_minutes": 13,
+      "strategy": "pdh_pdl_break"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "pdh_pdl_break",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "pnl": 206.0,
+      "gross_win": 1035.0,
+      "gross_loss": -830.0,
+      "avg_r": 0.13,
+      "avg_hold": 7.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 1035.0,
+      "avg_pnl": 1035.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -830.0,
+      "avg_pnl": -830.0
+    }
+  ],
+  "mtd": {
+    "pnl": -14655.0,
+    "trades": 53,
+    "wins": 11,
+    "losses": 42
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0,
+      "cumulative": -9859.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "cumulative": -10155.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0,
+      "cumulative": -12522.0
+    },
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0,
+      "cumulative": -14133.0
+    },
+    {
+      "day": "2026-07-29",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -729.0,
+      "cumulative": -14862.0
+    },
+    {
+      "day": "2026-07-30",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0,
+      "cumulative": -14656.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0
+    },
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0
+    },
+    {
+      "day": "2026-07-29",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -729.0
+    },
+    {
+      "day": "2026-07-30",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0,
+      "gross_win": 1035.0,
+      "gross_loss": -830.0,
+      "avg_hold": 7.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "12:00-13:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1035.0,
+    "avg_loss": -830.0,
+    "profit_factor": 1.25,
+    "expectancy": 102.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 13.0,
+    "avg_r": 0.13,
+    "max_win_streak": 1,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# 2026-07-30 Debrief\n\nToday was a break-even session on the surface—up ₹206 on two trades—but the month-to-date damage of ₹14,655 suggests this win-loss shuffle is masking deeper issues. The 50% win rate and 0.13 average R-multiple show the strategy is firing, but inconsistently and without enough edge to offset the monthly bleed.\n\nThe winning trade nailed the setup: a PDH break at 24,284 on NIFTY 24250 CE with 5-point confluence, solid trend score (63), and clean execution—entry at 124.9, target hit at 142.1 in under a minute for a 1.38R win worth ₹1,035. That's textbook pdh_pdl_break at its best, with VWAP confirmation and RSI neutral at entry.\n\nThe losing trade fifteen minutes later tells the real story. Same strike, same signal quality (6-point confluence, identical trend score), but entered at 142.05—right where the first trade exited—and stopped out at 130.55 for -1.11R and ₹830 loss. The bot chased the breakout momentum instead of respecting that the first winner had already captured the move, violating the core principle of not stacking correlated positions in the same strike on the same day.\n\nWatch entry sequencing tomorrow: if the same strike triggers a second time within 30 minutes of a winner, either skip it or dramatically reduce size. The ₹200 net profit evaporates instantly into slippage and fees if you're not careful about revenge trading the same setup twice.",
+  "generated_at": "2026-07-30T06:35:12.349763"
+}
