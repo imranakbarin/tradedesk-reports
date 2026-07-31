@@ -1,0 +1,331 @@
+{
+  "date": "2026-07-31",
+  "trades": [
+    {
+      "placed_at": "2026-07-31T12:00:14.299942",
+      "closed_at": "2026-07-31T12:45:51.373024",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77900,
+      "entry_price": 520.7,
+      "exit_price": 624.8,
+      "sl_price": 520.7,
+      "target_price": 624.8,
+      "lot_size": 1,
+      "pnl": 1987.8,
+      "status": "TARGET_HIT",
+      "reason": "[C6] Daily uptrend (score 73) + RSI 58 pullback — sniper entry (intraday 92) [C6/10] → TARGET_HIT: Target ₹624.80 reached",
+      "hold_minutes": 45,
+      "high_price": 623.5,
+      "low_price": 513.8,
+      "r_multiple": 1.43,
+      "confluence": 6,
+      "trend_score_entry": 73.0,
+      "rsi_entry": 58.3,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-07-31T12:56:15.907648",
+      "closed_at": "2026-07-31T14:03:13.463505",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 78100,
+      "entry_price": 518.0,
+      "exit_price": 504.9,
+      "sl_price": 448.9,
+      "target_price": 621.6,
+      "lot_size": 1,
+      "pnl": -350.46,
+      "status": "SMART_EXIT",
+      "reason": "[C9] Daily uptrend (score 83) + RSI 59 pullback — sniper entry (intraday 92) [C9/10] → SMART_EXIT: 5m Supertrend SHORT + RSI 54 — exit losing CE",
+      "hold_minutes": 66,
+      "high_price": 555.65,
+      "low_price": 477.3,
+      "r_multiple": -0.25,
+      "confluence": 9,
+      "trend_score_entry": 83.0,
+      "rsi_entry": 58.8,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-07-31T12:00:14.895908",
+      "closed_at": "2026-07-31T12:45:51.573375",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78100,
+      "entry_price": 429.15,
+      "exit_price": 372.55,
+      "sl_price": 421.15,
+      "target_price": 444.15,
+      "lot_size": 1,
+      "pnl": -1132.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|e51d64a6",
+      "hold_minutes": 45,
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-07-31T12:56:16.067863",
+      "closed_at": "2026-07-31T14:03:13.587903",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78300,
+      "entry_price": 456.55,
+      "exit_price": 456.35,
+      "sl_price": 448.55,
+      "target_price": 471.55,
+      "lot_size": 1,
+      "pnl": -4.0,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|5a290df7",
+      "hold_minutes": 66,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "mtf_sniper",
+      "trades": 2,
+      "wins": 1,
+      "losses": 1,
+      "pnl": 1637.0,
+      "gross_win": 1988.0,
+      "gross_loss": -350.0,
+      "avg_r": 0.59,
+      "avg_hold": 56.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 1988.0,
+      "avg_pnl": 1988.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -350.0,
+      "avg_pnl": -350.0
+    }
+  ],
+  "mtd": {
+    "pnl": -13018.0,
+    "trades": 55,
+    "wins": 12,
+    "losses": 43
+  },
+  "monthly_days": [
+    {
+      "day": "2026-07-01",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1893.0,
+      "cumulative": -1893.0
+    },
+    {
+      "day": "2026-07-02",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 107.0,
+      "cumulative": -1786.0
+    },
+    {
+      "day": "2026-07-03",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -947.0,
+      "cumulative": -2733.0
+    },
+    {
+      "day": "2026-07-06",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 196.0,
+      "cumulative": -2537.0
+    },
+    {
+      "day": "2026-07-07",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1591.0,
+      "cumulative": -4128.0
+    },
+    {
+      "day": "2026-07-08",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -2743.0,
+      "cumulative": -6871.0
+    },
+    {
+      "day": "2026-07-09",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 132.0,
+      "cumulative": -6739.0
+    },
+    {
+      "day": "2026-07-10",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2891.0,
+      "cumulative": -9630.0
+    },
+    {
+      "day": "2026-07-14",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1555.0,
+      "cumulative": -11185.0
+    },
+    {
+      "day": "2026-07-15",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -538.0,
+      "cumulative": -11723.0
+    },
+    {
+      "day": "2026-07-16",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -362.0,
+      "cumulative": -12085.0
+    },
+    {
+      "day": "2026-07-17",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1375.0,
+      "cumulative": -13460.0
+    },
+    {
+      "day": "2026-07-21",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -12552.0
+    },
+    {
+      "day": "2026-07-22",
+      "trades": 3,
+      "wins": 3,
+      "pnl": 2693.0,
+      "cumulative": -9859.0
+    },
+    {
+      "day": "2026-07-23",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -296.0,
+      "cumulative": -10155.0
+    },
+    {
+      "day": "2026-07-24",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -2367.0,
+      "cumulative": -12522.0
+    },
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0,
+      "cumulative": -14133.0
+    },
+    {
+      "day": "2026-07-29",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -729.0,
+      "cumulative": -14862.0
+    },
+    {
+      "day": "2026-07-30",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0,
+      "cumulative": -14656.0
+    },
+    {
+      "day": "2026-07-31",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0,
+      "cumulative": -13019.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0
+    },
+    {
+      "day": "2026-07-29",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -729.0
+    },
+    {
+      "day": "2026-07-30",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0
+    },
+    {
+      "day": "2026-07-31",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0,
+      "gross_win": 1988.0,
+      "gross_loss": -350.0,
+      "avg_hold": 56.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "12:00-13:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1988.0,
+    "avg_loss": -350.0,
+    "profit_factor": 5.67,
+    "expectancy": 819.0,
+    "avg_hold_win": 45.0,
+    "avg_hold_loss": 66.0,
+    "avg_r": 0.59,
+    "max_win_streak": 1,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "# Post-Market Debrief — July 31, 2026\n\nToday was a net positive session with ₹1,637 in daily profit across two trades, though the 50% win rate masks a stark disparity in execution: one perfectly executed target hit versus one premature exit that left ₹350 on the table. The morning CE on SENSEX 77900 was textbook—entered at 520.7 with a 73 trend score and RSI pullback, held just 45 minutes, and rode it to the 624.8 target for a clean 1.43R win. The afternoon trade on 78100 CE started with even stronger confluence (score 9/10, trend 83) but deteriorated quickly; despite a wider stop at 448.9, the SMART_EXIT triggered on a 5m Supertrend flip at 504.9, capturing only a -0.25R loss instead of letting the trend potentially develop toward the 621.6 target. The key issue wasn't entry quality—both trades had excellent daily uptrend alignment and intraday confirmation—but rather that the second trade's exit logic fired on intermediate noise rather than conviction, costing the trader roughly 1,300 rupees in foregone profit on a directionally sound setup. Watch the 5m Supertrend exit rule tomorrow: it's catching reversals correctly, but on high-confluence daily setups with 200+ point target ranges, consider whether a tighter profit-taking level or a trailing stop would capture more upside without increasing risk.",
+  "generated_at": "2026-07-31T06:35:11.622653"
+}
