@@ -1,0 +1,46 @@
+{
+  "date": "2026-08-03",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": null,
+    "trades": 0,
+    "wins": null,
+    "losses": null
+  },
+  "monthly_days": [],
+  "week_days": [
+    {
+      "day": "2026-07-28",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1611.0
+    },
+    {
+      "day": "2026-07-29",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -729.0
+    },
+    {
+      "day": "2026-07-30",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0
+    },
+    {
+      "day": "2026-07-31",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_analysis": "# Post-Market Debrief — August 3, 2026\n\nToday was a no-trade day on the NSE options board, which means you either stayed disciplined waiting for your setup or the market didn't present enough conviction to pull the trigger. Zero trades isn't a loss—it's a pass, and that's often the hardest decision for a retail trader to make. With no P&L to analyze, the real win here is not forcing a trade into a thin or choppy market; many traders would've forced something and given back edge. Tomorrow, review your entry criteria and ask whether you were genuinely waiting for high-probability setups or if you were simply too cautious—there's a difference. Watch for early-session volatility in your preferred underlyings (Nifty, Bank Nifty, or stock options) to see if there's genuine directional intent or just noise, because that distinction will tell you whether to stay patient again or recalibrate your strike/expiry selection.",
+  "generated_at": "2026-08-03T07:33:36.796818"
+}
