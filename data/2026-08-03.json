@@ -1,16 +1,56 @@
 {
   "date": "2026-08-03",
-  "trades": [],
+  "trades": [
+    {
+      "placed_at": "2026-08-03T09:46:00.155748",
+      "closed_at": "2026-08-04T00:14:01.802305",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24550,
+      "entry_price": 69.2,
+      "exit_price": 86.35,
+      "sl_price": 69.2,
+      "target_price": 96.88,
+      "lot_size": 1,
+      "pnl": 1046.1,
+      "status": "STARTUP_SQUARE_OFF",
+      "reason": "[C6] AI[76] NIFTY is in a textbook STRONG_UP continuation during the 9:45 morning killzone. The 5m/15m both show STRONG_UP with rang",
+      "hold_minutes": null,
+      "high_price": 92.15,
+      "low_price": 66.7,
+      "r_multiple": null,
+      "confluence": 6,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 0.0,
+      "regime": "",
+      "strategy": ""
+    }
+  ],
   "contra_trades": [],
   "by_strategy": [],
-  "reasons": [],
+  "reasons": [
+    {
+      "status": "STARTUP_SQUARE_OFF",
+      "n": 1,
+      "total_pnl": 1046.0,
+      "avg_pnl": 1046.0
+    }
+  ],
   "mtd": {
-    "pnl": null,
-    "trades": 0,
-    "wins": null,
-    "losses": null
+    "pnl": 1046.0,
+    "trades": 1,
+    "wins": 1,
+    "losses": 0
   },
-  "monthly_days": [],
+  "monthly_days": [
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0,
+      "cumulative": 1046.0
+    }
+  ],
   "week_days": [
     {
       "day": "2026-07-28",
@@ -35,12 +75,43 @@
       "trades": 2,
       "wins": 1,
       "pnl": 1637.0
+    },
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0
     }
   ],
   "index_breakdown": [],
-  "time_buckets": [],
-  "direction_breakdown": [],
-  "stats": {},
-  "ai_analysis": "# Post-Market Debrief — August 3, 2026\n\nToday was a no-trade day on the NSE options board, which means you either stayed disciplined waiting for your setup or the market didn't present enough conviction to pull the trigger. Zero trades isn't a loss—it's a pass, and that's often the hardest decision for a retail trader to make. With no P&L to analyze, the real win here is not forcing a trade into a thin or choppy market; many traders would've forced something and given back edge. Tomorrow, review your entry criteria and ask whether you were genuinely waiting for high-probability setups or if you were simply too cautious—there's a difference. Watch for early-session volatility in your preferred underlyings (Nifty, Bank Nifty, or stock options) to see if there's genuine directional intent or just noise, because that distinction will tell you whether to stay patient again or recalibrate your strike/expiry selection.",
-  "generated_at": "2026-08-03T07:33:36.796818"
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1046.0,
+    "avg_loss": 0,
+    "profit_factor": null,
+    "expectancy": 1046.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": null,
+    "avg_r": null,
+    "max_win_streak": 1,
+    "max_loss_streak": 0,
+    "current_streak": 1
+  },
+  "ai_analysis": "# Post-Market Debrief — August 3, 2026\n\nToday was a clean winner: one trade, one win, ₹1,046 profit, and a perfect 100% win rate. The NIFTY 24550 CE entry at 09:46 caught a textbook morning killzone continuation with strong confluence (6/10) across the 5m and 15m timeframes, executing at 69.2 and exiting at 86.35—a 24.8% move that validated the STRONG_UP bias. The trade showed good risk discipline, with the stop locked at entry and the target set at 96.88, though the bot squared off early at 86.35, leaving 10.5 points on the table before the trade could run to its full potential. The one concern: the exit reason flags \"STARTUP_SQUARE_OFF,\" suggesting the position was closed due to a system restart rather than a planned exit signal, which means you're relying on luck rather than repeatable trade management logic. Tomorrow, lock in a clear exit rule—whether that's hitting a target, time-decay threshold, or volatility level—so you're not dependent on forced squareoffs to end trades profitably.",
+  "generated_at": "2026-08-04T00:18:52.978680"
 }
