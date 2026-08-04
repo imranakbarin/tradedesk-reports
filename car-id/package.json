@@ -1,0 +1,17 @@
+{
+  "name": "car-id",
+  "version": "1.0.0",
+  "description": "Identify a car's brand and features from a photo",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "smoke": "node smoke-test.mjs"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.115.0",
+    "express": "^5.1.0",
+    "zod": "^3.25.0"
+  }
+}

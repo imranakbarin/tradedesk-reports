@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Car ID</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%233b82f6' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm14 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z'/%3E%3Cpath d='M3 17v-4l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5v4'/%3E%3C/svg%3E">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{min-height:100vh;background:#0b1120;color:#e2e8f0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  font-size:14px;line-height:1.55;padding:28px 20px 60px}
+.wrap{max-width:940px;margin:0 auto}
+
+/* Header */
+header{display:flex;align-items:center;gap:12px;padding-bottom:18px;border-bottom:1px solid #1e293b;margin-bottom:26px}
+h1{font-size:17px;font-weight:700;color:#f8fafc;letter-spacing:.02em}
+.sub{font-size:11px;color:#475569;margin-top:1px}
+.badge{margin-left:auto;font-size:10px;padding:3px 9px;border-radius:999px;background:#1e293b;color:#64748b}
+
+/* Drop zone */
+.drop{border:1.5px dashed #1e293b;border-radius:14px;padding:38px 24px;text-align:center;
+  cursor:pointer;transition:border-color .15s,background .15s;background:#0f172a}
+.drop:hover,.drop.over{border-color:#3b82f6;background:#111c33}
+.drop svg{opacity:.45;margin-bottom:10px}
+.drop-main{font-size:14px;color:#cbd5e1;font-weight:500}
+.drop-hint{font-size:11.5px;color:#475569;margin-top:5px}
+input[type=file]{display:none}
+
+/* Preview */
+.preview{display:none;gap:16px;align-items:flex-start;background:#0f172a;border:1px solid #1e293b;
+  border-radius:14px;padding:14px;margin-top:16px}
+.preview.show{display:flex}
+.preview img{width:190px;height:140px;object-fit:cover;border-radius:9px;background:#020617;flex-shrink:0}
+.pmeta{flex:1;min-width:0}
+.pname{font-size:13px;color:#e2e8f0;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.pdims{font-size:11.5px;color:#475569;margin-top:3px}
+.actions{display:flex;gap:8px;margin-top:14px;flex-wrap:wrap}
+button{font:inherit;font-size:13px;font-weight:600;border:none;border-radius:8px;padding:9px 18px;cursor:pointer;transition:background .15s}
+.primary{background:#2563eb;color:#fff}
+.primary:hover:not(:disabled){background:#1d4ed8}
+.primary:disabled{background:#1e3a5f;color:#64748b;cursor:default}
+.ghost{background:#1e293b;color:#94a3b8}
+.ghost:hover{background:#293548;color:#cbd5e1}
+
+/* Status */
+.status{display:none;align-items:center;gap:10px;margin-top:18px;padding:13px 16px;
+  background:#0f172a;border:1px solid #1e293b;border-radius:10px;font-size:13px;color:#93c5fd}
+.status.show{display:flex}
+.spin{width:15px;height:15px;border:2px solid #1e3a5f;border-top-color:#60a5fa;border-radius:50%;
+  animation:spin .7s linear infinite;flex-shrink:0}
+@keyframes spin{to{transform:rotate(360deg)}}
+.error{display:none;margin-top:18px;padding:13px 16px;background:#1f1315;border:1px solid #7f1d1d;
+  border-radius:10px;font-size:13px;color:#fca5a5}
+.error.show{display:block}
+
+/* Results */
+#results{margin-top:26px}
+.headline{background:linear-gradient(135deg,#111c33,#0f172a);border:1px solid #1e3a5f;
+  border-radius:14px;padding:22px 24px;margin-bottom:16px}
+.brand{font-size:12px;font-weight:600;color:#60a5fa;letter-spacing:.09em;text-transform:uppercase}
+.model{font-size:27px;font-weight:700;color:#f8fafc;margin-top:3px;line-height:1.2}
+.hl-meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.chip{font-size:11.5px;padding:4px 11px;border-radius:999px;background:#1e293b;color:#94a3b8;white-space:nowrap}
+.chip b{color:#cbd5e1;font-weight:600}
+.conf{font-weight:700;letter-spacing:.03em;text-transform:uppercase;font-size:10.5px}
+.conf-high{background:#052e1a;color:#4ade80}
+.conf-medium{background:#2c2410;color:#fbbf24}
+.conf-low{background:#2b1618;color:#f87171}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.card{background:#0f172a;border:1px solid #1e293b;border-radius:12px;padding:17px 19px}
+.card h2{font-size:11px;font-weight:700;color:#60a5fa;letter-spacing:.08em;
+  text-transform:uppercase;margin-bottom:13px}
+.row{display:flex;gap:10px;padding:6px 0;border-bottom:1px solid #16213a;font-size:13px}
+.row:last-child{border-bottom:none}
+.row dt{color:#64748b;flex-shrink:0;width:88px}
+.row dd{color:#e2e8f0;flex:1;min-width:0}
+ul.feat{list-style:none;margin-top:4px}
+ul.feat li{position:relative;padding-left:15px;padding-top:4px;color:#cbd5e1;font-size:13px}
+ul.feat li::before{content:'';position:absolute;left:2px;top:12px;width:4px;height:4px;
+  border-radius:50%;background:#3b82f6}
+.note{margin-top:11px;padding-top:11px;border-top:1px solid #16213a;
+  font-size:12px;color:#64748b;font-style:italic}
+
+/* Reasoning */
+details{margin-top:16px;background:#0f172a;border:1px solid #1e293b;border-radius:12px;overflow:hidden}
+summary{padding:15px 19px;cursor:pointer;font-size:12.5px;font-weight:600;color:#93c5fd;
+  list-style:none;display:flex;align-items:center;gap:9px;user-select:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'▾';margin-left:auto;color:#475569;transition:transform .18s}
+details[open] summary::after{transform:rotate(180deg)}
+summary:hover{background:#111c33}
+.dbody{padding:4px 19px 19px;border-top:1px solid #1e293b}
+.cue{padding:11px 0;border-bottom:1px solid #16213a}
+.cue:last-child{border-bottom:none}
+.cue-what{font-size:13px;color:#e2e8f0;font-weight:600}
+.cue-why{font-size:12.5px;color:#94a3b8;margin-top:3px}
+.alt{padding:10px 0;border-bottom:1px solid #16213a;font-size:12.5px}
+.alt:last-child{border-bottom:none}
+.alt b{color:#cbd5e1}
+.alt span{color:#64748b}
+.sec-label{font-size:10.5px;font-weight:700;color:#475569;letter-spacing:.08em;
+  text-transform:uppercase;margin:16px 0 2px}
+.caveats{margin-top:16px;padding:13px 17px;background:#0f172a;border:1px solid #1e293b;
+  border-left:2px solid #334155;border-radius:8px;font-size:12.5px;color:#64748b}
+.usage{margin-top:14px;text-align:right;font-size:11px;color:#334155}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.8"
+         stroke-linecap="round" stroke-linejoin="round">
+      <path d="M5 17h14M5 17a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm14 0a2 2 0 1 0 4 0 2 2 0 0 0-4 0Z"/>
+      <path d="M3 17v-4l2-5a2 2 0 0 1 1.9-1.4h10.2A2 2 0 0 1 19 8l2 5v4"/>
+      <path d="M5 13h14"/>
+    </svg>
+    <div>
+      <h1>Car ID</h1>
+      <div class="sub">Upload a photo — get the brand, model, and features</div>
+    </div>
+    <div class="badge" id="badge">checking…</div>
+  </header>
+
+  <div class="drop" id="drop">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" stroke-width="1.6"
+         stroke-linecap="round" stroke-linejoin="round">
+      <rect x="3" y="3" width="18" height="18" rx="2"/>
+      <circle cx="8.5" cy="8.5" r="1.5"/>
+      <path d="m21 15-5-5L5 21"/>
+    </svg>
+    <div class="drop-main">Drop a car photo here, or click to choose</div>
+    <div class="drop-hint">You can also paste from the clipboard · JPEG, PNG, WebP, GIF</div>
+  </div>
+  <input type="file" id="file" accept="image/jpeg,image/png,image/webp,image/gif">
+
+  <div class="preview" id="preview">
+    <img id="thumb" alt="Selected car photo">
+    <div class="pmeta">
+      <div class="pname" id="pname"></div>
+      <div class="pdims" id="pdims"></div>
+      <div class="actions">
+        <button class="primary" id="go">Identify</button>
+        <button class="ghost" id="clear">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="status" id="status"><div class="spin"></div><span id="statusText"></span></div>
+  <div class="error" id="error"></div>
+  <div id="results"></div>
+</div>
+
+<script>
+// Opus 5's high-resolution vision tier tops out at 2576px on the long edge —
+// sending more pixels costs tokens without adding detail the model can use.
+const MAX_EDGE = 2576;
+
+const $ = id => document.getElementById(id);
+const drop = $('drop'), fileInput = $('file'), preview = $('preview');
+let pending = null; // { base64, mediaType, name, w, h }
+
+// ---- health badge ----
+fetch('/api/health').then(r => r.json()).then(h => {
+  const b = $('badge');
+  b.textContent = h.keyConfigured ? 'ready' : 'no API key';
+  b.style.color = h.keyConfigured ? '#4ade80' : '#f87171';
+}).catch(() => { $('badge').textContent = 'offline'; });
+
+// ---- input paths: click, drop, paste ----
+drop.addEventListener('click', () => fileInput.click());
+fileInput.addEventListener('change', e => { if (e.target.files[0]) accept(e.target.files[0]); });
+
+drop.addEventListener('dragover', e => { e.preventDefault(); drop.classList.add('over'); });
+drop.addEventListener('dragleave', () => drop.classList.remove('over'));
+drop.addEventListener('drop', e => {
+  e.preventDefault();
+  drop.classList.remove('over');
+  const f = e.dataTransfer.files[0];
+  if (f) accept(f);
+});
+
+window.addEventListener('paste', e => {
+  for (const item of e.clipboardData?.items ?? []) {
+    if (item.type.startsWith('image/')) {
+      const f = item.getAsFile();
+      if (f) { accept(f); break; }
+    }
+  }
+});
+
+$('clear').addEventListener('click', reset);
+$('go').addEventListener('click', identify);
+
+async function accept(file) {
+  if (!file.type.startsWith('image/')) return showError('That file is not an image.');
+  hideError();
+  $('results').innerHTML = '';
+  try {
+    pending = await prepare(file);
+  } catch (err) {
+    return showError('Could not read that image: ' + err.message);
+  }
+  $('thumb').src = 'data:' + pending.mediaType + ';base64,' + pending.base64;
+  $('pname').textContent = pending.name;
+  $('pdims').textContent =
+    pending.w + ' × ' + pending.h + ' px · ' + Math.round(pending.base64.length * 0.75 / 1024) + ' KB';
+  preview.classList.add('show');
+}
+
+/** Decode, downscale to MAX_EDGE, re-encode as JPEG, return raw base64. */
+function prepare(file) {
+  return new Promise((resolve, reject) => {
+    const url = URL.createObjectURL(file);
+    const img = new Image();
+    img.onload = () => {
+      URL.revokeObjectURL(url);
+      const scale = Math.min(1, MAX_EDGE / Math.max(img.width, img.height));
+      const w = Math.max(1, Math.round(img.width * scale));
+      const h = Math.max(1, Math.round(img.height * scale));
+      const canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      const ctx = canvas.getContext('2d');
+      ctx.imageSmoothingQuality = 'high';
+      // Flatten onto white so transparent PNGs don't become black once JPEG-encoded.
+      ctx.fillStyle = '#fff';
+      ctx.fillRect(0, 0, w, h);
+      ctx.drawImage(img, 0, 0, w, h);
+      const dataUrl = canvas.toDataURL('image/jpeg', 0.9);
+      resolve({
+        base64: dataUrl.slice(dataUrl.indexOf(',') + 1),
+        mediaType: 'image/jpeg',
+        name: file.name || 'pasted-image.jpg',
+        w, h,
+      });
+    };
+    img.onerror = () => { URL.revokeObjectURL(url); reject(new Error('unsupported or corrupt file')); };
+    img.src = url;
+  });
+}
+
+async function identify() {
+  if (!pending) return;
+  hideError();
+  $('results').innerHTML = '';
+  $('go').disabled = true;
+  showStatus('Looking at the photo — this usually takes 10-30 seconds…');
+  try {
+    const res = await fetch('/api/identify', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ imageBase64: pending.base64, mediaType: pending.mediaType }),
+    });
+    const data = await res.json().catch(() => ({ error: 'The server returned an invalid response.' }));
+    if (!res.ok) throw new Error(data.error || 'Request failed (' + res.status + ')');
+    render(data.result, data.usage);
+  } catch (err) {
+    showError(err.message);
+  } finally {
+    hideStatus();
+    $('go').disabled = false;
+  }
+}
+
+// ---- rendering ----
+const esc = s => String(s).replace(/[&<>"']/g, c =>
+  ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+const has = v => v !== null && v !== undefined && v !== '' &&
+  !(Array.isArray(v) && v.length === 0);
+
+function row(label, value) {
+  return has(value) ? '<div class="row"><dt>' + label + '</dt><dd>' + esc(value) + '</dd></div>' : '';
+}
+function chip(label, value) {
+  return has(value)
+    ? '<div class="chip">' + label + ' <b>' + esc(value) + '</b></div>'
+    : '';
+}
+
+function render(r, usage) {
+  if (!r.is_vehicle) {
+    return showError("That photo doesn't appear to show a car. Try another image.");
+  }
+  const id = r.identification || {};
+  const ex = r.exterior || {};
+  const pt = r.powertrain || {};
+  const it = r.interior || {};
+  const conf = id.confidence || 'low';
+  let html = '';
+
+  // Headline
+  html += '<div class="headline">' +
+    '<div class="brand">' + esc(id.brand || 'Unidentified') + '</div>' +
+    '<div class="model">' + esc(id.model || 'Unknown model') + '</div>' +
+    '<div class="hl-meta">' +
+      '<div class="chip conf conf-' + conf + '">' + esc(conf) + ' confidence</div>' +
+      chip('Years', id.year_range) +
+      chip('Generation', id.generation) +
+      chip('Body', id.body_style) +
+      chip('Trim', id.trim_or_variant) +
+      chip('Market', id.market_region) +
+    '</div></div>';
+
+  html += '<div class="grid">';
+
+  // Exterior
+  let extRows = row('Color', ex.color) + row('Wheels', ex.wheels) +
+                row('Lighting', ex.lighting) + row('Badging', ex.badging);
+  let extList = has(ex.distinguishing_features)
+    ? '<ul class="feat">' + ex.distinguishing_features.map(f => '<li>' + esc(f) + '</li>').join('') + '</ul>'
+    : '';
+  if (extRows || extList) {
+    html += '<div class="card"><h2>Exterior</h2>' + extRows + extList + '</div>';
+  }
+
+  // Powertrain
+  let ptRows = row('Fuel', pt.fuel_type) + row('Drivetrain', pt.drivetrain);
+  let ptList = has(pt.likely_engine_options)
+    ? '<div class="sec-label">Likely engines</div><ul class="feat">' +
+      pt.likely_engine_options.map(e => '<li>' + esc(e) + '</li>').join('') + '</ul>'
+    : '';
+  let ptNote = has(pt.note) ? '<div class="note">' + esc(pt.note) + '</div>' : '';
+  if (ptRows || ptList) {
+    html += '<div class="card"><h2>Powertrain</h2>' + ptRows + ptList + ptNote + '</div>';
+  }
+
+  // Interior — only when actually visible
+  if (it.visible && has(it.notes)) {
+    html += '<div class="card"><h2>Interior</h2><div style="font-size:13px;color:#cbd5e1">' +
+      esc(it.notes) + '</div></div>';
+  }
+
+  html += '</div>';
+
+  // Reasoning notes — collapsed by default
+  const cues = r.identification_cues || [];
+  const alts = r.alternatives || [];
+  if (cues.length || alts.length) {
+    html += '<details><summary>' +
+      '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" ' +
+      'stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>' +
+      'How this was identified</summary><div class="dbody">';
+    if (cues.length) {
+      html += '<div class="sec-label">Visual cues</div>';
+      html += cues.map(c =>
+        '<div class="cue"><div class="cue-what">' + esc(c.cue) + '</div>' +
+        '<div class="cue-why">' + esc(c.what_it_indicates) + '</div></div>').join('');
+    }
+    if (alts.length) {
+      html += '<div class="sec-label">Also considered</div>';
+      html += alts.map(a =>
+        '<div class="alt"><b>' + esc(a.brand) + ' ' + esc(a.model) + '</b> — ' +
+        '<span>' + esc(a.why_not_chosen) + '</span></div>').join('');
+    }
+    html += '</div></details>';
+  }
+
+  if (has(r.caveats)) html += '<div class="caveats">' + esc(r.caveats) + '</div>';
+
+  if (usage) {
+    html += '<div class="usage">' + (usage.input_tokens ?? 0) + ' in · ' +
+      (usage.output_tokens ?? 0) + ' out tokens</div>';
+  }
+
+  $('results').innerHTML = html;
+}
+
+// ---- small UI helpers ----
+function showStatus(t) { $('statusText').textContent = t; $('status').classList.add('show'); }
+function hideStatus() { $('status').classList.remove('show'); }
+function showError(t) { $('error').textContent = t; $('error').classList.add('show'); }
+function hideError() { $('error').classList.remove('show'); }
+function reset() {
+  pending = null;
+  fileInput.value = '';
+  preview.classList.remove('show');
+  $('results').innerHTML = '';
+  hideError();
+}
+</script>
+</body>
+</html>
