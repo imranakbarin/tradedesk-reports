@@ -1,0 +1,258 @@
+{
+  "date": "2026-08-04",
+  "trades": [
+    {
+      "placed_at": "2026-08-04T10:27:07.208957",
+      "closed_at": "2026-08-04T10:57:06.336436",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24650,
+      "entry_price": 75.5,
+      "exit_price": 90.6,
+      "sl_price": 65.4,
+      "target_price": 90.6,
+      "lot_size": 1,
+      "pnl": 911.8,
+      "status": "TARGET_HIT",
+      "reason": "[C2] Inside-bar breakdown — 5m close below OR low 24,591 (first 3 candles), intraday 25 [C2/10] → TARGET_HIT: Target ₹90.60 reached",
+      "hold_minutes": 29,
+      "high_price": 83.8,
+      "low_price": 73.85,
+      "r_multiple": 1.39,
+      "confluence": 2,
+      "trend_score_entry": 87.0,
+      "rsi_entry": 64.0,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-04T11:41:12.921252",
+      "closed_at": "2026-08-04T11:47:23.371092",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24600,
+      "entry_price": 56.8,
+      "exit_price": 71.8,
+      "sl_price": 56.8,
+      "target_price": 71.8,
+      "lot_size": 1,
+      "pnl": 910.03,
+      "status": "TARGET_HIT",
+      "reason": "[C4] Bearish Engulfing — body 144pts, closed below prev 24,774 [C4/10] → TARGET_HIT: Target ₹71.80 reached",
+      "hold_minutes": 6,
+      "high_price": 66.9,
+      "low_price": 56.8,
+      "r_multiple": 1.4,
+      "confluence": 4,
+      "trend_score_entry": 87.0,
+      "rsi_entry": 63.3,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-04T11:59:46.783123",
+      "closed_at": "2026-08-04T12:04:01.400310",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24550,
+      "entry_price": 55.9,
+      "exit_price": 55.9,
+      "sl_price": 55.9,
+      "target_price": 70.9,
+      "lot_size": 1,
+      "pnl": -62.3,
+      "status": "TRAIL_SL",
+      "reason": "[C4] Bearish Engulfing — body 181pts, closed below prev 24,774 [C4/10] → TRAIL_SL: SL ₹55.90 hit (trail=True)",
+      "hold_minutes": 4,
+      "high_price": 69.85,
+      "low_price": 54.65,
+      "r_multiple": -0.1,
+      "confluence": 4,
+      "trend_score_entry": 87.0,
+      "rsi_entry": 62.6,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-08-04T10:27:26.997529",
+      "closed_at": "2026-08-04T11:47:23.549268",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24550,
+      "entry_price": 64.9,
+      "exit_price": 37.25,
+      "sl_price": 56.9,
+      "target_price": 79.9,
+      "lot_size": 1,
+      "pnl": -1797.25,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|ca3af777",
+      "hold_minutes": 6,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-04T11:41:13.316355",
+      "closed_at": "2026-08-04T12:04:01.457282",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24500,
+      "entry_price": 80.8,
+      "exit_price": 57.1,
+      "sl_price": 72.8,
+      "target_price": 95.8,
+      "lot_size": 1,
+      "pnl": -1540.5,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|001a825a",
+      "hold_minutes": 4,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-04T11:59:46.866763",
+      "closed_at": null,
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24450,
+      "entry_price": 91.3,
+      "exit_price": null,
+      "sl_price": 83.3,
+      "target_price": 106.3,
+      "lot_size": 1,
+      "pnl": 0.0,
+      "status": "CONTRA_OPEN",
+      "reason": "CONTRA|c8d1bb1c",
+      "hold_minutes": null,
+      "strategy": "candle_pattern"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 3,
+      "wins": 2,
+      "losses": 1,
+      "pnl": 1760.0,
+      "gross_win": 1822.0,
+      "gross_loss": -62.0,
+      "avg_r": 0.9,
+      "avg_hold": 13.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 2,
+      "total_pnl": 1822.0,
+      "avg_pnl": 911.0
+    },
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -62.0,
+      "avg_pnl": -62.0
+    }
+  ],
+  "mtd": {
+    "pnl": 2806.0,
+    "trades": 4,
+    "wins": 3,
+    "losses": 1
+  },
+  "monthly_days": [
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0,
+      "cumulative": 1046.0
+    },
+    {
+      "day": "2026-08-04",
+      "trades": 3,
+      "wins": 2,
+      "pnl": 1760.0,
+      "cumulative": 2806.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-07-29",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -729.0
+    },
+    {
+      "day": "2026-07-30",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 206.0
+    },
+    {
+      "day": "2026-07-31",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 1637.0
+    },
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0
+    },
+    {
+      "day": "2026-08-04",
+      "trades": 3,
+      "wins": 2,
+      "pnl": 1760.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 3,
+      "wins": 2,
+      "pnl": 1760.0,
+      "gross_win": 1822.0,
+      "gross_loss": -62.0,
+      "avg_hold": 13.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 912.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 848.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 3,
+      "wins": 2,
+      "pnl": 1760.0
+    }
+  ],
+  "stats": {
+    "avg_win": 911.0,
+    "avg_loss": -62.0,
+    "profit_factor": 29.24,
+    "expectancy": 587.0,
+    "avg_hold_win": 18.0,
+    "avg_hold_loss": 4.0,
+    "avg_r": 0.9,
+    "max_win_streak": 2,
+    "max_loss_streak": 1,
+    "current_streak": -1
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdhZPseve6WqdpHuogi8d'}",
+  "generated_at": "2026-08-04T06:35:04.534542"
+}
