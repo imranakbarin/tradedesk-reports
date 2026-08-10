@@ -1,0 +1,423 @@
+{
+  "date": "2026-08-10",
+  "trades": [
+    {
+      "placed_at": "2026-08-10T09:32:40.383395",
+      "closed_at": "2026-08-10T10:18:30.389197",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24600,
+      "entry_price": 110.7,
+      "exit_price": 98.9,
+      "sl_price": 94.1,
+      "target_price": 143.9,
+      "lot_size": 1,
+      "pnl": -841.01,
+      "status": "SMART_EXIT",
+      "reason": "[C3] ORB breakdown below 24,555 — held 123s, VWAP confirms, intraday 8 [C3/10] → SMART_EXIT: 5m Supertrend LONG + RSI 58 — exit losing PE",
+      "hold_minutes": 45,
+      "high_price": 126.55,
+      "low_price": 101.4,
+      "r_multiple": -0.78,
+      "confluence": 3,
+      "trend_score_entry": 80.0,
+      "rsi_entry": 60.5,
+      "regime": "trending",
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-08-10T10:18:31.542347",
+      "closed_at": "2026-08-10T10:33:40.457758",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78600,
+      "entry_price": 460.15,
+      "exit_price": 418.95,
+      "sl_price": 398.75,
+      "target_price": 552.15,
+      "lot_size": 1,
+      "pnl": -906.06,
+      "status": "SMART_EXIT",
+      "reason": "[C4] At R1 78,739 (-229pts), 5m PE, PCR 0.80 [C4/10] → SMART_EXIT: Daily Supertrend LONG — exit PE",
+      "hold_minutes": 15,
+      "high_price": 460.15,
+      "low_price": 405.6,
+      "r_multiple": -0.74,
+      "confluence": 4,
+      "trend_score_entry": 63.0,
+      "rsi_entry": 57.4,
+      "regime": "mixed",
+      "strategy": "oi_sr_simple"
+    },
+    {
+      "placed_at": "2026-08-10T11:46:11.166505",
+      "closed_at": "2026-08-10T12:01:14.859730",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24650,
+      "entry_price": 110.0,
+      "exit_price": 105.05,
+      "sl_price": 95.3,
+      "target_price": 132.0,
+      "lot_size": 1,
+      "pnl": -397.31,
+      "status": "SMART_EXIT",
+      "reason": "[C2] At R1 24,578 (-2pts), 5m PE, PCR 1.11 [C2/10] → SMART_EXIT: 5m Supertrend LONG + RSI 51 — exit losing PE",
+      "hold_minutes": 15,
+      "high_price": 110.0,
+      "low_price": 99.75,
+      "r_multiple": -0.42,
+      "confluence": 2,
+      "trend_score_entry": 87.0,
+      "rsi_entry": 60.4,
+      "regime": "trending",
+      "strategy": "oi_sr_simple"
+    },
+    {
+      "placed_at": "2026-08-10T12:00:04.281170",
+      "closed_at": "2026-08-10T12:53:14.963215",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 78500,
+      "entry_price": 530.9,
+      "exit_price": 530.9,
+      "sl_price": 530.9,
+      "target_price": 589.9,
+      "lot_size": 1,
+      "pnl": -90.64,
+      "status": "TRAIL_SL",
+      "reason": "[C6] Daily uptrend (score 77) + RSI 59 pullback — sniper entry (intraday 92) [C6/10] → TRAIL_SL: SL ₹530.90 hit (trail=True)",
+      "hold_minutes": 53,
+      "high_price": 584.35,
+      "low_price": 527.5,
+      "r_multiple": -0.12,
+      "confluence": 6,
+      "trend_score_entry": 77.0,
+      "rsi_entry": 59.4,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-08-10T13:01:34.018133",
+      "closed_at": "2026-08-10T13:25:38.792546",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24650,
+      "entry_price": 102.85,
+      "exit_price": 99.05,
+      "sl_price": 89.15,
+      "target_price": 123.45,
+      "lot_size": 1,
+      "pnl": -320.25,
+      "status": "SMART_EXIT",
+      "reason": "[C2] At R1 24,578 (-4pts), 5m PE, PCR 1.10 [C2/10] → SMART_EXIT: Daily Supertrend LONG — exit PE",
+      "hold_minutes": 24,
+      "high_price": 106.35,
+      "low_price": 98.1,
+      "r_multiple": -0.36,
+      "confluence": 2,
+      "trend_score_entry": 87.0,
+      "rsi_entry": 60.4,
+      "regime": "trending",
+      "strategy": "oi_sr_simple"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-08-10T09:32:40.681621",
+      "closed_at": "2026-08-10T10:18:30.711303",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24500,
+      "entry_price": 133.75,
+      "exit_price": 139.75,
+      "sl_price": 113.65,
+      "target_price": 173.85,
+      "lot_size": 1,
+      "pnl": 306.64,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|f9910294",
+      "hold_minutes": 45,
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-08-10T10:18:31.970295",
+      "closed_at": "2026-08-10T10:33:52.442370",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 78400,
+      "entry_price": 546.4,
+      "exit_price": 588.6,
+      "sl_price": 538.4,
+      "target_price": 561.4,
+      "lot_size": 1,
+      "pnl": 750.12,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|328ca341",
+      "hold_minutes": 15,
+      "strategy": "oi_sr_simple"
+    },
+    {
+      "placed_at": "2026-08-10T11:46:11.515235",
+      "closed_at": "2026-08-10T12:01:26.332313",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24500,
+      "entry_price": 149.65,
+      "exit_price": 155.2,
+      "sl_price": 141.65,
+      "target_price": 164.65,
+      "lot_size": 1,
+      "pnl": 273.28,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|cc3c34dd",
+      "hold_minutes": 15,
+      "strategy": "oi_sr_simple"
+    },
+    {
+      "placed_at": "2026-08-10T12:00:04.457175",
+      "closed_at": "2026-08-10T12:53:15.245097",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78600,
+      "entry_price": 385.85,
+      "exit_price": 375.8,
+      "sl_price": 377.85,
+      "target_price": 400.85,
+      "lot_size": 1,
+      "pnl": -279.47,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|ae077c0b",
+      "hold_minutes": 53,
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-08-10T13:01:34.546545",
+      "closed_at": "2026-08-10T13:25:39.330019",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24500,
+      "entry_price": 151.1,
+      "exit_price": 152.15,
+      "sl_price": 143.1,
+      "target_price": 166.1,
+      "lot_size": 1,
+      "pnl": -19.07,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|e7a36970",
+      "hold_minutes": 24,
+      "strategy": "oi_sr_simple"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "mtf_sniper",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -91.0,
+      "gross_win": 0.0,
+      "gross_loss": -91.0,
+      "avg_r": -0.12,
+      "avg_hold": 53.0
+    },
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -841.0,
+      "gross_win": 0.0,
+      "gross_loss": -841.0,
+      "avg_r": -0.78,
+      "avg_hold": 45.0
+    },
+    {
+      "strategy": "oi_sr_simple",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "pnl": -1624.0,
+      "gross_win": 0.0,
+      "gross_loss": -1624.0,
+      "avg_r": -0.51,
+      "avg_hold": 18.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -91.0,
+      "avg_pnl": -91.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 4,
+      "total_pnl": -2465.0,
+      "avg_pnl": -616.0
+    }
+  ],
+  "mtd": {
+    "pnl": 84.0,
+    "trades": 34,
+    "wins": 14,
+    "losses": 20
+  },
+  "monthly_days": [
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0,
+      "cumulative": 1046.0
+    },
+    {
+      "day": "2026-08-04",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 6457.0,
+      "cumulative": 7503.0
+    },
+    {
+      "day": "2026-08-05",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 876.0,
+      "cumulative": 8379.0
+    },
+    {
+      "day": "2026-08-06",
+      "trades": 14,
+      "wins": 8,
+      "pnl": -3213.0,
+      "cumulative": 5166.0
+    },
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0,
+      "cumulative": 2639.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0,
+      "cumulative": 84.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-08-04",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 6457.0
+    },
+    {
+      "day": "2026-08-05",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 876.0
+    },
+    {
+      "day": "2026-08-06",
+      "trades": 14,
+      "wins": 8,
+      "pnl": -3213.0
+    },
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -997.0,
+      "gross_win": 0.0,
+      "gross_loss": -997.0,
+      "avg_hold": 34.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1559.0,
+      "gross_win": 0.0,
+      "gross_loss": -1559.0,
+      "avg_hold": 28.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -841.0
+    },
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -906.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -397.0
+    },
+    {
+      "bucket": "12:00-13:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -91.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -320.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -91.0
+    },
+    {
+      "action": "PE",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2465.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -511.0,
+    "profit_factor": 0.0,
+    "expectancy": -511.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 30.0,
+    "avg_r": -0.48,
+    "max_win_streak": 0,
+    "max_loss_streak": 5,
+    "current_streak": -5
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdtvFcbaStMZgG4AtJ21J'}",
+  "generated_at": "2026-08-10T06:35:08.179838"
+}
