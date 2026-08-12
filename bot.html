@@ -262,6 +262,52 @@ function renderReport(d) {
   // contra
   const contraTotal = contra.reduce((s,t)=>s+(t.pnl||0),0);
 
+  // ── AI trader: decision record ──────────────────────────────────────────
+  // The AI deliberates 20-100x/day and acts almost never, so the useful view is
+  // "what it considered" — especially calls that got near the confidence gate
+  // without clearing it. A day with zero decisions means it was DOWN, not
+  // patient, so that case gets an explicit warning rather than an empty table.
+  const ai = d.ai_trader || {};
+  const aiMix = Object.entries(ai.action_mix || {})
+    .sort((a,b)=>b[1]-a[1])
+    .map(([k,v])=>`${k} ${v}`).join(' · ') || '—';
+  const aiCalls = (ai.close_calls||[]).map(c => {
+    const badge = c.executed
+      ? '<span class="green">EXECUTED</span>'
+      : `<span class="amber">${c.status||'not taken'}</span>`;
+    return `<tr>
+      <td class="c">${c.time||''}</td>
+      <td class="c" style="font-weight:600">${c.action||''}</td>
+      <td class="c purple" style="font-weight:600">${c.confidence}</td>
+      <td class="c" style="font-size:11px">${badge}</td>
+      <td style="font-size:11px;line-height:1.5">${(c.reasoning||'').replace(/</g,'&lt;')}</td>
+    </tr>`;
+  }).join('');
+  const aiBody = ai.decisions
+    ? `<tr><td colspan="5" class="no-data" style="padding:14px">No decision came within reach of the entry gate today.</td></tr>`
+    : `<tr><td colspan="5" class="no-data" style="padding:14px">No AI decisions recorded — the AI trader was not running.</td></tr>`;
+  const aiSection = `
+    <div class="sec">
+      <h2>AI Trader · Decision Record</h2>
+      <div class="qstats" style="margin:0 0 10px">
+        <div class="qs"><div class="ql">Decisions</div><div class="qv">${ai.decisions||0}</div></div>
+        <div class="qs"><div class="ql">Wanted to enter</div><div class="qv amber">${ai.entries_wanted||0}</div></div>
+        <div class="qs"><div class="ql">Executed</div><div class="qv green">${ai.executed||0}</div></div>
+        <div class="qs"><div class="ql">Avg conf</div><div class="qv">${ai.avg_confidence != null ? ai.avg_confidence : '—'}</div></div>
+        <div class="qs"><div class="ql">Peak conf</div><div class="qv purple">${ai.peak_confidence != null ? ai.peak_confidence : '—'}</div></div>
+        <div class="qs"><div class="ql">Trades</div><div class="qv">${ai.trades||0}</div></div>
+        <div class="qs"><div class="ql">AI P&L</div><div class="qv" style="color:${pc(ai.pnl||0)}">${fmt(ai.pnl||0)}</div></div>
+      </div>
+      <div class="sub" style="margin:0 0 10px;font-size:11px;opacity:.7">
+        ${ai.first_decision ? `active ${ai.first_decision}–${ai.last_decision} · ` : ''}${aiMix}
+        ${ai.gate_note ? `<br>${ai.gate_note}` : ''}
+      </div>
+      <table>
+        <thead><tr><th class="c">Time</th><th class="c">Action</th><th class="c">Conf</th><th class="c">Outcome</th><th>Reasoning</th></tr></thead>
+        <tbody>${aiCalls || aiBody}</tbody>
+      </table>
+    </div>`;
+
   // max weekly cap for bar charts
   const wCap = Math.max(...(d.week_days||[]).map(r=>Math.abs(r.pnl||0)),1);
   const mCap = Math.max(...(d.monthly_days||[]).map(r=>Math.abs(r.pnl||0)),1);
@@ -299,6 +345,9 @@ function renderReport(d) {
       <h2>AI Analysis · Claude Haiku</h2>
       <div class="ai-text">${(d.ai_analysis||'No analysis.').replace(/\n/g,'<br>')}</div>
     </div>
+
+    <!-- AI TRADER DECISION RECORD -->
+    ${aiSection}
 
     <!-- WEEKLY + MONTHLY BARS -->
     <div class="g2">

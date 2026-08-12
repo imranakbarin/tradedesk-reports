@@ -1,0 +1,437 @@
+{
+  "date": "2026-08-12",
+  "trades": [
+    {
+      "placed_at": "2026-08-12T10:19:03.050602",
+      "closed_at": "2026-08-12T10:34:06.582084",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24450,
+      "entry_price": 147.7,
+      "exit_price": 134.15,
+      "sl_price": 129.8,
+      "target_price": 177.2,
+      "lot_size": 1,
+      "pnl": -964.94,
+      "status": "SMART_EXIT",
+      "reason": "[C5] Inside-bar breakdown — 5m close below OR low 24,391 (first 3 candles), intraday 8 [C5/10] → SMART_EXIT: Near-SL exit: 76% of SL consumed (loss ₹13.5 of max ₹17.9) — cutting before full SL hit",
+      "hold_minutes": 15,
+      "high_price": 150.4,
+      "low_price": 134.15,
+      "r_multiple": -0.83,
+      "confluence": 5,
+      "trend_score_entry": 63.0,
+      "rsi_entry": 52.4,
+      "regime": "ranging",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-12T11:55:29.861690",
+      "closed_at": "2026-08-12T12:27:03.799221",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24300,
+      "entry_price": 117.8,
+      "exit_price": 112.8,
+      "sl_price": 102.1,
+      "target_price": 141.4,
+      "lot_size": 1,
+      "pnl": -402.1,
+      "status": "SMART_EXIT",
+      "reason": "[C8] Bearish Engulfing — body 199pts, closed below prev 24,472 [C8/10] → SMART_EXIT: Daily Supertrend LONG — exit PE",
+      "hold_minutes": 31,
+      "high_price": 119.85,
+      "low_price": 112.3,
+      "r_multiple": -0.39,
+      "confluence": 8,
+      "trend_score_entry": 27.0,
+      "rsi_entry": 49.6,
+      "regime": "ranging",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-12T13:12:48.756013",
+      "closed_at": "2026-08-12T13:30:28.261981",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24350,
+      "entry_price": 134.55,
+      "exit_price": 127.0,
+      "sl_price": 116.65,
+      "target_price": 161.45,
+      "lot_size": 1,
+      "pnl": -571.92,
+      "status": "SMART_EXIT",
+      "reason": "[C6] Bearish Engulfing — body 191pts, closed below prev 24,472 [C6/10] → SMART_EXIT: Daily Supertrend LONG — exit PE",
+      "hold_minutes": 17,
+      "high_price": 135.7,
+      "low_price": 126.0,
+      "r_multiple": -0.49,
+      "confluence": 6,
+      "trend_score_entry": 27.0,
+      "rsi_entry": 49.9,
+      "regime": "mixed",
+      "strategy": "candle_pattern"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-08-12T10:19:03.437417",
+      "closed_at": "2026-08-12T10:34:09.275146",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24300,
+      "entry_price": 203.75,
+      "exit_price": 214.15,
+      "sl_price": 195.75,
+      "target_price": 218.75,
+      "lot_size": 1,
+      "pnl": 573.3,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|87450872",
+      "hold_minutes": 15,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-12T11:55:30.203586",
+      "closed_at": "2026-08-12T12:27:04.104242",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24250,
+      "entry_price": 187.2,
+      "exit_price": 191.8,
+      "sl_price": 179.2,
+      "target_price": 202.2,
+      "lot_size": 1,
+      "pnl": 202.16,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|78425503",
+      "hold_minutes": 31,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-12T13:12:49.092888",
+      "closed_at": "2026-08-12T13:30:43.440159",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24200,
+      "entry_price": 222.15,
+      "exit_price": 230.05,
+      "sl_price": 214.15,
+      "target_price": 237.15,
+      "lot_size": 1,
+      "pnl": 406.39,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|1cca1a3c",
+      "hold_minutes": 17,
+      "strategy": "candle_pattern"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "pnl": -1939.0,
+      "gross_win": 0.0,
+      "gross_loss": -1939.0,
+      "avg_r": -0.57,
+      "avg_hold": 21.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 3,
+      "total_pnl": -1939.0,
+      "avg_pnl": -646.0
+    }
+  ],
+  "mtd": {
+    "pnl": -3363.0,
+    "trades": 40,
+    "wins": 14,
+    "losses": 26
+  },
+  "monthly_days": [
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0,
+      "cumulative": 1046.0
+    },
+    {
+      "day": "2026-08-04",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 6457.0,
+      "cumulative": 7503.0
+    },
+    {
+      "day": "2026-08-05",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 876.0,
+      "cumulative": 8379.0
+    },
+    {
+      "day": "2026-08-06",
+      "trades": 14,
+      "wins": 8,
+      "pnl": -3213.0,
+      "cumulative": 5166.0
+    },
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0,
+      "cumulative": 2639.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0,
+      "cumulative": 84.0
+    },
+    {
+      "day": "2026-08-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1508.0,
+      "cumulative": -1424.0
+    },
+    {
+      "day": "2026-08-12",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0,
+      "cumulative": -3363.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-08-06",
+      "trades": 14,
+      "wins": 8,
+      "pnl": -3213.0
+    },
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0
+    },
+    {
+      "day": "2026-08-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1508.0
+    },
+    {
+      "day": "2026-08-12",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0,
+      "gross_win": 0.0,
+      "gross_loss": -1939.0,
+      "avg_hold": 21.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -965.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -402.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -572.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -646.0,
+    "profit_factor": 0.0,
+    "expectancy": -646.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 21.0,
+    "avg_r": -0.57,
+    "max_win_streak": 0,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_trader": {
+    "decisions": 32,
+    "action_mix": {
+      "WAIT": 10,
+      "HOLD": 21,
+      "SHORT": 1
+    },
+    "entries_wanted": 1,
+    "executed": 1,
+    "rejected": 0,
+    "avg_confidence": 20.1,
+    "peak_confidence": 74,
+    "first_decision": "09:08:28",
+    "last_decision": "14:53:25",
+    "close_calls": [
+      {
+        "time": "14:17:08",
+        "action": "SHORT",
+        "confidence": 72,
+        "status": "EXECUTED",
+        "executed": true,
+        "trade_id": "205de644",
+        "reasoning": "After 4 consecutive WAITs, confluence stack remains solid (≥3 categories, R:R 3.9 >> 2.0 minimum). 4h downtrend + swept low bounce + overbought 1h exhaustion + London killzone stack has had sufficient time to degrade and hasn't. Entering SHORT now per escalation rule. Target: swept low at 63162.7 (586 pts down). SL: 63900 (tight 151 pt risk into structural bounce high).",
+        "risk_note": "None"
+      },
+      {
+        "time": "14:11:50",
+        "action": "WAIT",
+        "confidence": 74,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "First 5m candle (14:00-14:05) closed above the sweep low 24265.95 without retesting — step 1 confirmed. Current candle (14:05-14:10) is now closing; waiting to see if it breaks and closes above 5m swing high 24292-24303. Price at 24284.6 is positioned for the move. This is the textbook 2nd-candle confirmation sequence in a liquidity sweep reversal. If next candle closes above 24292, entry is trigg",
+        "risk_note": "CE theta -9.47% per day is manageable for 6 DTE. IV regime is low (11.94%), slightly unfavorable for premium buyer, but the 2.8 R:R asymmetry strongly compensates. Delta 0.514 provides solid positive "
+      },
+      {
+        "time": "14:24:09",
+        "action": "HOLD",
+        "confidence": 74,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "[CRITIC] Forced close window too tight for target execution: 40 minutes to achieve +110pt target with theta -9.31%/day; sideways consolidation into 15:30 forced close = loss despite thesis validity; theta decay compounds if price stalls even briefly. SEVERITY: MAJOR; Invalidation level too close: SL at 24260 is only 30pts below entry and just 6pts below the PDL sweep point (24265.95); normal intra",
+        "risk_note": "ATM CE delta 0.52, theta −9.31%/day manageable at 6 DTE, IV 11.95 (low regime, buyer-favored), vega +12.41 captures upside if volatility expands into the breakout."
+      },
+      {
+        "time": "14:18:11",
+        "action": "WAIT",
+        "confidence": 73,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "PDL sweep confirmed at 14:00–14:05 (low 24265.95), price bounced to 24282.4 (+16.5 pts). Current 5m candle (14:15–14:20) is forming; waiting for close above 5m swing high 24292–24303. All three confluence categories stack: structure (sweep), flow (extreme PCR), time (killzone). Afternoon execution window offers 44 min runway. Price is 9.6–20.6 pts from confirmation threshold — imminent. Per WAIT-3",
+        "risk_note": "CE theta −14.55/day (−9.53%) costs ₹0.39/min; PE theta −10.23/day (−7.09%) costs ₹0.27/min. Low IV regime (11.95, IV rank bottom quartile) = vega neutral. 6 DTE manageable. Focus on delta directional "
+      },
+      {
+        "time": "14:06:55",
+        "action": "WAIT",
+        "confidence": 72,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "Session low swept at 24265.95 during afternoon killzone (14:00-15:00 IST); price bounced to 24282.95. This is a textbook liquidity sweep reversal — institutional trap on PDL stops, now reversing into prime execution window. Extreme bearish PCR (0.6591) amplifies the contrarian bullish signal. Waiting for current 5m candle (14:00-14:05) to close; confirmation requires break above 5m swing highs (24",
+        "risk_note": "PE 143.99 with theta -10.23/day (-7.1% daily decay). 6 days to expiry = manageable. Sweep reversals resolve within 30-60 min in killzones; theta bleed minimal. IV uptick (+0.78%) provides slight vega "
+      },
+      {
+        "time": "14:11:50",
+        "action": "WAIT",
+        "confidence": 72,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "SENSEX bounced from critical 15m swing low (77498) to 77583. PCR extreme (0.6684) + max pain gravity favor CE reversal, but STRONG_DOWN trend argues caution. Next 5m candle determines: rejection (CE) or breakdown (PE). Final WAIT—next tick commits.",
+        "risk_note": "1-DTE CE theta -54%/day; PE -46%/day. Both expensive. VIX flat (low regime)—vega neutral, pure bleed."
+      },
+      {
+        "time": "14:02:09",
+        "action": "WAIT",
+        "confidence": 70,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "SENSEX at critical 15m swing low (77498) in STRONG_DOWN trend during afternoon killzone. Two paths forward: (1) Rejection candle from swing low → CE upside to 5m high (77626) and max pain (77700); (2) Breakdown below swing low → PE continuation. PCR extreme (0.6678) signals puts are over-owned, favoring reversal (CE). But intraday momentum is DOWN. Inflection point requires next 1–2 candles for co",
+        "risk_note": "Day-before-expiry: brutal theta bleed (PE −45.55%/day, CE −54.49%/day). VIX flat at 11.98—no vega support. Both directions lose money if held past today. High gamma intraday makes rejection/breakdown "
+      },
+      {
+        "time": "14:05:12",
+        "action": "WAIT",
+        "confidence": 70,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "[cached] No material change since last decision — SENSEX at critical 15m swing low (77498) in STRONG_DOWN trend during afternoon killzone. Two paths forward: (1) Rejection candle from swing low → CE upside to 5m high (77626) and max pain (77700); (2) Breakdown below swing low → PE continuation. PCR extreme (0.6678) signals puts are over-owned, favoring reversal (CE). But intraday momentum is DOWN.",
+        "risk_note": "Day-before-expiry: brutal theta bleed (PE −45.55%/day, CE −54.49%/day). VIX flat at 11.98—no vega support. Both directions lose money if held past today. High gamma intraday makes rejection/breakdown "
+      },
+      {
+        "time": "14:24:23",
+        "action": "HOLD",
+        "confidence": 66,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "[CRITIC] Theta decay (1 DTE, -₹27/min): Premium collapses fast with only ~55 minutes to force-close. Position must hit 2R target within first 5-10 minutes or theta alone erases the profit buffer. No margin for 'let it work' trades.; Strong downtrend headwind unaccounted for: Thesis admits STRONG_DOWN trend across all MTF. Counter-trend scalps into established downtrends have materially lower win r",
+        "risk_note": "CE theta -57.37% daily on day-before expiry. Premium at ₹179.89 decays ₹27 every 15 minutes. VIX rising (+0.78%) offset by trend headwind. Scalp out at 2R or scratch if wick below 77498 closes the can"
+      }
+    ],
+    "trades": 1,
+    "wins": 0,
+    "pnl": -38.0,
+    "sessions": [
+      {
+        "index": "NIFTY",
+        "model": "claude-haiku-4-5-20251001",
+        "mode": "auto",
+        "strategy": "swing",
+        "interval": 5,
+        "status": "STOPPED"
+      },
+      {
+        "index": "SENSEX",
+        "model": "claude-haiku-4-5-20251001",
+        "mode": "auto",
+        "strategy": "swing",
+        "interval": 5,
+        "status": "STOPPED"
+      },
+      {
+        "index": "BTCUSDT",
+        "model": "claude-haiku-4-5-20251001",
+        "mode": "auto",
+        "strategy": "swing",
+        "interval": 5,
+        "status": "RUNNING"
+      }
+    ],
+    "gate_note": "Entry gate: confidence >= 70 base, raised to 75/80 by condition and 85 on expiry afternoons (55 for scalper mode)."
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdxhsQz5hWSuyT6bWdEtf'}",
+  "generated_at": "2026-08-12T06:35:07.379050"
+}
