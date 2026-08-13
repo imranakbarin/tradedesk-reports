@@ -1,0 +1,574 @@
+{
+  "date": "2026-08-13",
+  "trades": [
+    {
+      "placed_at": "2026-08-13T09:34:56.893752",
+      "closed_at": "2026-08-13T09:46:31.766017",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24350,
+      "entry_price": 107.2,
+      "exit_price": 92.7,
+      "sl_price": 92.7,
+      "target_price": 139.4,
+      "lot_size": 1,
+      "pnl": -1015.55,
+      "status": "SL_HIT",
+      "reason": "[C6] ORB breakdown below 24,327 — held 139s, VWAP confirms, intraday 8 [C6/10] → SL_HIT: SL ₹92.70 hit (trail=False)",
+      "hold_minutes": 11,
+      "high_price": 108.9,
+      "low_price": 93.1,
+      "r_multiple": -1.08,
+      "confluence": 6,
+      "trend_score_entry": 43.0,
+      "rsi_entry": 51.5,
+      "regime": "ranging",
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-08-13T10:25:58.383141",
+      "closed_at": "2026-08-13T10:48:25.681117",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24400,
+      "entry_price": 121.1,
+      "exit_price": 116.45,
+      "sl_price": 105.0,
+      "target_price": 145.3,
+      "lot_size": 1,
+      "pnl": -381.04,
+      "status": "SMART_EXIT",
+      "reason": "[C6] Inside-bar breakdown — 5m close below OR low 24,327 (first 3 candles), intraday 8 [C6/10] → SMART_EXIT: Daily Supertrend LONG — exit PE",
+      "hold_minutes": 22,
+      "high_price": 130.0,
+      "low_price": 116.4,
+      "r_multiple": -0.36,
+      "confluence": 6,
+      "trend_score_entry": 43.0,
+      "rsi_entry": 51.9,
+      "regime": "ranging",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-13T10:53:10.736361",
+      "closed_at": "2026-08-13T10:58:18.028070",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77900,
+      "entry_price": 171.45,
+      "exit_price": 177.95,
+      "sl_price": 143.65,
+      "target_price": 214.35,
+      "lot_size": 1,
+      "pnl": 68.12,
+      "status": "TIME_STOP",
+      "reason": "[C7] Gamma wall rejection at 77800 (γ=0.00240): spot 4pts above wall, 5m bearish rejection [C7/10] → TIME_STOP: Gamma scalp held 5m — time stop",
+      "hold_minutes": 5,
+      "high_price": 180.1,
+      "low_price": 171.25,
+      "r_multiple": 0.12,
+      "confluence": 7,
+      "trend_score_entry": 37.0,
+      "rsi_entry": 50.8,
+      "regime": "ranging",
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T11:31:09.584844",
+      "closed_at": "2026-08-13T11:36:12.309767",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77900,
+      "entry_price": 167.7,
+      "exit_price": 163.0,
+      "sl_price": 140.5,
+      "target_price": 209.6,
+      "lot_size": 1,
+      "pnl": -154.3,
+      "status": "TIME_STOP",
+      "reason": "[C8] Gamma wall rejection at 77800 (γ=0.00260): spot 1pts above wall, 5m bearish rejection [C8/10] → TIME_STOP: Gamma scalp held 5m — time stop",
+      "hold_minutes": 5,
+      "high_price": 167.7,
+      "low_price": 157.25,
+      "r_multiple": -0.28,
+      "confluence": 8,
+      "trend_score_entry": 37.0,
+      "rsi_entry": 51.2,
+      "regime": "ranging",
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T12:01:30.308455",
+      "closed_at": "2026-08-13T12:06:32.832372",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77900,
+      "entry_price": 193.4,
+      "exit_price": 201.9,
+      "sl_price": 162.1,
+      "target_price": 241.8,
+      "lot_size": 1,
+      "pnl": 106.72,
+      "status": "TIME_STOP",
+      "reason": "[C5] Gamma wall bounce at 78000 (γ=0.00260): spot 12pts below wall, 5m bullish rejection [C5/10] → TIME_STOP: Gamma scalp held 5m — time stop",
+      "hold_minutes": 5,
+      "high_price": 221.75,
+      "low_price": 178.75,
+      "r_multiple": 0.17,
+      "confluence": 5,
+      "trend_score_entry": 43.0,
+      "rsi_entry": 51.3,
+      "regime": "ranging",
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T12:07:42.739085",
+      "closed_at": "2026-08-13T12:12:50.894708",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77900,
+      "entry_price": 189.2,
+      "exit_price": 172.75,
+      "sl_price": 158.5,
+      "target_price": 236.5,
+      "lot_size": 1,
+      "pnl": -390.26,
+      "status": "TIME_STOP",
+      "reason": "[C7] Gamma wall bounce at 78000 (γ=0.00260): spot 3pts below wall, 5m bullish rejection [C7/10] → TIME_STOP: Gamma scalp held 5m — time stop",
+      "hold_minutes": 5,
+      "high_price": 203.0,
+      "low_price": 170.6,
+      "r_multiple": -0.64,
+      "confluence": 7,
+      "trend_score_entry": 53.0,
+      "rsi_entry": 51.7,
+      "regime": "ranging",
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T12:12:54.748618",
+      "closed_at": "2026-08-13T12:18:20.499567",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77900,
+      "entry_price": 172.75,
+      "exit_price": 154.9,
+      "sl_price": 144.75,
+      "target_price": 215.95,
+      "lot_size": 1,
+      "pnl": -417.21,
+      "status": "TIME_STOP",
+      "reason": "[C7] Gamma wall bounce at 78000 (γ=0.00280): spot 35pts below wall, 5m bullish rejection [C7/10] → TIME_STOP: Gamma scalp held 5m — time stop",
+      "hold_minutes": 5,
+      "high_price": 180.65,
+      "low_price": 162.45,
+      "r_multiple": -0.75,
+      "confluence": 7,
+      "trend_score_entry": 53.0,
+      "rsi_entry": 51.7,
+      "regime": "ranging",
+      "strategy": "gamma_blast_scalper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-08-13T09:34:57.187682",
+      "closed_at": "2026-08-13T09:46:43.811344",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24300,
+      "entry_price": 152.75,
+      "exit_price": 166.55,
+      "sl_price": 129.85,
+      "target_price": 198.55,
+      "lot_size": 1,
+      "pnl": 807.09,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|f25d5a61",
+      "hold_minutes": 11,
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-08-13T10:25:58.716280",
+      "closed_at": "2026-08-13T10:48:38.292034",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 24250,
+      "entry_price": 188.25,
+      "exit_price": 189.0,
+      "sl_price": 180.25,
+      "target_price": 203.25,
+      "lot_size": 1,
+      "pnl": -47.91,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|8eeb8ec2",
+      "hold_minutes": 22,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-08-13T10:53:11.068787",
+      "closed_at": "2026-08-13T10:58:18.172697",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77700,
+      "entry_price": 204.5,
+      "exit_price": 194.55,
+      "sl_price": 170.4,
+      "target_price": 255.6,
+      "lot_size": 1,
+      "pnl": -262.39,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|a0c5e3d1",
+      "hold_minutes": 5,
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T11:31:45.656953",
+      "closed_at": "2026-08-13T11:36:12.476245",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77700,
+      "entry_price": 189.8,
+      "exit_price": 188.9,
+      "sl_price": 158.2,
+      "target_price": 237.3,
+      "lot_size": 1,
+      "pnl": -80.77,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|f0ce5d9e",
+      "hold_minutes": 5,
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T12:01:30.595942",
+      "closed_at": "2026-08-13T12:06:34.016249",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78100,
+      "entry_price": 167.6,
+      "exit_price": 164.45,
+      "sl_price": 139.7,
+      "target_price": 209.5,
+      "lot_size": 1,
+      "pnl": -123.35,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|4882c1a5",
+      "hold_minutes": 5,
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T12:07:43.369952",
+      "closed_at": "2026-08-13T12:12:51.118930",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78100,
+      "entry_price": 170.6,
+      "exit_price": 176.75,
+      "sl_price": 142.2,
+      "target_price": 213.2,
+      "lot_size": 1,
+      "pnl": 61.19,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|a267cb54",
+      "hold_minutes": 5,
+      "strategy": "gamma_blast_scalper"
+    },
+    {
+      "placed_at": "2026-08-13T12:12:55.048414",
+      "closed_at": "2026-08-13T12:18:20.628300",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 78000,
+      "entry_price": 117.95,
+      "exit_price": 123.15,
+      "sl_price": 98.25,
+      "target_price": 147.45,
+      "lot_size": 1,
+      "pnl": 47.43,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|a938adac",
+      "hold_minutes": 5,
+      "strategy": "gamma_blast_scalper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -381.0,
+      "gross_win": 0.0,
+      "gross_loss": -381.0,
+      "avg_r": -0.36,
+      "avg_hold": 22.0
+    },
+    {
+      "strategy": "gamma_blast_scalper",
+      "trades": 5,
+      "wins": 2,
+      "losses": 3,
+      "pnl": -787.0,
+      "gross_win": 175.0,
+      "gross_loss": -962.0,
+      "avg_r": -0.28,
+      "avg_hold": 5.0
+    },
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -1016.0,
+      "gross_win": 0.0,
+      "gross_loss": -1016.0,
+      "avg_r": -1.08,
+      "avg_hold": 11.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -381.0,
+      "avg_pnl": -381.0
+    },
+    {
+      "status": "TIME_STOP",
+      "n": 5,
+      "total_pnl": -787.0,
+      "avg_pnl": -157.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -1016.0,
+      "avg_pnl": -1016.0
+    }
+  ],
+  "mtd": {
+    "pnl": -5546.0,
+    "trades": 47,
+    "wins": 16,
+    "losses": 31
+  },
+  "monthly_days": [
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0,
+      "cumulative": 1046.0
+    },
+    {
+      "day": "2026-08-04",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 6457.0,
+      "cumulative": 7503.0
+    },
+    {
+      "day": "2026-08-05",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 876.0,
+      "cumulative": 8379.0
+    },
+    {
+      "day": "2026-08-06",
+      "trades": 14,
+      "wins": 8,
+      "pnl": -3213.0,
+      "cumulative": 5166.0
+    },
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0,
+      "cumulative": 2639.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0,
+      "cumulative": 84.0
+    },
+    {
+      "day": "2026-08-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1508.0,
+      "cumulative": -1424.0
+    },
+    {
+      "day": "2026-08-12",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0,
+      "cumulative": -3363.0
+    },
+    {
+      "day": "2026-08-13",
+      "trades": 7,
+      "wins": 2,
+      "pnl": -2184.0,
+      "cumulative": -5547.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0
+    },
+    {
+      "day": "2026-08-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1508.0
+    },
+    {
+      "day": "2026-08-12",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0
+    },
+    {
+      "day": "2026-08-13",
+      "trades": 7,
+      "wins": 2,
+      "pnl": -2184.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 5,
+      "wins": 2,
+      "pnl": -787.0,
+      "gross_win": 175.0,
+      "gross_loss": -962.0,
+      "avg_hold": 5.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1397.0,
+      "gross_win": 0.0,
+      "gross_loss": -1397.0,
+      "avg_hold": 17.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1016.0
+    },
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 1,
+      "pnl": -313.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -154.0
+    },
+    {
+      "bucket": "12:00-13:00",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -701.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 3,
+      "wins": 1,
+      "pnl": -701.0
+    },
+    {
+      "action": "PE",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -1483.0
+    }
+  ],
+  "stats": {
+    "avg_win": 87.0,
+    "avg_loss": -472.0,
+    "profit_factor": 0.07,
+    "expectancy": -312.0,
+    "avg_hold_win": 5.0,
+    "avg_hold_loss": 10.0,
+    "avg_r": -0.4,
+    "max_win_streak": 1,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_trader": {
+    "decisions": 13,
+    "action_mix": {
+      "WAIT": 2,
+      "HOLD": 11
+    },
+    "entries_wanted": 0,
+    "executed": 0,
+    "rejected": 0,
+    "avg_confidence": 5.7,
+    "peak_confidence": 74,
+    "first_decision": "09:54:42",
+    "last_decision": "15:15:04",
+    "close_calls": [
+      {
+        "time": "10:01:57",
+        "action": "HOLD",
+        "confidence": 74,
+        "status": "PENDING",
+        "executed": false,
+        "trade_id": null,
+        "reasoning": "[CRITIC] Killzone false-break trap: 9:45-10:30 is institutional stop-hunt peak. The pullback to 5m swing low (24312.55) is a classic hunt setup before reversal. SL at 24310 is dangerously close to the swing low — a 25-point stop hunt clears it and liquidates the CE before the actual directional move confirms. Severity: MAJOR; Theta bleed + consolidation death: At -15.56/day theta (≈3.1 rupees/hour",
+        "risk_note": "CE theta -15.56/day manageable in low IV (11.72); vega 11.34 insulates against crush; 5 DTE provides time before theta acceleration."
+      }
+    ],
+    "trades": 0,
+    "wins": 0,
+    "pnl": 0,
+    "sessions": [
+      {
+        "index": "NIFTY",
+        "model": "claude-haiku-4-5-20251001",
+        "mode": "auto",
+        "strategy": "swing",
+        "interval": 5,
+        "status": "STOPPED"
+      },
+      {
+        "index": "NIFTY",
+        "model": "claude-haiku-4-5-20251001",
+        "mode": "auto",
+        "strategy": "swing",
+        "interval": 5,
+        "status": "STOPPED"
+      }
+    ],
+    "gate_note": "Entry gate: confidence >= 70 base, raised to 75/80 by condition and 85 on expiry afternoons (55 for scalper mode)."
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CdzbgPVne3u13XZeqEDRk'}",
+  "generated_at": "2026-08-13T06:35:07.367632"
+}
