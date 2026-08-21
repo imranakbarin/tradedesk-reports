@@ -1,0 +1,246 @@
+{
+  "date": "2026-08-21",
+  "trades": [
+    {
+      "placed_at": "2026-08-21T10:01:39.216774",
+      "closed_at": "2026-08-21T15:17:21.133861",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 77500,
+      "entry_price": 528.25,
+      "exit_price": 502.45,
+      "sl_price": 476.35,
+      "target_price": 633.95,
+      "lot_size": 1,
+      "pnl": -604.69,
+      "status": "STARTUP_SQUARE_OFF",
+      "reason": "[C5] At S1 77,446 (+144pts), 5m CE, PCR 1.17 [C5/10]",
+      "hold_minutes": null,
+      "high_price": 569.7,
+      "low_price": 499.7,
+      "r_multiple": null,
+      "confluence": 5,
+      "trend_score_entry": 27.0,
+      "rsi_entry": 48.7,
+      "regime": "ranging",
+      "strategy": "oi_sr_simple"
+    },
+    {
+      "placed_at": "2026-08-21T10:01:39.410919",
+      "closed_at": "2026-08-21T15:17:21.133861",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 77700,
+      "entry_price": 360.0,
+      "exit_price": 355.4,
+      "sl_price": 352.0,
+      "target_price": 375.0,
+      "lot_size": 1,
+      "pnl": -168.06,
+      "status": "STARTUP_SQUARE_OFF",
+      "reason": "CONTRA|107009ef",
+      "hold_minutes": null,
+      "high_price": 377.75,
+      "low_price": 327.05,
+      "r_multiple": null,
+      "confluence": 0,
+      "trend_score_entry": null,
+      "rsi_entry": null,
+      "regime": null,
+      "strategy": "oi_sr_simple"
+    }
+  ],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [
+    {
+      "status": "STARTUP_SQUARE_OFF",
+      "n": 2,
+      "total_pnl": -773.0,
+      "avg_pnl": -386.0
+    }
+  ],
+  "mtd": {
+    "pnl": -6106.0,
+    "trades": 64,
+    "wins": 22,
+    "losses": 42
+  },
+  "monthly_days": [
+    {
+      "day": "2026-08-03",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1046.0,
+      "cumulative": 1046.0
+    },
+    {
+      "day": "2026-08-04",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 6457.0,
+      "cumulative": 7503.0
+    },
+    {
+      "day": "2026-08-05",
+      "trades": 6,
+      "wins": 2,
+      "pnl": 876.0,
+      "cumulative": 8379.0
+    },
+    {
+      "day": "2026-08-06",
+      "trades": 14,
+      "wins": 8,
+      "pnl": -3213.0,
+      "cumulative": 5166.0
+    },
+    {
+      "day": "2026-08-07",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -2527.0,
+      "cumulative": 2639.0
+    },
+    {
+      "day": "2026-08-10",
+      "trades": 5,
+      "wins": 0,
+      "pnl": -2555.0,
+      "cumulative": 84.0
+    },
+    {
+      "day": "2026-08-11",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1508.0,
+      "cumulative": -1424.0
+    },
+    {
+      "day": "2026-08-12",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1939.0,
+      "cumulative": -3363.0
+    },
+    {
+      "day": "2026-08-13",
+      "trades": 7,
+      "wins": 2,
+      "pnl": -2184.0,
+      "cumulative": -5547.0
+    },
+    {
+      "day": "2026-08-14",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -918.0,
+      "cumulative": -6465.0
+    },
+    {
+      "day": "2026-08-17",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 2414.0,
+      "cumulative": -4051.0
+    },
+    {
+      "day": "2026-08-18",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -577.0,
+      "cumulative": -4628.0
+    },
+    {
+      "day": "2026-08-19",
+      "trades": 5,
+      "wins": 2,
+      "pnl": 274.0,
+      "cumulative": -4354.0
+    },
+    {
+      "day": "2026-08-20",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -980.0,
+      "cumulative": -5334.0
+    },
+    {
+      "day": "2026-08-21",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -773.0,
+      "cumulative": -6107.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-08-17",
+      "trades": 4,
+      "wins": 3,
+      "pnl": 2414.0
+    },
+    {
+      "day": "2026-08-18",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -577.0
+    },
+    {
+      "day": "2026-08-19",
+      "trades": 5,
+      "wins": 2,
+      "pnl": 274.0
+    },
+    {
+      "day": "2026-08-20",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -980.0
+    },
+    {
+      "day": "2026-08-21",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -773.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -773.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -605.0
+    },
+    {
+      "action": "PE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -168.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -386.0,
+    "profit_factor": 0.0,
+    "expectancy": -386.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": null,
+    "avg_r": null,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_trader": {},
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeFk9RVauYxfesAQia2zn'}",
+  "generated_at": "2026-08-21T06:35:04.550107"
+}
