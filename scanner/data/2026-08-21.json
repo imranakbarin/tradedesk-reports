@@ -1,0 +1,119 @@
+{
+  "date": "2026-08-21",
+  "generated_at": "2026-08-21 15:35:52 IST",
+  "headline": "Signals: INVALIDATED 1, TARGET 1.",
+  "recorded_buys": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "recorded_sells": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "signals": {
+    "summary": {
+      "n": 2,
+      "wins": 1,
+      "win_rate": 50,
+      "total": 9.2,
+      "unit": "%",
+      "avg": 4.6
+    },
+    "by_outcome": {
+      "INVALIDATED": 1,
+      "TARGET": 1
+    },
+    "rows": [
+      {
+        "id": "2026-08-21_NSE:BRITANNIA-EQ_PE_5350",
+        "logged_at": "2026-08-21 10:18:39",
+        "trade_date": "2026-08-21",
+        "symbol": "NSE:BRITANNIA-EQ",
+        "name": "Britannia",
+        "direction": "Long Put (PE)",
+        "side": "PE",
+        "strike": "5350",
+        "label": "ATM",
+        "option_symbol": "NSE:BRITANNIA26AUG5350PE",
+        "entry_premium": "48.0",
+        "premium_sl": "36.8",
+        "premium_target": "68.1",
+        "underlying_sl": "5401.9",
+        "underlying_target": "5323.8",
+        "confidence": "5",
+        "phase": "PRIMARY",
+        "news_sentiment": "Neutral",
+        "alignment": "Neutral - no news lean",
+        "factors": "Price 5374.0 below VWAP 5399.29 (bearish) | 15m MA20(5498.55) < MA50(5499.46) - downtrend | ATM CE: Short buildup (dOI 5,500) | Trending (ER 0.622 >= 0.4)",
+        "status": "CLOSED",
+        "outcome": "INVALIDATED",
+        "exit_premium": "36.8",
+        "pnl_pct": "-23.3",
+        "exit_at": "2026-08-21 10:25:00",
+        "reconciled_at": "2026-08-21 15:35:14"
+      },
+      {
+        "id": "2026-08-21_NSE:HINDALCO-EQ_PE_1040",
+        "logged_at": "2026-08-21 10:18:39",
+        "trade_date": "2026-08-21",
+        "symbol": "NSE:HINDALCO-EQ",
+        "name": "Hindalco",
+        "direction": "Long Put (PE)",
+        "side": "PE",
+        "strike": "1040",
+        "label": "ATM",
+        "option_symbol": "NSE:HINDALCO26AUG1040PE",
+        "entry_premium": "11.4",
+        "premium_sl": "9.4",
+        "premium_target": "15.1",
+        "underlying_sl": "1039.2",
+        "underlying_target": "1029.0",
+        "confidence": "3",
+        "phase": "PRIMARY",
+        "news_sentiment": "Positive",
+        "alignment": "CONFLICT: Positive news opposes the PE setup - confidence cut",
+        "factors": "Price 1035.55 above VWAP 1035.18 (bullish) | 15m MA20(1030.06) < MA50(1030.16) - downtrend | ATM CE: Short covering (dOI -76,300) | ATM PE: Long buildup (dOI 28,700) - bearish | PCR 0.624 < 0.7 (call-heavy, resistance) | Trending (ER 0.4 >= 0.4)",
+        "status": "CLOSED",
+        "outcome": "TARGET",
+        "exit_premium": "15.1",
+        "pnl_pct": "32.5",
+        "exit_at": "2026-08-21 11:15:00",
+        "reconciled_at": "2026-08-21 15:35:14"
+      }
+    ]
+  },
+  "selling": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "nifty": {
+      "n": 0,
+      "total": 0
+    },
+    "rows": []
+  },
+  "correlation": {
+    "pearson": -0.172,
+    "overlap_days": 25,
+    "reading": "independent"
+  }
+}
