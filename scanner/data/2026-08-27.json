@@ -1,0 +1,90 @@
+{
+  "date": "2026-08-27",
+  "generated_at": "2026-08-27 15:52:40 IST",
+  "headline": "Signals: TIME_EXIT 1.",
+  "recorded_buys": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "%",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "recorded_sells": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "rows": []
+  },
+  "signals": {
+    "summary": {
+      "n": 1,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 5.4,
+      "unit": "%",
+      "avg": 5.4
+    },
+    "by_outcome": {
+      "TIME_EXIT": 1
+    },
+    "rows": [
+      {
+        "id": "2026-08-27_NSE:LT-EQ_PE_4050",
+        "logged_at": "2026-08-27 15:02:19",
+        "trade_date": "2026-08-27",
+        "symbol": "NSE:LT-EQ",
+        "name": "Larsen & Toubro",
+        "direction": "Long Put (PE)",
+        "side": "PE",
+        "strike": "4050",
+        "label": "ATM",
+        "option_symbol": "NSE:LT26SEP4050PE",
+        "entry_premium": "65.35",
+        "premium_sl": "57.5",
+        "premium_target": "77.1",
+        "underlying_sl": "4050.1",
+        "underlying_target": "4024.7",
+        "confidence": "5",
+        "phase": "MIDDAY",
+        "news_sentiment": "Negative",
+        "alignment": "Aligned: Negative news supports the PE setup",
+        "factors": "Price 4041.0 below VWAP 4043.58 (bearish) | 15m MA20(4042.86) < MA50(4056.89) - downtrend | ATM CE: Long buildup (dOI 25,725) | ATM PE: Long buildup (dOI 33,250) - bearish | Nifty index trend DOWN (context only - no measured edge) | Trending (ER 0.426 >= 0.4)",
+        "status": "CLOSED",
+        "outcome": "TIME_EXIT",
+        "exit_premium": "68.9",
+        "pnl_pct": "5.4",
+        "exit_at": "2026-08-27 15:35:00",
+        "reconciled_at": "2026-08-27 15:52:17"
+      }
+    ]
+  },
+  "selling": {
+    "summary": {
+      "n": 0,
+      "wins": 0,
+      "win_rate": 0,
+      "total": 0,
+      "unit": "Rs",
+      "avg": 0
+    },
+    "nifty": {
+      "n": 0,
+      "total": 0
+    },
+    "rows": []
+  },
+  "correlation": {
+    "pearson": -0.093,
+    "overlap_days": 27,
+    "reading": "independent"
+  }
+}
