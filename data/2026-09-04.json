@@ -1,0 +1,257 @@
+{
+  "date": "2026-09-04",
+  "trades": [
+    {
+      "placed_at": "2026-09-04T09:58:47.220273",
+      "closed_at": "2026-09-04T12:04:57.338084",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23900,
+      "entry_price": 153.85,
+      "exit_price": 153.85,
+      "sl_price": 153.85,
+      "target_price": 200.05,
+      "lot_size": 1,
+      "pnl": -87.76,
+      "status": "TRAIL_SL",
+      "reason": "[C2] ORB breakout above 23,948 — held 125s, VWAP confirms, intraday 92 [C2/10] → TRAIL_SL: SL ₹153.85 hit (trail=True)",
+      "hold_minutes": 126,
+      "high_price": 178.45,
+      "low_price": 142.75,
+      "r_multiple": -0.06,
+      "confluence": 2,
+      "trend_score_entry": 13.0,
+      "rsi_entry": 39.5,
+      "regime": "ranging",
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-09-04T14:16:53.301355",
+      "closed_at": "2026-09-04T14:32:03.903141",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24000,
+      "entry_price": 100.3,
+      "exit_price": 87.0,
+      "sl_price": 86.9,
+      "target_price": 120.4,
+      "lot_size": 1,
+      "pnl": -936.3,
+      "status": "SMART_EXIT",
+      "reason": "[C7] Daily downtrend (score 20) + RSI 41 bounce — sniper entry (intraday 42) [C7/10] → SMART_EXIT: Near-SL exit: 99% of SL consumed (loss ₹13.3 of max ₹13.4) — cutting before full SL hit",
+      "hold_minutes": 15,
+      "high_price": 101.45,
+      "low_price": 87.0,
+      "r_multiple": -1.07,
+      "confluence": 7,
+      "trend_score_entry": 20.0,
+      "rsi_entry": 40.6,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-09-04T14:54:41.222262",
+      "closed_at": "2026-09-04T15:20:09.022803",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 76800,
+      "entry_price": 409.3,
+      "exit_price": 410.0,
+      "sl_price": 375.2,
+      "target_price": 460.5,
+      "lot_size": 1,
+      "pnl": -66.23,
+      "status": "EOD_CLOSE",
+      "reason": "[C7] Daily downtrend (score 20) + RSI 44 bounce — sniper entry (intraday 25) [C7/10] → EOD_CLOSE: Auto-close at 15:20",
+      "hold_minutes": 25,
+      "high_price": 418.0,
+      "low_price": 401.65,
+      "r_multiple": -0.1,
+      "confluence": 7,
+      "trend_score_entry": 20.0,
+      "rsi_entry": 43.7,
+      "regime": "trending",
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-09-04T09:58:48.146484",
+      "closed_at": "2026-09-04T12:04:57.685161",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 24000,
+      "entry_price": 102.5,
+      "exit_price": 100.85,
+      "sl_price": 87.1,
+      "target_price": 133.3,
+      "lot_size": 1,
+      "pnl": -181.64,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|75ed6d76",
+      "hold_minutes": 126,
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-09-04T14:16:54.150047",
+      "closed_at": "2026-09-04T14:32:20.026162",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23900,
+      "entry_price": 138.6,
+      "exit_price": 152.45,
+      "sl_price": 130.6,
+      "target_price": 153.6,
+      "lot_size": 1,
+      "pnl": 814.15,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|09d0a181",
+      "hold_minutes": 15,
+      "strategy": "mtf_sniper"
+    },
+    {
+      "placed_at": "2026-09-04T14:54:42.830466",
+      "closed_at": "2026-09-04T15:20:11.076028",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 76500,
+      "entry_price": 585.75,
+      "exit_price": 582.0,
+      "sl_price": 577.75,
+      "target_price": 600.75,
+      "lot_size": 1,
+      "pnl": -169.88,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|a2cd6104",
+      "hold_minutes": 25,
+      "strategy": "mtf_sniper"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -88.0,
+      "gross_win": 0.0,
+      "gross_loss": -88.0,
+      "avg_r": -0.06,
+      "avg_hold": 126.0
+    },
+    {
+      "strategy": "mtf_sniper",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -936.0,
+      "gross_win": 0.0,
+      "gross_loss": -936.0,
+      "avg_r": -1.07,
+      "avg_hold": 15.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "EOD_CLOSE",
+      "n": 1,
+      "total_pnl": -66.0,
+      "avg_pnl": -66.0
+    },
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -88.0,
+      "avg_pnl": -88.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -936.0,
+      "avg_pnl": -936.0
+    }
+  ],
+  "mtd": {
+    "pnl": -1090.0,
+    "trades": 3,
+    "wins": 0,
+    "losses": 3
+  },
+  "monthly_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0,
+      "cumulative": -1090.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-08-31",
+      "trades": 4,
+      "wins": 0,
+      "pnl": -1342.0
+    },
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1024.0,
+      "gross_win": 0.0,
+      "gross_loss": -1024.0,
+      "avg_hold": 71.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -88.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1003.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -88.0
+    },
+    {
+      "action": "PE",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1003.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -363.0,
+    "profit_factor": 0.0,
+    "expectancy": -363.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 55.0,
+    "avg_r": -0.41,
+    "max_win_streak": 0,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_trader": {},
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeiFUZ7Ugx4WejtsQTqQc'}",
+  "generated_at": "2026-09-04T06:35:08.748299"
+}
