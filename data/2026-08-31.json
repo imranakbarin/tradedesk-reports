@@ -477,6 +477,12 @@
     "current_streak": -4
   },
   "ai_trader": {},
-  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeagFACbg9aUcnzJ1WdSb'}",
-  "generated_at": "2026-08-31T06:35:11.132937"
+  "rupee_shadow": {
+    "n": 0,
+    "real_pnl": 0,
+    "shadow_pnl": 0,
+    "rows": []
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CejWxuaZhuNFDiJ8cE9qL'}",
+  "generated_at": "2026-09-04T22:38:51.403109"
 }

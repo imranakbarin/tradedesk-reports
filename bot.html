@@ -259,6 +259,27 @@ function renderReport(d) {
     `<tr><td>${r.status||''}</td><td class="c">${r.n}</td><td class="r" style="color:${pc(r.total_pnl)}">${fmt(r.total_pnl)}</td><td class="r">${fmt(r.avg_pnl)}</td></tr>`
   ).join('') || `<tr><td colspan="4" class="no-data" style="padding:14px">No data</td></tr>`;
 
+  // rupee-lock shadow trial (2026-09-04, read-only — see trading_bot.py RUPEE_LOCK_*)
+  const rupeeShadow = d.rupee_shadow || {n:0, real_pnl:0, shadow_pnl:0, rows:[]};
+  const rsRows = (rupeeShadow.rows||[]).map(r => {
+    const diff = (r.rupee_shadow_pnl||0) - (r.real_pnl||0);
+    return `<tr><td style="font-size:11px">${r.strategy||''}</td><td>${r.index_name||''} ${r.action||''} ${r.strike||''}</td><td class="r" style="color:${pc(r.real_pnl)}">${fmt(r.real_pnl)}</td><td class="r" style="color:${pc(r.rupee_shadow_pnl)}">${fmt(r.rupee_shadow_pnl)}</td><td class="r" style="color:${pc(diff)}">${fmt(diff)}</td></tr>`;
+  }).join('') || `<tr><td colspan="5" class="no-data" style="padding:14px">No shadow-resolved trades today</td></tr>`;
+  const rsSection = `
+    <div class="sec">
+      <h2>Rupee-Lock Shadow Trial <span style="font-size:11px;font-weight:400;opacity:.7">(₹500 trigger / ₹400 kept — read-only trial, not live)</span></h2>
+      <div class="qstats" style="margin:0 0 10px">
+        <div class="qs"><div class="ql">Tracked</div><div class="qv">${rupeeShadow.n}</div></div>
+        <div class="qs"><div class="ql">Real P&L</div><div class="qv" style="color:${pc(rupeeShadow.real_pnl)}">${fmt(rupeeShadow.real_pnl)}</div></div>
+        <div class="qs"><div class="ql">Shadow P&L</div><div class="qv" style="color:${pc(rupeeShadow.shadow_pnl)}">${fmt(rupeeShadow.shadow_pnl)}</div></div>
+        <div class="qs"><div class="ql">Difference</div><div class="qv" style="color:${pc(rupeeShadow.shadow_pnl-rupeeShadow.real_pnl)}">${fmt(rupeeShadow.shadow_pnl-rupeeShadow.real_pnl)}</div></div>
+      </div>
+      <table>
+        <thead><tr><th>Strategy</th><th>Trade</th><th class="r">Real</th><th class="r">Shadow</th><th class="r">Diff</th></tr></thead>
+        <tbody>${rsRows}</tbody>
+      </table>
+    </div>`;
+
   // contra
   const contraTotal = contra.reduce((s,t)=>s+(t.pnl||0),0);
 
@@ -387,6 +408,9 @@ function renderReport(d) {
         </table>
       </div>
     </div>
+
+    <!-- RUPEE-LOCK SHADOW TRIAL -->
+    ${rsSection}
 
     <!-- ALL TRADES -->
     <div class="sec">

@@ -1,0 +1,360 @@
+{
+  "date": "2026-09-07",
+  "trades": [
+    {
+      "placed_at": "2026-09-07T09:56:56.714481",
+      "closed_at": "2026-09-07T11:08:04.133208",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23850,
+      "entry_price": 74.65,
+      "exit_price": 97.05,
+      "sl_price": 85.72,
+      "target_price": 97.05,
+      "lot_size": 1,
+      "pnl": 1382.75,
+      "status": "TARGET_HIT",
+      "reason": "[C9] ORB breakdown below 23,819 — held 128s, VWAP confirms, intraday 8 [C9/10] → TARGET_HIT: Target ₹97.05 reached",
+      "hold_minutes": 71,
+      "high_price": 97.6,
+      "low_price": 73.25,
+      "r_multiple": 2.11,
+      "confluence": 9,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 36.5,
+      "regime": "trending",
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-09-07T11:13:46.827611",
+      "closed_at": "2026-09-07T11:53:59.084320",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23800,
+      "entry_price": 71.1,
+      "exit_price": 62.45,
+      "sl_price": 61.1,
+      "target_price": 86.1,
+      "lot_size": 1,
+      "pnl": -628.71,
+      "status": "SMART_EXIT",
+      "reason": "[C9] Bearish Engulfing — body 118pts, closed below prev 23,898 [C9/10] → SMART_EXIT: Near-SL exit: 86% of SL consumed (loss ₹8.6 of max ₹10.0) — cutting before full SL hit",
+      "hold_minutes": 40,
+      "high_price": 73.05,
+      "low_price": 62.45,
+      "r_multiple": -0.97,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 34.8,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-09-07T12:27:36.090102",
+      "closed_at": "2026-09-07T13:21:49.290216",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23800,
+      "entry_price": 65.05,
+      "exit_price": 64.4,
+      "sl_price": 65.05,
+      "target_price": 80.05,
+      "lot_size": 1,
+      "pnl": -108.31,
+      "status": "TRAIL_SL",
+      "reason": "[C9] Bearish Engulfing — body 120pts, closed below prev 23,898 [C9/10] → TRAIL_SL: SL ₹65.05 hit (trail=True)",
+      "hold_minutes": 54,
+      "high_price": 77.1,
+      "low_price": 62.8,
+      "r_multiple": -0.17,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 34.5,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-09-07T13:42:01.212286",
+      "closed_at": "2026-09-07T13:53:26.609308",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23800,
+      "entry_price": 61.7,
+      "exit_price": 48.35,
+      "sl_price": 51.7,
+      "target_price": 76.7,
+      "lot_size": 1,
+      "pnl": -930.88,
+      "status": "SL_HIT",
+      "reason": "[C9] Bearish Engulfing — body 122pts, closed below prev 23,898 [C9/10] → SL_HIT: SL ₹51.70 hit (trail=False)",
+      "hold_minutes": 11,
+      "high_price": 62.85,
+      "low_price": 48.35,
+      "r_multiple": -1.43,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 34.1,
+      "regime": "ranging",
+      "strategy": "candle_pattern"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-09-07T09:56:57.368932",
+      "closed_at": "2026-09-07T11:08:04.282555",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23800,
+      "entry_price": 95.65,
+      "exit_price": 81.5,
+      "sl_price": 81.35,
+      "target_price": 124.35,
+      "lot_size": 1,
+      "pnl": -992.54,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|4064b4f8",
+      "hold_minutes": 71,
+      "strategy": "orb_breakout"
+    },
+    {
+      "placed_at": "2026-09-07T11:13:47.060219",
+      "closed_at": "2026-09-07T11:53:59.293103",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23750,
+      "entry_price": 107.15,
+      "exit_price": 118.55,
+      "sl_price": 99.15,
+      "target_price": 122.15,
+      "lot_size": 1,
+      "pnl": 659.39,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|2247acbf",
+      "hold_minutes": 40,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-09-07T12:27:36.356925",
+      "closed_at": "2026-09-07T13:21:49.332203",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23750,
+      "entry_price": 111.95,
+      "exit_price": 107.5,
+      "sl_price": 103.95,
+      "target_price": 126.95,
+      "lot_size": 1,
+      "pnl": -368.24,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|aa79a42e",
+      "hold_minutes": 54,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-09-07T13:42:01.550549",
+      "closed_at": "2026-09-07T13:53:27.026086",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23700,
+      "entry_price": 145.7,
+      "exit_price": 161.55,
+      "sl_price": 137.7,
+      "target_price": 160.7,
+      "lot_size": 1,
+      "pnl": 936.54,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|d2f403fe",
+      "hold_minutes": 11,
+      "strategy": "candle_pattern"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 1383.0,
+      "gross_win": 1383.0,
+      "gross_loss": 0.0,
+      "avg_r": 2.11,
+      "avg_hold": 71.0
+    },
+    {
+      "strategy": "candle_pattern",
+      "trades": 3,
+      "wins": 0,
+      "losses": 3,
+      "pnl": -1668.0,
+      "gross_win": 0.0,
+      "gross_loss": -1668.0,
+      "avg_r": -0.86,
+      "avg_hold": 35.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 1383.0,
+      "avg_pnl": 1383.0
+    },
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -108.0,
+      "avg_pnl": -108.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -629.0,
+      "avg_pnl": -629.0
+    },
+    {
+      "status": "SL_HIT",
+      "n": 1,
+      "total_pnl": -931.0,
+      "avg_pnl": -931.0
+    }
+  ],
+  "mtd": {
+    "pnl": -1375.0,
+    "trades": 7,
+    "wins": 1,
+    "losses": 6
+  },
+  "monthly_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0,
+      "cumulative": -1090.0
+    },
+    {
+      "day": "2026-09-07",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0,
+      "cumulative": -1375.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0
+    },
+    {
+      "day": "2026-09-07",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0,
+      "gross_win": 1383.0,
+      "gross_loss": -1668.0,
+      "avg_hold": 44.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1383.0
+    },
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -629.0
+    },
+    {
+      "bucket": "12:00-13:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -108.0
+    },
+    {
+      "bucket": "13:00-14:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -931.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1383.0,
+    "avg_loss": -556.0,
+    "profit_factor": 0.83,
+    "expectancy": -71.0,
+    "avg_hold_win": 71.0,
+    "avg_hold_loss": 35.0,
+    "avg_r": -0.12,
+    "max_win_streak": 1,
+    "max_loss_streak": 3,
+    "current_streak": -3
+  },
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 4,
+    "real_pnl": -285.0,
+    "shadow_pnl": -205.0,
+    "rows": [
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 23850,
+        "strategy": "orb_breakout",
+        "real_pnl": 1382.75,
+        "rupee_shadow_pnl": 782.42,
+        "rupee_shadow_status": "SHADOW_SL"
+      },
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 23800,
+        "strategy": "candle_pattern",
+        "real_pnl": -628.71,
+        "rupee_shadow_pnl": -628.71,
+        "rupee_shadow_status": "CLOSED_WITH_REAL"
+      },
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 23800,
+        "strategy": "candle_pattern",
+        "real_pnl": -108.31,
+        "rupee_shadow_pnl": 572.15,
+        "rupee_shadow_status": "SHADOW_SL"
+      },
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 23800,
+        "strategy": "candle_pattern",
+        "real_pnl": -930.88,
+        "rupee_shadow_pnl": -930.88,
+        "rupee_shadow_status": "SHADOW_SL"
+      }
+    ]
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Ceovu4ubHcr1jZWgxjbdK'}",
+  "generated_at": "2026-09-07T06:35:05.071808"
+}
