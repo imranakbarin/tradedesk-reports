@@ -1,0 +1,262 @@
+{
+  "date": "2026-09-09",
+  "trades": [
+    {
+      "placed_at": "2026-09-09T10:01:02.034838",
+      "closed_at": "2026-09-09T10:18:05.936929",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23550,
+      "entry_price": 136.3,
+      "exit_price": 123.5,
+      "sl_price": 120.4,
+      "target_price": 163.6,
+      "lot_size": 1,
+      "pnl": -917.0,
+      "status": "SMART_EXIT",
+      "reason": "[C9] Inside-bar breakdown — 5m close below OR low 23,479 (first 3 candles), intraday 8 [C9/10] → SMART_EXIT: Near-SL exit: 81% of SL consumed (loss ₹12.8 of max ₹15.9) — cutting before full SL hit",
+      "hold_minutes": 17,
+      "high_price": 141.5,
+      "low_price": 123.5,
+      "r_multiple": -0.89,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 27.8,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-09-09T14:07:10.626519",
+      "closed_at": "2026-09-09T14:22:19.689256",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23500,
+      "entry_price": 184.4,
+      "exit_price": 173.5,
+      "sl_price": 159.8,
+      "target_price": 221.3,
+      "lot_size": 1,
+      "pnl": -808.24,
+      "status": "SMART_EXIT",
+      "reason": "[C2] Bullish OB 23,596–23,605 at VAL 23,580 (impulse 0.3%) + PCR 1.02 [C2/10] → SMART_EXIT: Daily Supertrend SHORT — exit CE",
+      "hold_minutes": 15,
+      "high_price": 184.4,
+      "low_price": 168.35,
+      "r_multiple": -0.51,
+      "confluence": 2,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 28.9,
+      "regime": "trending",
+      "strategy": "inst_flow"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-09-09T10:01:02.730086",
+      "closed_at": "2026-09-09T10:18:06.183750",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23400,
+      "entry_price": 210.95,
+      "exit_price": 225.0,
+      "sl_price": 202.95,
+      "target_price": 225.95,
+      "lot_size": 1,
+      "pnl": 800.76,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|334ba7c1",
+      "hold_minutes": 17,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-09-09T14:07:11.627377",
+      "closed_at": "2026-09-09T14:22:20.022384",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23650,
+      "entry_price": 140.8,
+      "exit_price": 147.35,
+      "sl_price": 122.0,
+      "target_price": 169.0,
+      "lot_size": 1,
+      "pnl": 335.93,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|3e1aed5c",
+      "hold_minutes": 15,
+      "strategy": "inst_flow"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "inst_flow",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -808.0,
+      "gross_win": 0.0,
+      "gross_loss": -808.0,
+      "avg_r": -0.51,
+      "avg_hold": 15.0
+    },
+    {
+      "strategy": "candle_pattern",
+      "trades": 1,
+      "wins": 0,
+      "losses": 1,
+      "pnl": -917.0,
+      "gross_win": 0.0,
+      "gross_loss": -917.0,
+      "avg_r": -0.89,
+      "avg_hold": 17.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "SMART_EXIT",
+      "n": 2,
+      "total_pnl": -1725.0,
+      "avg_pnl": -863.0
+    }
+  ],
+  "mtd": {
+    "pnl": -2721.0,
+    "trades": 11,
+    "wins": 2,
+    "losses": 9
+  },
+  "monthly_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0,
+      "cumulative": -1090.0
+    },
+    {
+      "day": "2026-09-07",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0,
+      "cumulative": -1375.0
+    },
+    {
+      "day": "2026-09-08",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 380.0,
+      "cumulative": -995.0
+    },
+    {
+      "day": "2026-09-09",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1725.0,
+      "cumulative": -2720.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0
+    },
+    {
+      "day": "2026-09-07",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0
+    },
+    {
+      "day": "2026-09-08",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 380.0
+    },
+    {
+      "day": "2026-09-09",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1725.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1725.0,
+      "gross_win": 0.0,
+      "gross_loss": -1725.0,
+      "avg_hold": 16.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "10:00-11:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -917.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -808.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "CE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -808.0
+    },
+    {
+      "action": "PE",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -917.0
+    }
+  ],
+  "stats": {
+    "avg_win": 0,
+    "avg_loss": -863.0,
+    "profit_factor": 0.0,
+    "expectancy": -863.0,
+    "avg_hold_win": null,
+    "avg_hold_loss": 16.0,
+    "avg_r": -0.7,
+    "max_win_streak": 0,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 2,
+    "real_pnl": -1725.0,
+    "shadow_pnl": -1725.0,
+    "rows": [
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 23550,
+        "strategy": "candle_pattern",
+        "real_pnl": -917.0,
+        "rupee_shadow_pnl": -917.0,
+        "rupee_shadow_status": "CLOSED_WITH_REAL"
+      },
+      {
+        "index_name": "NIFTY",
+        "action": "CE",
+        "strike": 23500,
+        "strategy": "inst_flow",
+        "real_pnl": -808.24,
+        "rupee_shadow_pnl": -808.24,
+        "rupee_shadow_status": "CLOSED_WITH_REAL"
+      }
+    ]
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CesiX958Japcp7GZB2YT8'}",
+  "generated_at": "2026-09-09T06:35:08.769100"
+}
