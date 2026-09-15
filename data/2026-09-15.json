@@ -1,0 +1,197 @@
+{
+  "date": "2026-09-15",
+  "trades": [
+    {
+      "placed_at": "2026-09-15T09:55:14.658282",
+      "closed_at": "2026-09-15T10:30:20.288387",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 23450,
+      "entry_price": 85.85,
+      "exit_price": 111.65,
+      "sl_price": 85.85,
+      "target_price": 111.65,
+      "lot_size": 1,
+      "pnl": 1599.19,
+      "status": "TARGET_HIT",
+      "reason": "[C8] ORB breakdown below 23,452 — held 617s, VWAP confirms, intraday 42 [C8/10] → TARGET_HIT: Target ₹111.65 reached",
+      "hold_minutes": 35,
+      "high_price": 114.65,
+      "low_price": 85.85,
+      "r_multiple": 2.12,
+      "confluence": 8,
+      "trend_score_entry": 13.0,
+      "rsi_entry": 28.8,
+      "regime": "trending",
+      "strategy": "orb_breakout"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-09-15T09:55:17.415898",
+      "closed_at": "2026-09-15T10:30:38.184859",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 23400,
+      "entry_price": 62.5,
+      "exit_price": 47.3,
+      "sl_price": 53.1,
+      "target_price": 81.3,
+      "lot_size": 1,
+      "pnl": -1051.1,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|3f076305",
+      "hold_minutes": 35,
+      "strategy": "orb_breakout"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "orb_breakout",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 1599.0,
+      "gross_win": 1599.0,
+      "gross_loss": 0.0,
+      "avg_r": 2.12,
+      "avg_hold": 35.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 1599.0,
+      "avg_pnl": 1599.0
+    }
+  ],
+  "mtd": {
+    "pnl": -1916.0,
+    "trades": 13,
+    "wins": 3,
+    "losses": 10
+  },
+  "monthly_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0,
+      "cumulative": -1090.0
+    },
+    {
+      "day": "2026-09-07",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0,
+      "cumulative": -1375.0
+    },
+    {
+      "day": "2026-09-08",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 380.0,
+      "cumulative": -995.0
+    },
+    {
+      "day": "2026-09-09",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1725.0,
+      "cumulative": -2720.0
+    },
+    {
+      "day": "2026-09-10",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -794.0,
+      "cumulative": -3514.0
+    },
+    {
+      "day": "2026-09-15",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1599.0,
+      "cumulative": -1915.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-09-09",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1725.0
+    },
+    {
+      "day": "2026-09-10",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -794.0
+    },
+    {
+      "day": "2026-09-15",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1599.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "NIFTY",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1599.0,
+      "gross_win": 1599.0,
+      "gross_loss": 0.0,
+      "avg_hold": 35.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "09:15-10:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1599.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1599.0
+    }
+  ],
+  "stats": {
+    "avg_win": 1599.0,
+    "avg_loss": 0,
+    "profit_factor": null,
+    "expectancy": 1599.0,
+    "avg_hold_win": 35.0,
+    "avg_hold_loss": null,
+    "avg_r": 2.12,
+    "max_win_streak": 1,
+    "max_loss_streak": 0,
+    "current_streak": 1
+  },
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 1,
+    "real_pnl": 1599.0,
+    "shadow_pnl": 274.0,
+    "rows": [
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 23450,
+        "strategy": "orb_breakout",
+        "real_pnl": 1599.19,
+        "rupee_shadow_pnl": 273.97,
+        "rupee_shadow_status": "SHADOW_SL"
+      }
+    ]
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011Cf55NaFSb5PvcGGhqBS7s'}",
+  "generated_at": "2026-09-15T06:35:08.159476"
+}
