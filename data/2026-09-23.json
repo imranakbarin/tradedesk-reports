@@ -1,0 +1,118 @@
+{
+  "date": "2026-09-23",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": -6165.0,
+    "trades": 18,
+    "wins": 4,
+    "losses": 14
+  },
+  "monthly_days": [
+    {
+      "day": "2026-09-04",
+      "trades": 3,
+      "wins": 0,
+      "pnl": -1090.0,
+      "cumulative": -1090.0
+    },
+    {
+      "day": "2026-09-07",
+      "trades": 4,
+      "wins": 1,
+      "pnl": -285.0,
+      "cumulative": -1375.0
+    },
+    {
+      "day": "2026-09-08",
+      "trades": 2,
+      "wins": 1,
+      "pnl": 380.0,
+      "cumulative": -995.0
+    },
+    {
+      "day": "2026-09-09",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1725.0,
+      "cumulative": -2720.0
+    },
+    {
+      "day": "2026-09-10",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -794.0,
+      "cumulative": -3514.0
+    },
+    {
+      "day": "2026-09-15",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 1599.0,
+      "cumulative": -1915.0
+    },
+    {
+      "day": "2026-09-16",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1602.0,
+      "cumulative": -3517.0
+    },
+    {
+      "day": "2026-09-17",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -3176.0,
+      "cumulative": -6693.0
+    },
+    {
+      "day": "2026-09-18",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -378.0,
+      "cumulative": -7071.0
+    },
+    {
+      "day": "2026-09-22",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0,
+      "cumulative": -6163.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-09-17",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -3176.0
+    },
+    {
+      "day": "2026-09-18",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -378.0
+    },
+    {
+      "day": "2026-09-22",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 908.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 0,
+    "real_pnl": 0,
+    "shadow_pnl": 0,
+    "rows": []
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfLDqrCcw3XYaWw1dL1Am'}",
+  "generated_at": "2026-09-23T06:35:07.716546"
+}
