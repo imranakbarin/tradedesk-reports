@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-05",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": null,
+    "trades": 0,
+    "wins": null,
+    "losses": null
+  },
+  "monthly_days": [],
+  "week_days": [],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 0,
+    "real_pnl": 0,
+    "shadow_pnl": 0,
+    "rows": []
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfiwZ9ShnAACg3cMnkHPS'}",
+  "generated_at": "2026-10-05T06:35:11.625314"
+}
