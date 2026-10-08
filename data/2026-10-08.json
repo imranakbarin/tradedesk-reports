@@ -1,0 +1,307 @@
+{
+  "date": "2026-10-08",
+  "trades": [
+    {
+      "placed_at": "2026-10-08T11:36:37.651847",
+      "closed_at": "2026-10-08T12:31:22.294517",
+      "index_name": "SENSEX",
+      "action": "PE",
+      "strike": 72100,
+      "entry_price": 238.95,
+      "exit_price": 358.45,
+      "sl_price": 296.1,
+      "target_price": 358.45,
+      "lot_size": 1,
+      "pnl": 2313.55,
+      "status": "TARGET_HIT",
+      "reason": "[C9] Expiry day — trend 7% bearish, -0.96% from open [C9/10] → TARGET_HIT: Target ₹358.45 reached",
+      "hold_minutes": 54,
+      "high_price": 375.0,
+      "low_price": 223.65,
+      "r_multiple": 2.15,
+      "confluence": 9,
+      "trend_score_entry": 7.0,
+      "rsi_entry": 33.2,
+      "regime": "trending",
+      "strategy": "expiry_theta"
+    },
+    {
+      "placed_at": "2026-10-08T12:35:14.226867",
+      "closed_at": "2026-10-08T13:34:25.712373",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 22350,
+      "entry_price": 174.75,
+      "exit_price": 173.3,
+      "sl_price": 174.75,
+      "target_price": 209.75,
+      "lot_size": 1,
+      "pnl": -193.01,
+      "status": "TRAIL_SL",
+      "reason": "[C9] Bearish Engulfing 5m [CP5:2026-10-08T12:30:00+05:30] [C9/10] → TRAIL_SL: SL ₹174.75 hit (trail=True)",
+      "hold_minutes": 59,
+      "high_price": 199.3,
+      "low_price": 165.4,
+      "r_multiple": -0.13,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 28.7,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-10-08T14:05:18.215941",
+      "closed_at": "2026-10-08T14:31:53.084848",
+      "index_name": "NIFTY",
+      "action": "PE",
+      "strike": 22250,
+      "entry_price": 150.0,
+      "exit_price": 132.25,
+      "sl_price": 130.0,
+      "target_price": 180.0,
+      "lot_size": 1,
+      "pnl": -1241.98,
+      "status": "SMART_EXIT",
+      "reason": "[C9] Bearish Engulfing 5m [CP5:2026-10-08T14:00:00+05:30] [C9/10] → SMART_EXIT: Near-SL exit: 89% of SL consumed (loss ₹17.8 of max ₹20.0) — cutting before full SL hit",
+      "hold_minutes": 26,
+      "high_price": 160.9,
+      "low_price": 132.25,
+      "r_multiple": -0.96,
+      "confluence": 9,
+      "trend_score_entry": 0.0,
+      "rsi_entry": 27.5,
+      "regime": "trending",
+      "strategy": "candle_pattern"
+    }
+  ],
+  "contra_trades": [
+    {
+      "placed_at": "2026-10-08T11:36:38.231643",
+      "closed_at": "2026-10-08T12:31:22.501101",
+      "index_name": "SENSEX",
+      "action": "CE",
+      "strike": 71800,
+      "entry_price": 265.85,
+      "exit_price": 144.1,
+      "sl_price": 199.35,
+      "target_price": 398.75,
+      "lot_size": 1,
+      "pnl": -2498.73,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|cb88a5f3",
+      "hold_minutes": 54,
+      "strategy": "expiry_theta"
+    },
+    {
+      "placed_at": "2026-10-08T12:35:14.581246",
+      "closed_at": "2026-10-08T13:34:25.836355",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 22250,
+      "entry_price": 173.1,
+      "exit_price": 169.8,
+      "sl_price": 165.1,
+      "target_price": 188.1,
+      "lot_size": 1,
+      "pnl": -312.75,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|04b559e8",
+      "hold_minutes": 59,
+      "strategy": "candle_pattern"
+    },
+    {
+      "placed_at": "2026-10-08T14:05:18.369577",
+      "closed_at": "2026-10-08T14:31:54.747545",
+      "index_name": "NIFTY",
+      "action": "CE",
+      "strike": 22200,
+      "entry_price": 173.0,
+      "exit_price": 184.45,
+      "sl_price": 165.0,
+      "target_price": 188.0,
+      "lot_size": 1,
+      "pnl": 643.55,
+      "status": "CONTRA_CLOSED",
+      "reason": "CONTRA|e663882c",
+      "hold_minutes": 26,
+      "strategy": "candle_pattern"
+    }
+  ],
+  "by_strategy": [
+    {
+      "strategy": "expiry_theta",
+      "trades": 1,
+      "wins": 1,
+      "losses": 0,
+      "pnl": 2314.0,
+      "gross_win": 2314.0,
+      "gross_loss": 0.0,
+      "avg_r": 2.15,
+      "avg_hold": 54.0
+    },
+    {
+      "strategy": "candle_pattern",
+      "trades": 2,
+      "wins": 0,
+      "losses": 2,
+      "pnl": -1435.0,
+      "gross_win": 0.0,
+      "gross_loss": -1435.0,
+      "avg_r": -0.54,
+      "avg_hold": 43.0
+    }
+  ],
+  "reasons": [
+    {
+      "status": "TARGET_HIT",
+      "n": 1,
+      "total_pnl": 2314.0,
+      "avg_pnl": 2314.0
+    },
+    {
+      "status": "TRAIL_SL",
+      "n": 1,
+      "total_pnl": -193.0,
+      "avg_pnl": -193.0
+    },
+    {
+      "status": "SMART_EXIT",
+      "n": 1,
+      "total_pnl": -1242.0,
+      "avg_pnl": -1242.0
+    }
+  ],
+  "mtd": {
+    "pnl": 776.0,
+    "trades": 4,
+    "wins": 1,
+    "losses": 3
+  },
+  "monthly_days": [
+    {
+      "day": "2026-10-07",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -102.0,
+      "cumulative": -102.0
+    },
+    {
+      "day": "2026-10-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 879.0,
+      "cumulative": 777.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-10-07",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -102.0
+    },
+    {
+      "day": "2026-10-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 879.0
+    }
+  ],
+  "index_breakdown": [
+    {
+      "index_name": "SENSEX",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 2314.0,
+      "gross_win": 2314.0,
+      "gross_loss": 0.0,
+      "avg_hold": 54.0
+    },
+    {
+      "index_name": "NIFTY",
+      "trades": 2,
+      "wins": 0,
+      "pnl": -1435.0,
+      "gross_win": 0.0,
+      "gross_loss": -1435.0,
+      "avg_hold": 43.0
+    }
+  ],
+  "time_buckets": [
+    {
+      "bucket": "11:00-12:00",
+      "trades": 1,
+      "wins": 1,
+      "pnl": 2314.0
+    },
+    {
+      "bucket": "12:00-13:00",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -193.0
+    },
+    {
+      "bucket": "14:00-15:30",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -1242.0
+    }
+  ],
+  "direction_breakdown": [
+    {
+      "action": "PE",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 879.0
+    }
+  ],
+  "stats": {
+    "avg_win": 2314.0,
+    "avg_loss": -717.0,
+    "profit_factor": 1.61,
+    "expectancy": 293.0,
+    "avg_hold_win": 54.0,
+    "avg_hold_loss": 42.0,
+    "avg_r": 0.35,
+    "max_win_streak": 1,
+    "max_loss_streak": 2,
+    "current_streak": -2
+  },
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 3,
+    "real_pnl": 879.0,
+    "shadow_pnl": 662.0,
+    "rows": [
+      {
+        "index_name": "SENSEX",
+        "action": "PE",
+        "strike": 72100,
+        "strategy": "expiry_theta",
+        "real_pnl": 2313.55,
+        "rupee_shadow_pnl": 401.48,
+        "rupee_shadow_status": "SHADOW_SL"
+      },
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 22350,
+        "strategy": "candle_pattern",
+        "real_pnl": -193.01,
+        "rupee_shadow_pnl": 43.87,
+        "rupee_shadow_status": "SHADOW_SL"
+      },
+      {
+        "index_name": "NIFTY",
+        "action": "PE",
+        "strike": 22250,
+        "strategy": "candle_pattern",
+        "real_pnl": -1241.98,
+        "rupee_shadow_pnl": 216.29,
+        "rupee_shadow_status": "SHADOW_SL"
+      }
+    ]
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfpcyevjPS58aT3DCkGHJ'}",
+  "generated_at": "2026-10-08T06:35:08.144260"
+}
