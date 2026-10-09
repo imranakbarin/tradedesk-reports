@@ -1,0 +1,56 @@
+{
+  "date": "2026-10-09",
+  "trades": [],
+  "contra_trades": [],
+  "by_strategy": [],
+  "reasons": [],
+  "mtd": {
+    "pnl": 776.0,
+    "trades": 4,
+    "wins": 1,
+    "losses": 3
+  },
+  "monthly_days": [
+    {
+      "day": "2026-10-07",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -102.0,
+      "cumulative": -102.0
+    },
+    {
+      "day": "2026-10-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 879.0,
+      "cumulative": 777.0
+    }
+  ],
+  "week_days": [
+    {
+      "day": "2026-10-07",
+      "trades": 1,
+      "wins": 0,
+      "pnl": -102.0
+    },
+    {
+      "day": "2026-10-08",
+      "trades": 3,
+      "wins": 1,
+      "pnl": 879.0
+    }
+  ],
+  "index_breakdown": [],
+  "time_buckets": [],
+  "direction_breakdown": [],
+  "stats": {},
+  "ai_trader": {},
+  "rupee_shadow": {
+    "n": 0,
+    "real_pnl": 0,
+    "shadow_pnl": 0,
+    "rows": []
+  },
+  "ai_analysis": "AI analysis unavailable: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CfrWnYt6gGNnfF7vMrkDu'}",
+  "generated_at": "2026-10-09T06:35:08.168366"
+}
