@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Options Buying Post-Market Report - 2026-10-23</title>
+<style>
+:root {
+  --bg: #f5f7fb;
+  --ink: #111827;
+  --muted: #52627a;
+  --line: #dbe3ef;
+  --panel: #ffffff;
+  --good: #047857;
+  --bad: #dc2626;
+  --blue: #1d4ed8;
+  --amber: #b45309;
+}
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, Segoe UI, Arial, sans-serif; color: var(--ink); background: var(--bg); }
+header { padding: 26px 32px 18px; background: #111827; color: white; }
+header h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0; }
+header p { margin: 0; color: #cbd5e1; }
+main { padding: 22px 32px 40px; display: grid; gap: 18px; }
+.banner { border-left: 5px solid var(--blue); background: #eff6ff; padding: 13px 16px; border-radius: 8px; color: #1e3a8a; }
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 16px; box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04); overflow: hidden; }
+.wide { overflow-x: auto; }
+h2 { margin: 0 0 12px; font-size: 17px; }
+.kpis { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+.kpi { border: 1px solid var(--line); border-radius: 8px; padding: 11px; min-height: 86px; }
+.kpi span, .kpi small { display: block; color: var(--muted); font-size: 12px; font-weight: 700; text-transform: uppercase; }
+.kpi strong { display: block; margin: 8px 0 5px; font-size: 21px; }
+.good { color: var(--good); }
+.bad { color: var(--bad); }
+.flat { color: var(--muted); }
+ul { margin: 0; padding-left: 18px; }
+li { margin: 8px 0; line-height: 1.42; }
+table { width: 100%; border-collapse: collapse; font-size: 13px; }
+th, td { border-bottom: 1px solid var(--line); text-align: left; padding: 9px 10px; white-space: nowrap; }
+th { color: var(--muted); font-size: 11px; text-transform: uppercase; }
+svg { width: 100%; height: auto; display: block; }
+.chartTitle { font-size: 15px; font-weight: 800; fill: var(--ink); }
+.axis { stroke: #94a3b8; stroke-width: 1; }
+.barPos { fill: #059669; }
+.barNeg { fill: #ef4444; }
+.xLabel, .yLabel { fill: var(--muted); font-size: 11px; }
+.hbarRow { display: grid; grid-template-columns: 145px 1fr 95px; align-items: center; gap: 10px; margin: 10px 0; font-size: 13px; }
+.hbarTrack { height: 10px; background: #e5eaf2; border-radius: 999px; overflow: hidden; }
+.hbarTrack i { display: block; height: 100%; background: var(--muted); }
+.hbarTrack i.good { background: var(--good); }
+.hbarTrack i.bad { background: var(--bad); }
+.muted { color: var(--muted); }
+footer { color: var(--muted); font-size: 12px; padding: 0 32px 26px; }
+
+.reportNav { margin: 0; }
+.reportNav a { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-weight: 800; text-decoration: none; }
+.calendarMeta { display: flex; flex-wrap: wrap; gap: 10px; justify-content: space-between; align-items: baseline; margin-bottom: 12px; }
+.calendarMeta h2 { margin: 0; }
+.calendarMeta span { color: var(--muted); font-size: 13px; font-weight: 700; }
+.calendarGrid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 7px; }
+.calendarWeekday { color: var(--muted); font-size: 11px; font-weight: 800; text-align: center; text-transform: uppercase; }
+.dayBox { border: 1px solid var(--line); border-radius: 8px; min-height: 62px; padding: 7px; display: grid; align-content: space-between; background: #f8fafc; }
+.dayBox strong { font-size: 12px; line-height: 1; }
+.dayBox span { font-size: 11px; font-weight: 800; overflow-wrap: anywhere; }
+.dayBox small { color: var(--muted); font-size: 10px; font-weight: 700; }
+.dayBox.good { background: #dcfce7; border-color: #86efac; color: #065f46; }
+.dayBox.bad { background: #fee2e2; border-color: #fca5a5; color: #991b1b; }
+.dayBox.flat { background: #eef2ff; border-color: #c7d2fe; color: #3730a3; }
+.dayBox.empty { background: #f8fafc; color: var(--muted); }
+.dayBox.future { background: #f1f5f9; color: #94a3b8; }
+.dayBox.blank { visibility: hidden; }
+@media (max-width: 760px) {
+  .calendarGrid { gap: 4px; }
+  .dayBox { min-height: 52px; padding: 5px; }
+  .dayBox span { font-size: 10px; }
+  .dayBox small { display: none; }
+}
+
+@media (max-width: 980px) {
+  header, main, footer { padding-left: 16px; padding-right: 16px; }
+  .grid, .two { grid-template-columns: 1fr; }
+  .kpis { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Options Buying Post-Market Report - 2026-10-23</h1>
+  <p>Final post-market report generated 2026-10-23 15:40:15 IST from D:\Imran devs\Apps\HybridTrading\backend\db\hybridtrading_bot.sqlite</p>
+</header>
+<main>
+  <nav class='reportNav'><a href='../../index.html'>&larr; Back to Codex summary</a></nav>
+  <div class="banner">Market-close guard passed. This report is safe to use for end-of-day review.</div>
+  <section class="grid">
+    <section class='panel'><h2>Today</h2><div class='kpis'><div class='kpi good'><span>Net P&amp;L</span><strong>Rs 10,125</strong><small>7 trades</small></div><div class='kpi '><span>Win rate</span><strong>85.7%</strong><small>6W / 1L</small></div><div class='kpi good'><span>Average</span><strong>Rs 1,446</strong><small>per trade</small></div><div class='kpi '><span>Normal / Explore</span><strong>7 / 0</strong><small>trade mix</small></div><div class='kpi '><span>Best / Worst</span><strong>Rs 3,681 / -Rs 1,233</strong><small>0 open</small></div></div></section>
+    <section class='panel'><h2>Last 7 Days</h2><div class='kpis'><div class='kpi good'><span>Net P&amp;L</span><strong>Rs 3,193</strong><small>18 trades</small></div><div class='kpi '><span>Win rate</span><strong>38.9%</strong><small>7W / 11L</small></div><div class='kpi good'><span>Average</span><strong>Rs 177</strong><small>per trade</small></div><div class='kpi '><span>Normal / Explore</span><strong>18 / 0</strong><small>trade mix</small></div><div class='kpi '><span>Best / Worst</span><strong>Rs 3,681 / -Rs 1,413</strong><small>0 open</small></div></div></section>
+    <section class='panel'><h2>Last 30 Days</h2><div class='kpis'><div class='kpi bad'><span>Net P&amp;L</span><strong>-Rs 893</strong><small>65 trades</small></div><div class='kpi '><span>Win rate</span><strong>40.0%</strong><small>26W / 39L</small></div><div class='kpi bad'><span>Average</span><strong>-Rs 14</strong><small>per trade</small></div><div class='kpi '><span>Normal / Explore</span><strong>64 / 1</strong><small>trade mix</small></div><div class='kpi '><span>Best / Worst</span><strong>Rs 3,681 / -Rs 2,302</strong><small>0 open</small></div></div></section>
+  </section>
+  <section class='panel'><div class='calendarMeta'><h2>Options Buying Monthly Calendar</h2><span>October 2026 | Net Rs 4,124 | 7 active day(s)</span></div><div class='calendarGrid'><div class='calendarWeekday'>Mon</div><div class='calendarWeekday'>Tue</div><div class='calendarWeekday'>Wed</div><div class='calendarWeekday'>Thu</div><div class='calendarWeekday'>Fri</div><div class='calendarWeekday'>Sat</div><div class='calendarWeekday'>Sun</div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div><div class='dayBox empty' title='2026-10-01 -'><strong>1</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-02 -'><strong>2</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-03 -'><strong>3</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-04 -'><strong>4</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-05 -'><strong>5</strong><span>-</span><small>No trades</small></div><div class='dayBox bad' title='2026-10-06 -Rs 69'><strong>6</strong><span>-Rs 69</span><small>6 item(s)</small></div><div class='dayBox bad' title='2026-10-07 -Rs 1,767'><strong>7</strong><span>-Rs 1,767</span><small>5 item(s)</small></div><div class='dayBox empty' title='2026-10-08 -'><strong>8</strong><span>-</span><small>No trades</small></div><div class='dayBox bad' title='2026-10-09 -Rs 8,928'><strong>9</strong><span>-Rs 8,928</span><small>7 item(s)</small></div><div class='dayBox empty' title='2026-10-10 -'><strong>10</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-11 -'><strong>11</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-12 -'><strong>12</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-13 -'><strong>13</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-14 -'><strong>14</strong><span>-</span><small>No trades</small></div><div class='dayBox good' title='2026-10-15 Rs 3,796'><strong>15</strong><span>Rs 3,796</span><small>6 item(s)</small></div><div class='dayBox good' title='2026-10-16 Rs 7,899'><strong>16</strong><span>Rs 7,899</span><small>5 item(s)</small></div><div class='dayBox empty' title='2026-10-17 -'><strong>17</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-18 -'><strong>18</strong><span>-</span><small>No trades</small></div><div class='dayBox bad' title='2026-10-19 -Rs 6,932'><strong>19</strong><span>-Rs 6,932</span><small>11 item(s)</small></div><div class='dayBox empty' title='2026-10-20 -'><strong>20</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-21 -'><strong>21</strong><span>-</span><small>No trades</small></div><div class='dayBox empty' title='2026-10-22 -'><strong>22</strong><span>-</span><small>No trades</small></div><div class='dayBox good' title='2026-10-23 Rs 10,125'><strong>23</strong><span>Rs 10,125</span><small>7 item(s)</small></div><div class='dayBox future' title='2026-10-24 -'><strong>24</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-25 -'><strong>25</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-26 -'><strong>26</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-27 -'><strong>27</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-28 -'><strong>28</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-29 -'><strong>29</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-30 -'><strong>30</strong><span>-</span><small>No trades</small></div><div class='dayBox future' title='2026-10-31 -'><strong>31</strong><span>-</span><small>No trades</small></div><div class='dayBox blank' title=' '><strong></strong><span></span><small>No trades</small></div></div></section>
+  <section class="two">
+    <section class="panel">
+      <h2>What Went Well</h2>
+      <ul><li>Today finished green at Rs 10,125.</li><li>Best strategy was vov_breakout with Rs 7,294 across 2 trades.</li><li>Best trade: NIFTY PE 22700 via vov_breakout made Rs 3,681.</li><li>3 trade(s) reached target.</li><li>Guardrails blocked 21 risky entry attempt(s).</li><li>No open trades were left in the report window.</li></ul>
+    </section>
+    <section class="panel">
+      <h2>What Did Not Go Well</h2>
+      <ul><li>Worst strategy was vrp_momentum with -Rs 400 across 2 trades.</li><li>Worst trade: SENSEX PE 72900 via vrp_momentum lost -Rs 1,233.</li><li>1 trade(s) hit stop loss.</li></ul>
+    </section>
+  </section>
+  <section class="panel"><svg viewBox="0 0 1260 230" role="img" aria-label="Daily P&amp;L - Last 30 Calendar Days">
+<text x="58" y="20" class="chartTitle">Daily P&amp;L - Last 30 Calendar Days</text>
+<line x1="58" y1="107.0" x2="1238" y2="107.0" class="axis" />
+<rect x="62.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="77.7" y="212" text-anchor="middle" class="xLabel">09-24</text>
+<rect x="101.3" y="107.0" width="31.3" height="8.6" rx="3" class="barNeg" />
+<rect x="140.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="180.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="195.7" y="212" text-anchor="middle" class="xLabel">09-27</text>
+<rect x="219.3" y="107.0" width="31.3" height="6.7" rx="3" class="barNeg" />
+<rect x="258.7" y="107.0" width="31.3" height="22.9" rx="3" class="barNeg" />
+<rect x="298.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="313.7" y="212" text-anchor="middle" class="xLabel">09-30</text>
+<rect x="337.3" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="376.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="416.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="431.7" y="212" text-anchor="middle" class="xLabel">10-03</text>
+<rect x="455.3" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="494.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="534.0" y="107.0" width="31.3" height="0.5" rx="3" class="barNeg" />
+<text x="549.7" y="212" text-anchor="middle" class="xLabel">10-06</text>
+<rect x="573.3" y="107.0" width="31.3" height="13.4" rx="3" class="barNeg" />
+<rect x="612.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="652.0" y="107.0" width="31.3" height="67.9" rx="3" class="barNeg" />
+<text x="667.7" y="212" text-anchor="middle" class="xLabel">10-09</text>
+<rect x="691.3" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="730.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="770.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="785.7" y="212" text-anchor="middle" class="xLabel">10-12</text>
+<rect x="809.3" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="848.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="888.0" y="78.1" width="31.3" height="28.9" rx="3" class="barPos" />
+<text x="903.7" y="212" text-anchor="middle" class="xLabel">10-15</text>
+<rect x="927.3" y="46.9" width="31.3" height="60.1" rx="3" class="barPos" />
+<rect x="966.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="1006.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="1021.7" y="212" text-anchor="middle" class="xLabel">10-18</text>
+<rect x="1045.3" y="107.0" width="31.3" height="52.7" rx="3" class="barNeg" />
+<rect x="1084.7" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="1124.0" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<text x="1139.7" y="212" text-anchor="middle" class="xLabel">10-21</text>
+<rect x="1163.3" y="107.0" width="31.3" height="0.0" rx="3" class="barPos" />
+<rect x="1202.7" y="30.0" width="31.3" height="77.0" rx="3" class="barPos" />
+<text x="10" y="36.0" class="yLabel">Rs 10,125</text>
+<text x="10" y="184.0" class="yLabel">-Rs 10,125</text>
+</svg></section>
+  <section class="two">
+    <section class='panel'><h2>Strategy P&amp;L - Last 30 Days</h2><div class='hbarRow'><span>vrp_momentum</span><div class='hbarTrack'><i class='bad' style='width:43.4%'></i></div><b class='bad'>-Rs 5,949</b></div><div class='hbarRow'><span>flow_confirmed_breakout</span><div class='hbarTrack'><i class='bad' style='width:37.2%'></i></div><b class='bad'>-Rs 5,106</b></div><div class='hbarRow'><span>expiry_pm_buyer</span><div class='hbarTrack'><i class='bad' style='width:14.3%'></i></div><b class='bad'>-Rs 1,961</b></div><div class='hbarRow'><span>trend_sr_agent</span><div class='hbarTrack'><i class='bad' style='width:11.9%'></i></div><b class='bad'>-Rs 1,640</b></div><div class='hbarRow'><span>nifty_tick_fade_reversal</span><div class='hbarTrack'><i class='bad' style='width:11.5%'></i></div><b class='bad'>-Rs 1,583</b></div><div class='hbarRow'><span>gex_slippery</span><div class='hbarTrack'><i class='good' style='width:11.8%'></i></div><b class='good'>Rs 1,622</b></div><div class='hbarRow'><span>vov_breakout</span><div class='hbarTrack'><i class='good' style='width:100.0%'></i></div><b class='good'>Rs 13,722</b></div></section>
+    <section class='panel'><h2>Today&#x27;s Exit Mix</h2><div class='hbarRow'><span>SL_HIT</span><div class='hbarTrack'><i class='good' style='width:33.3%'></i></div><b class='good'>1</b></div><div class='hbarRow'><span>TARGET_HIT</span><div class='hbarTrack'><i class='good' style='width:100.0%'></i></div><b class='good'>3</b></div><div class='hbarRow'><span>TIME_EXIT</span><div class='hbarTrack'><i class='good' style='width:100.0%'></i></div><b class='good'>3</b></div></section>
+  </section>
+  <section class='panel wide'><h2>Today By Strategy And Index</h2><table><thead><tr><th>Strategy</th><th>Index Name</th><th>Trades</th><th>Exploration</th><th>Win Rate</th><th>Net Pnl</th><th>Avg Pnl</th><th>Best</th><th>Worst</th><th>Open</th></tr></thead><tbody><tr><td class=''>vrp_momentum</td><td class=''>SENSEX</td><td class=''>1</td><td class=''>0</td><td class=''>0.0%</td><td class='bad'>-Rs 1,233</td><td class='bad'>-Rs 1,233</td><td class='bad'>-Rs 1,233</td><td class='bad'>-Rs 1,233</td><td class=''>0</td></tr><tr><td class=''>trend_sr_agent</td><td class=''>NIFTY</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 506</td><td class='good'>Rs 506</td><td class='good'>Rs 506</td><td class='good'>Rs 506</td><td class=''>0</td></tr><tr><td class=''>trend_sr_agent</td><td class=''>SENSEX</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 507</td><td class='good'>Rs 507</td><td class='good'>Rs 507</td><td class='good'>Rs 507</td><td class=''>0</td></tr><tr><td class=''>vrp_momentum</td><td class=''>NIFTY</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 834</td><td class='good'>Rs 834</td><td class='good'>Rs 834</td><td class='good'>Rs 834</td><td class=''>0</td></tr><tr><td class=''>gex_slippery</td><td class=''>NIFTY</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 2,218</td><td class='good'>Rs 2,218</td><td class='good'>Rs 2,218</td><td class='good'>Rs 2,218</td><td class=''>0</td></tr><tr><td class=''>vov_breakout</td><td class=''>SENSEX</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 3,613</td><td class='good'>Rs 3,613</td><td class='good'>Rs 3,613</td><td class='good'>Rs 3,613</td><td class=''>0</td></tr><tr><td class=''>vov_breakout</td><td class=''>NIFTY</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 3,681</td><td class='good'>Rs 3,681</td><td class='good'>Rs 3,681</td><td class='good'>Rs 3,681</td><td class=''>0</td></tr></tbody></table></section>
+  <section class='panel wide'><h2>Last 7 Days By Strategy</h2><table><thead><tr><th>Strategy</th><th>Trades</th><th>Exploration</th><th>Win Rate</th><th>Net Pnl</th><th>Avg Pnl</th><th>Best</th><th>Worst</th><th>Open</th></tr></thead><tbody><tr><td class=''>vrp_momentum</td><td class=''>4</td><td class=''>0</td><td class=''>25.0%</td><td class='bad'>-Rs 2,840</td><td class='bad'>-Rs 710</td><td class='good'>Rs 834</td><td class='bad'>-Rs 1,413</td><td class=''>0</td></tr><tr><td class=''>flow_confirmed_breakout</td><td class=''>2</td><td class=''>0</td><td class=''>0.0%</td><td class='bad'>-Rs 2,168</td><td class='bad'>-Rs 1,084</td><td class='bad'>-Rs 871</td><td class='bad'>-Rs 1,298</td><td class=''>0</td></tr><tr><td class=''>expiry_pm_buyer</td><td class=''>1</td><td class=''>0</td><td class=''>0.0%</td><td class='bad'>-Rs 758</td><td class='bad'>-Rs 758</td><td class='bad'>-Rs 758</td><td class='bad'>-Rs 758</td><td class=''>0</td></tr><tr><td class=''>nifty_tick_fade_reversal</td><td class=''>2</td><td class=''>0</td><td class=''>0.0%</td><td class='bad'>-Rs 489</td><td class='bad'>-Rs 245</td><td class='bad'>-Rs 241</td><td class='bad'>-Rs 248</td><td class=''>0</td></tr><tr><td class=''>trend_sr_agent</td><td class=''>4</td><td class=''>0</td><td class=''>50.0%</td><td class='bad'>-Rs 407</td><td class='bad'>-Rs 102</td><td class='good'>Rs 507</td><td class='bad'>-Rs 807</td><td class=''>0</td></tr><tr><td class=''>gex_slippery</td><td class=''>1</td><td class=''>0</td><td class=''>100.0%</td><td class='good'>Rs 2,218</td><td class='good'>Rs 2,218</td><td class='good'>Rs 2,218</td><td class='good'>Rs 2,218</td><td class=''>0</td></tr><tr><td class=''>vov_breakout</td><td class=''>4</td><td class=''>0</td><td class=''>75.0%</td><td class='good'>Rs 7,636</td><td class='good'>Rs 1,909</td><td class='good'>Rs 3,681</td><td class='bad'>-Rs 1,413</td><td class=''>0</td></tr></tbody></table></section>
+  <section class='panel wide'><h2>Tuning Before / After</h2><p class='muted'>Cutover: 2026-08-30T09:30:57. Verdict: Improved.</p><table><thead><tr><th>Window</th><th>Trades</th><th>Win Rate</th><th>Net Pnl</th><th>Avg Pnl</th><th>Best</th><th>Worst</th><th>Open</th></tr></thead><tbody><tr><td>before</td><td>310</td><td>32.6%</td><td class='bad'>-Rs 50,637</td><td class='bad'>-Rs 163</td><td class='good'>Rs 4,427</td><td class='bad'>-Rs 5,200</td><td>0</td></tr><tr><td>after</td><td>115</td><td>39.1%</td><td class='bad'>-Rs 1,242</td><td class='bad'>-Rs 11</td><td class='good'>Rs 3,681</td><td class='bad'>-Rs 2,351</td><td>0</td></tr></tbody></table><h2 style='margin-top:18px'>By Strategy Since Tuning</h2><table><thead><tr><th>Strategy</th><th>Before Trades</th><th>Before Avg</th><th>Before Win</th><th>After Trades</th><th>After Avg</th><th>After Win</th><th>Avg Delta</th></tr></thead><tbody><tr><td>flow_confirmed_breakout</td><td>6</td><td class='good'>Rs 217</td><td>33.3%</td><td>7</td><td class='bad'>-Rs 828</td><td>14.3%</td><td class='bad'>-Rs 1,045</td></tr><tr><td>vrp_momentum</td><td>40</td><td class='good'>Rs 73</td><td>42.5%</td><td>15</td><td class='bad'>-Rs 180</td><td>26.7%</td><td class='bad'>-Rs 253</td></tr><tr><td>nifty_tick_fade_reversal</td><td>26</td><td class='bad'>-Rs 163</td><td>15.4%</td><td>16</td><td class='bad'>-Rs 164</td><td>31.2%</td><td class='bad'>-Rs 1</td></tr><tr><td>expiry_pm_buyer</td><td>16</td><td class='bad'>-Rs 399</td><td>12.5%</td><td>7</td><td class='bad'>-Rs 330</td><td>28.6%</td><td class='good'>Rs 69</td></tr><tr><td>trend_sr_agent</td><td>68</td><td class='bad'>-Rs 174</td><td>27.9%</td><td>39</td><td class='bad'>-Rs 85</td><td>35.9%</td><td class='good'>Rs 90</td></tr><tr><td>vov_breakout</td><td>27</td><td class='good'>Rs 202</td><td>51.9%</td><td>28</td><td class='good'>Rs 550</td><td>64.3%</td><td class='good'>Rs 348</td></tr><tr><td>gex_slippery</td><td>23</td><td class='bad'>-Rs 928</td><td>21.7%</td><td>3</td><td class='good'>Rs 34</td><td>33.3%</td><td class='good'>Rs 962</td></tr><tr><td>ivp_reversal</td><td>50</td><td class='bad'>-Rs 32</td><td>42.0%</td><td>0</td><td class='flat'>Rs 0</td><td>0.0%</td><td class=''></td></tr><tr><td>pcr_atm_flow</td><td>54</td><td class='bad'>-Rs 276</td><td>31.5%</td><td>0</td><td class='flat'>Rs 0</td><td>0.0%</td><td class=''></td></tr></tbody></table></section>
+  <section class='panel wide'><h2>Operational Events Today</h2><p class='muted'>ENTRY_BLOCKED: 21, ENTRY_MARK_FALLBACK: 8, GATE_CHANGE: 86, SL_HIT: 1, START: 15, TARGET_HIT: 3, TIME_EXIT: 3, TRADE: 7, TRAIL_SL: 25</p><h2 style='margin-top:18px'>Top Entry Blockers</h2><table><thead><tr><th>Count</th><th>Message</th></tr></thead><tbody><tr><td>15</td><td>NIFTY vrp_momentum trade limit reached (1/1)</td></tr><tr><td>5</td><td>NIFTY gex_slippery trade limit reached (1/1)</td></tr><tr><td>1</td><td>Capital risk cap blocks entry: one lot risks 3667, budget 2500</td></tr></tbody></table></section>
+</main>
+<footer>
+  Paper/live mode comes from the active database; this report only summarizes recorded options buying sessions and trades.
+</footer>
+</body>
+</html>
